@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="定渊国际产品展示 — 大师级、收藏级、日用级紫砂茶具精选实拍，支持分类筛选" />
+  <link rel="canonical" href="https://www.yixingdingyuan.cn/gallery.html" />
+  <title>产品展示 | 定渊国际 — 宜兴紫砂茶具</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Lato:wght@300;400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="inner-page page-gallery">
+
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <header class="header scrolled" id="header">
+    <nav class="nav container">
+      <a href="index.html" class="logo">
+        <span class="logo-mark"><span class="logo-mark-inner">定</span></span>
+        <span class="logo-text">
+          <strong data-i18n="brand">定渊国际</strong>
+          <small data-i18n="brand-en">Dingyuan International</small>
+        </span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" data-i18n="nav-home">首页</a></li>
+        <li><a href="about.html" data-i18n="nav-about">关于我们</a></li>
+        <li><a href="products.html" data-i18n="nav-products">产品系列</a></li>
+        <li><a href="gallery.html" data-i18n="nav-gallery">产品展示</a></li>
+        <li><a href="why.html" data-i18n="nav-why">合作优势</a></li>
+        <li><a href="contact.html" data-i18n="nav-contact">联系我们</a></li>
+      </ul>
+      <div class="nav-right">
+        <button class="lang-btn" id="langBtn" type="button">EN</button>
+        <button class="nav-toggle" id="navToggle" aria-label="菜单"><span></span><span></span></button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- PAGE HERO -->
+    <div class="page-hero">
+      <div class="page-hero-bg">
+        <picture>
+          <source srcset="assets/images/product-1-1200.webp" type="image/webp" />
+          <img src="assets/images/product-1-800.jpg" alt="" loading="eager" decoding="async" />
+        </picture>
+      </div>
+      <div class="container page-hero-content">
+        <nav class="breadcrumb" aria-label="面包屑">
+          <a href="index.html">首页</a>
+          <span class="breadcrumb-sep">›</span>
+          <span data-i18n="nav-gallery">产品展示</span>
+        </nav>
+        <h1 data-i18n="gallery-title">精选实拍</h1>
+        <p>大师级、收藏级、日用级全系列产品，每件均经严格品质把控，呈现紫砂工艺之美。</p>
+      </div>
+      <div class="page-hero-glyph" aria-hidden="true">展</div>
+    </div>
+
+    <!-- GALLERY FILTER + GRID -->
+    <section class="section gallery-page" style="padding-top:4rem">
+      <div class="container">
+        <!-- Filter Bar -->
+        <div class="filter-bar" role="group" aria-label="产品分类筛选">
+          <button class="filter-btn active" data-filter="all" data-i18n="filter-all">全部</button>
+          <button class="filter-btn" data-filter="master" data-i18n="filter-master">大师级</button>
+          <button class="filter-btn" data-filter="collector" data-i18n="filter-collector">收藏级</button>
+          <button class="filter-btn" data-filter="daily" data-i18n="filter-daily">日用级</button>
+        </div>
+
+        <!-- Product Grid -->
+        <div class="products-grid" id="productsGrid">
+
+          <!-- MASTER GRADE — 大师级 -->
+          <article class="product-item reveal-up" style="--delay:0.05s"
+            data-grade="master"
+            data-name="竹韵壶"
+            data-name-en="Bamboo Rhythm Pot"
+            data-grade-label="大师级 · Master Grade"
+            data-desc="水墨竹纹手工刻绘，名家作品，限量3件。天青泥精制，器型端庄，附收藏证书及大师签章。"
+            data-desc-en="Hand-carved bamboo ink motif, limited edition of 3. Crafted in Tianqing clay, with certificate of authenticity."
+            data-material="天青泥"
+            data-size="220ml"
+            data-img="assets/images/product-1-800.jpg">
+            <div class="product-item-img">
+              <picture>
+                <source srcset="assets/images/product-1-800.webp" type="image/webp" />
+                <img src="assets/images/product-1-800.jpg" alt="竹韵壶" loading="lazy" decoding="async" />
+              </picture>
+              <span class="product-item-grade master">大师级</span>
+              <div class="product-item-overlay">
+                <button class="product-item-overlay-btn" data-open-modal>查看详情</button>
+              </div>
+            </div>
+            <div class="product-item-info">
+              <div class="product-item-name">竹韵壶</div>
+              <div class="product-item-meta">天青泥 · 220ml · 大师手作</div>
+            </div>
+          </article>
+
+          <article class="product-item reveal-up" style="--delay:0.1s"
+            data-grade="master"
+            data-name="墨竹行云壶"
+            data-name-en="Ink Bamboo Cloud Pot"
+            data-grade-label="大师级 · Master Grade"
+            data-desc="水墨风格竹纹，行云流水器型，工艺美术大师亲制，限量5件，附证书。"
+            data-desc-en="Ink-style bamboo carving with flowing cloud form. Master artisan work, limited to 5 pieces."
+            data-material="朱泥"
+            data-size="180ml"
+            data-img="assets/images/product-2-800.jpg">
+            <div class="product-item-img">
+              <picture>
+                <source srcset="assets/images/product-2-800.webp" type="image/webp" />
+                <img src="assets/images/product-2-800.jpg" alt="墨竹行云壶" loading="lazy" decoding="async" />
+              </picture>
+              <span class="product-item-grade master">大师级</span>
+              <div class="product-item-overlay">
+                <button class="product-item-overlay-btn" data-open-modal>查看详情</button>
+              </div>
+            </div>
+            <div class="product-item-info">
+              <div class="product-item-name">墨竹行云壶</div>
+              <div class="product-item-meta">朱泥 · 180ml · 名家限量</div>
+            </div>
+          </article>
+
+          <article class="product-item reveal-up" style="--delay:0.15s"
+            data-grade="master"
+            data-name="松风壶"
+            data-name-en="Pine Wind Pot"
+            data-grade-label="大师级 · Master Grade"
+            data-desc="松纹深刻，配以松涛意境，获省级工艺美术奖，是茶人珍藏首选。"
+            data-desc-en="Deep pine bark carving with evocative atmosphere. Provincial craft arts award winner."
+            data-material="底槽清泥"
+            data-size="260ml"
+            data-img="assets/images/product-3-800.jpg">
+            <div class="product-item-img">
+              <picture>
+                <source srcset="assets/images/product-3-800.webp" type="image/webp" />
+                <img src="assets/images/product-3-800.jpg" alt="松风壶" loading="lazy" decoding="async" />
+              </picture>
+              <span class="product-item-grade master">大师级</span>
+              <div class="product-item-overlay">
+                <button class="product-item-overlay-btn" data-open-modal>查看详情</button>
+              </div>
+            </div>
+            <div class="product-item-info">
+              <div class="product-item-name">松风壶</div>
+              <div class="product-item-meta">底槽清 · 260ml · 获奖作品</div>
+            </div>
+          </article>
+
+          <article class="product-item reveal-up" style="--delay:0.2s"
+            data-grade="master"
+            data-name="梅影壶"
+            data-name-en="Plum Shadow Pot"
+            data-grade-label="大师级 · Master Grade"
+            data-desc="梅花刻绘，运刀如笔，老泥精选，是冬日茶席最雅之器，限量发行。"
+            data-desc-en="Plum blossom carving with brush-like precision. Selected aged clay, limited winter edition."
+            data-material="紫泥"
+            data-size="200ml"
+            data-img="assets/images/product-4-800.jpg">
+            <div class="product-item-img">
+              <picture>
+                <source srcset="assets/images/product-4-800.webp" type="image/webp" />
+                <img src="assets/images/product-4-800.jpg" alt="梅影壶" loading="lazy" decoding="async" />
+              </picture>
+              <span class="product-item-grade master">大师级</span>
+              <div class="product-item-overlay">
+                <button class="product-item-overlay-btn" data-open-modal>查看详情</button>
+              </div>
+            </div>
+            <div class="product-item-info">
+              <div class="product-item-name">梅影壶</div>
+              <div class="product-item-meta">紫泥 · 200ml · 限量冬藏</div>
+            </div>
+          </article>
+
+          <article class="product-item reveal-up" style="--delay:0.25s"
+            data-grade="master"
+            data-name="荷风壶"
+            data-name-en="Lotus Wind Pot"
+            data-grade-label="大师级 · Master Grade"
+            data-desc="荷叶纹饰，线条流转，盛夏茶席之精品，大师亲制并签名，保真传承。"
+            data-desc-en="Lotus leaf motif with flowing lines. Summer tea ceremony masterpiece, signed by the master."
+            data-material="绿泥"
+            data-size="240ml"
+            data-img="assets/images/product-5-800.jpg">
+            <div class="product-item-img">
+              <picture>
+                <source srcset="assets/images/product-5-800.webp" type="image/webp" />
+                <img src="assets/images/product-5-800.jpg" alt="荷风壶" loading="lazy" decoding="async" />
+              </picture>
+              <span class="product-item-grade master">大师级</span>
+              <div class="product-item-overlay">
+                <button class="product-item-overlay-btn" data-open-modal>查看详情</button>
+              </div>
+            </div>
+            <div class="product-item-info">
+              <div class="product-item-name">荷风壶</div>
+              <div class="product-item-meta">绿泥 · 240ml · 夏季珍藏</div>
+            </div>
+          </article>
+
+          <article class="product-item reveal-up" style="--delay:0.3s"
+            data-grade="master"
+            data-name="云水间壶"
+            data-name-en="Cloud & Water Pot"
+            data-grade-label="大师级 · Master Grade"
+            data-desc="云水意象，禅意悠然，手工捏制配以刻绘，灵动器形令藏家爱不释手。"
+            data-desc-en="Cloud and water imagery with Zen-like serenity. Hand-formed with carved motifs, a collector's delight."
+            data-material="段泥"
+            data-size="280ml"
+            data-img="assets/images/product-1-800.jpg">
+            <div class="product-item-img">
+              <picture>
+                <source srcset="assets/images/product-1-800.webp" type="image/webp" />
+                <img src="assets/images/product-1-800.jpg" alt="云水间壶" loading="lazy" decoding="async" />
+              </picture>
+              <span class="product-item-grade master">大师级</span>
+              <div class="product-item-overlay">
+                <button class="product-item-overlay-btn" data-open-modal>查看详情</button>
+              </div>
+            </div>
+            <div class="product-item-info">
+              <div class="product-item-name">云水间壶</div>
+              <div class="product-item-meta">段泥 · 280ml · 禅意珍品</div>
+            </div>
+          </article>
+
+          <!-- COLLECTOR GRADE — 收藏级 -->
+          <article class="product-item reveal-up" style="--delay:0.05s"
+            data-grade="collector"
+            data-name="德钟壶"
+            data-name-en="De Zhong Pot"
+            data-grade-label="收藏级 · Collector Grade"
+            data-desc="经典德钟器型，原矿紫砂精制，器身浑厚，出水流畅，是茶人日用兼收藏之佳品。"
+            data-desc-en="Classic De Zhong form in authentic Yixing ore clay. Smooth pour, ideal for use and collection."
+            data-material="原矿紫砂"
+            data-size="300ml"
+            data-img="assets/images/product-2-800.jpg">
+            <div class="product-item-img">
+              <picture>
+                <source srcset="assets/images/product-2-800.webp" type="image/webp" />
+                <img src="assets/images/product-2-800.jpg" alt="德钟壶" loading="lazy" decoding="async" />
+              </picture>
+              <span class="product-item-grade collector">收藏级</span>
+              <div class="product-item-overlay">
+                <button class="product-item-overlay-btn" data-open-modal>查看详情</button>
+              </div>
+            </div>
+            <div class="product-item-info">
+              <div class="product-item-name">德钟壶</div>
+              <div class="product-item-meta">原矿紫砂 · 300ml · 经典器型</div>
+            </div>
+          </article>
+
+          <article class="product-item reveal-up" style="--delay:0.1s"
+            data-grade="collector"
+            data-name="石瓢壶"
+            data-name-en="Stone Ladle Pot"
+            data-grade-label="收藏级 · Collector Grade"
+            data-desc="石瓢经典，力道刚柔并济，精选底槽清泥，养壶后色泽温润，深受茶友喜爱。"
+            data-desc-en="Iconic Shi Piao form — powerful yet refined. Bottom tank Qing clay develops beautiful patina with use."
+            data-material="底槽清泥"
+            data-size="250ml"
+            data-img="assets/images/product-3-800.jpg">
+            <div class="product-item-img">
+              <picture>
+                <source srcset="assets/images/product-3-800.webp" type="image/webp" />
+                <img src="assets/images/product-3-800.jpg" alt="石瓢壶" loading="lazy" decoding="async" />
+              </picture>
+              <span class="product-item-grade collector">收藏级</span>
+              <div class="product-item-overlay">
+                <button class="product-item-overlay-btn" data-open-modal>查看详情</button>
+              </div>
+            </div>
+            <div class="product-item-info">
+              <div class="product-item-name">石瓢壶</div>
+              <div class="product-item-meta">底槽清 · 250ml · 经典石瓢</div>
+            </div>
+          </article>
+
+          <article class="product-item reveal-up" style="--delay:0.15s"
+            data-grade="collector"
+            data-name="西施壶"
+            data-name-en="Xi Shi Pot"
+            data-grade-label="收藏级 · Collector Grade"
+            data-desc="西施器型圆润饱满，线条优雅，朱泥精制，色泽朱红，适合乌龙、岩茶冲泡。"
+            data-desc-en="Xi Shi's graceful, rounded form in vermilion Zhuni clay. Perfect for oolong and rock teas."
+            data-material="朱泥"
+            data-size="160ml"
+            data-img="assets/images/product-4-800.jpg">
+            <div class="product-item-img">
+              <picture>
+                <source srcset="assets/images/product-4-800.webp" type="image/webp" />
+                <img src="assets/images/product-4-800.jpg" alt="西施壶" loading="lazy" decoding="async" />
+              </picture>
+              <span class="product-item-grade collector">收藏级</span>
+              <div class="product-item-overlay">
+                <button class="product-item-overlay-btn" data-open-modal>查看详情</button>
+              </div>
+            </div>
+            <div class="product-item-info">
+              <div class="product-item-name">西施壶</div>
+              <div class="product-item-meta">朱泥 · 160ml · 圆润优雅</div>
+            </div>
+          </article>
+
+          <article class="product-item reveal-up" style="--delay:0.2s"
+            data-grade="collector"
+            data-name="井栏壶"
+            data-name-en="Well Fence Pot"
+            data-grade-label="收藏级 · Collector Grade"
+            data-desc="井栏器型稳重大气，精选原矿紫砂，泡养后越发古朴，适合收藏与日常使用。"
+            data-desc-en="Well Fence form — stately and dignified. Authentic ore clay, develops character with daily use."
+            data-material="原矿紫砂"
+            data-size="320ml"
+            data-img="assets/images/product-5-800.jpg">
+            <div class="product-item-img">
+              <picture>
+                <source srcset="assets/images/product-5-800.webp" type="image/webp" />
+                <img src="assets/images/product-5-800.jpg" alt="井栏壶" loading="lazy" decoding="async" />
+              </picture>
+              <span class="product-item-grade collector">收藏级</span>
+              <div class="product-item-overlay">
+                <button class="product-item-overlay-btn" data-open-modal>查看详情</button>
+              </div>
+            </div>
+            <div class="product-item-info">
+              <div class="product-item-name">井栏壶</div>
+              <div class="product-item-meta">原矿紫砂 · 320ml · 稳重大气</div>
+            </div>
+          </article>
+
+          <article class="product-item reveal-up" style="--delay:0.25s"
+            data-grade="collector"
+            data-name="仿古壶"
+            data-name-en="Antique Style Pot"
+            data-grade-label="收藏级 · Collector Grade"
+            data-desc="仿古器型，传承明代制壶工艺，配以礼盒包装，适合馈赠与收藏，备受外贸客户青睐。"
+            data-desc-en="Ming dynasty inspired form with gift box. Popular for export gifting and collection."
+            data-material="天青泥"
+            data-size="270ml"
+            data-img="assets/images/product-1-800.jpg">
+            <div class="product-item-img">
+              <picture>
+                <source srcset="assets/images/product-1-800.webp" type="image/webp" />
+                <img src="assets/images/product-1-800.jpg" alt="仿古壶" loading="lazy" decoding="async" />
+              </picture>
+              <span class="product-item-grade collector">收藏级</span>
+              <div class="product-item-overlay">
+                <button class="product-item-overlay-btn" data-open-modal>查看详情</button>
+              </div>
+            </div>
+            <div class="product-item-info">
+              <div class="product-item-name">仿古壶</div>
+              <div class="product-item-meta">天青泥 · 270ml · 明式器型</div>
+            </div>
+          </article>
+
+          <article class="product-item reveal-up" style="--delay:0.3s"
+            data-grade="collector"
+            data-name="思亭壶"
+            data-name-en="Si Ting Pot"
+            data-grade-label="收藏级 · Collector Grade"
+            data-desc="思亭壶高挑清秀，流把设计精妙，工匠精心打磨，是茶席上的一道风景。"
+            data-desc-en="Elegant Si Ting form — slender and refined. Masterfully crafted spout and handle."
+            data-material="朱泥"
+            data-size="200ml"
+            data-img="assets/images/product-2-800.jpg">
+            <div class="product-item-img">
+              <picture>
+                <source srcset="assets/images/product-2-800.webp" type="image/webp" />
+                <img src="assets/images/product-2-800.jpg" alt="思亭壶" loading="lazy" decoding="async" />
+              </picture>
+              <span class="product-item-grade collector">收藏级</span>
+              <div class="product-item-overlay">
+                <button class="product-item-overlay-btn" data-open-modal>查看详情</button>
+              </div>
+            </div>
+            <div class="product-item-info">
+              <div class="product-item-name">思亭壶</div>
+              <div class="product-item-meta">朱泥 · 200ml · 高挑清秀</div>
+            </div>
+          </article>
+
+          <!-- DAILY GRADE — 日用级 -->
+          <article class="product-item reveal-up" style="--delay:0.05s"
+            data-grade="daily"
+            data-name="圆满壶"
+            data-name-en="Round Harmony Pot"
+            data-grade-label="日用级 · Daily Grade"
+            data-desc="圆润壶型，适合家庭日常使用，泡养容易，价格实惠，量大从优，快速发货。"
+            data-desc-en="Rounded daily-use pot. Easy to season, affordable, bulk pricing available, fast shipping."
+            data-material="紫砂泥"
+            data-size="350ml"
+            data-img="assets/images/product-3-800.jpg">
+            <div class="product-item-img">
+              <picture>
+                <source srcset="assets/images/product-3-800.webp" type="image/webp" />
+                <img src="assets/images/product-3-800.jpg" alt="圆满壶" loading="lazy" decoding="async" />
+              </picture>
+              <span class="product-item-grade daily">日用级</span>
+              <div class="product-item-overlay">
+                <button class="product-item-overlay-btn" data-open-modal>查看详情</button>
+              </div>
+            </div>
+            <div class="product-item-info">
+              <div class="product-item-name">圆满壶</div>
+              <div class="product-item-meta">紫砂泥 · 350ml · 日用首选</div>
+            </div>
+          </article>
+
+          <article class="product-item reveal-up" style="--delay:0.1s"
+            data-grade="daily"
+            data-name="四方壶"
+            data-name-en="Square Pot"
+            data-grade-label="日用级 · Daily Grade"
+            data-desc="四方端正，线条硬朗，造型独特，适合泡普洱、黑茶，茶楼茶馆批量采购优选。"
+            data-desc-en="Bold square form, ideal for pu-erh and dark teas. Popular for tea house bulk orders."
+            data-material="紫砂泥"
+            data-size="400ml"
+            data-img="assets/images/product-4-800.jpg">
+            <div class="product-item-img">
+              <picture>
+                <source srcset="assets/images/product-4-800.webp" type="image/webp" />
+                <img src="assets/images/product-4-800.jpg" alt="四方壶" loading="lazy" decoding="async" />
+              </picture>
+              <span class="product-item-grade daily">日用级</span>
+              <div class="product-item-overlay">
+                <button class="product-item-overlay-btn" data-open-modal>查看详情</button>
+              </div>
+            </div>
+            <div class="product-item-info">
+              <div class="product-item-name">四方壶</div>
+              <div class="product-item-meta">紫砂泥 · 400ml · 线条硬朗</div>
+            </div>
+          </article>
+
+          <article class="product-item reveal-up" style="--delay:0.15s"
+            data-grade="daily"
+            data-name="葫芦壶"
+            data-name-en="Gourd Pot"
+            data-grade-label="日用级 · Daily Grade"
+            data-desc="葫芦器型寓意吉祥，外形可爱讨喜，价格亲民，是电商平台热销款式。"
+            data-desc-en="Gourd shape symbolizes good fortune. Popular e-commerce bestseller with affordable pricing."
+            data-material="紫砂泥"
+            data-size="280ml"
+            data-img="assets/images/product-5-800.jpg">
+            <div class="product-item-img">
+              <picture>
+                <source srcset="assets/images/product-5-800.webp" type="image/webp" />
+                <img src="assets/images/product-5-800.jpg" alt="葫芦壶" loading="lazy" decoding="async" />
+              </picture>
+              <span class="product-item-grade daily">日用级</span>
+              <div class="product-item-overlay">
+                <button class="product-item-overlay-btn" data-open-modal>查看详情</button>
+              </div>
+            </div>
+            <div class="product-item-info">
+              <div class="product-item-name">葫芦壶</div>
+              <div class="product-item-meta">紫砂泥 · 280ml · 吉祥寓意</div>
+            </div>
+          </article>
+
+          <article class="product-item reveal-up" style="--delay:0.2s"
+            data-grade="daily"
+            data-name="报春壶"
+            data-name-en="Spring Herald Pot"
+            data-grade-label="日用级 · Daily Grade"
+            data-desc="报春器型活泼生动，适合绿茶、白茶冲泡，入门级首选，量大价更优。"
+            data-desc-en="Lively Spring Herald form, ideal for green and white teas. Entry-level with volume discounts."
+            data-material="紫砂泥"
+            data-size="220ml"
+            data-img="assets/images/product-1-800.jpg">
+            <div class="product-item-img">
+              <picture>
+                <source srcset="assets/images/product-1-800.webp" type="image/webp" />
+                <img src="assets/images/product-1-800.jpg" alt="报春壶" loading="lazy" decoding="async" />
+              </picture>
+              <span class="product-item-grade daily">日用级</span>
+              <div class="product-item-overlay">
+                <button class="product-item-overlay-btn" data-open-modal>查看详情</button>
+              </div>
+            </div>
+            <div class="product-item-info">
+              <div class="product-item-name">报春壶</div>
+              <div class="product-item-meta">紫砂泥 · 220ml · 入门首选</div>
+            </div>
+          </article>
+
+          <article class="product-item reveal-up" style="--delay:0.25s"
+            data-grade="daily"
+            data-name="笑樱壶"
+            data-name-en="Smiling Cherry Pot"
+            data-grade-label="日用级 · Daily Grade"
+            data-desc="笑樱壶型圆融可爱，出水流畅，易于清洗保养，适合茶室配套批量供应。"
+            data-desc-en="Round and charming Xiao Ying form. Easy care, smooth flow. Ideal for tea room supply."
+            data-material="紫砂泥"
+            data-size="300ml"
+            data-img="assets/images/product-2-800.jpg">
+            <div class="product-item-img">
+              <picture>
+                <source srcset="assets/images/product-2-800.webp" type="image/webp" />
+                <img src="assets/images/product-2-800.jpg" alt="笑樱壶" loading="lazy" decoding="async" />
+              </picture>
+              <span class="product-item-grade daily">日用级</span>
+              <div class="product-item-overlay">
+                <button class="product-item-overlay-btn" data-open-modal>查看详情</button>
+              </div>
+            </div>
+            <div class="product-item-info">
+              <div class="product-item-name">笑樱壶</div>
+              <div class="product-item-meta">紫砂泥 · 300ml · 茶室配套</div>
+            </div>
+          </article>
+
+          <article class="product-item reveal-up" style="--delay:0.3s"
+            data-grade="daily"
+            data-name="文旦壶"
+            data-name-en="Wen Dan Pot"
+            data-grade-label="日用级 · Daily Grade"
+            data-desc="文旦壶清雅秀气，适合各类茶品，是日用级中的经典款，外贸热销产品。"
+            data-desc-en="Elegant Wen Dan form, versatile for all teas. Classic daily grade export bestseller."
+            data-material="紫砂泥"
+            data-size="260ml"
+            data-img="assets/images/product-3-800.jpg">
+            <div class="product-item-img">
+              <picture>
+                <source srcset="assets/images/product-3-800.webp" type="image/webp" />
+                <img src="assets/images/product-3-800.jpg" alt="文旦壶" loading="lazy" decoding="async" />
+              </picture>
+              <span class="product-item-grade daily">日用级</span>
+              <div class="product-item-overlay">
+                <button class="product-item-overlay-btn" data-open-modal>查看详情</button>
+              </div>
+            </div>
+            <div class="product-item-info">
+              <div class="product-item-name">文旦壶</div>
+              <div class="product-item-meta">紫砂泥 · 260ml · 外贸热销</div>
+            </div>
+          </article>
+
+        </div><!-- /products-grid -->
+
+        <!-- CTA -->
+        <div style="text-align:center;margin-top:4rem;padding:3rem;border:1px solid rgba(201,169,110,0.15);background:var(--cream-warm);">
+          <span class="eyebrow">定制采购</span>
+          <h3 style="font-family:var(--font-display);font-size:2rem;font-weight:400;color:var(--ink);margin:0.5rem 0 1rem;">
+            未找到合适的产品？
+          </h3>
+          <p style="color:var(--ink-muted);font-weight:300;margin-bottom:2rem;">我们提供OEM定制服务，包括器型开发、泥料配方及礼盒包装。</p>
+          <a href="contact.html" class="btn btn-primary">联系询价</a>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Product Detail Modal -->
+  <div class="product-modal-overlay" id="productModal" role="dialog" aria-modal="true" aria-label="产品详情">
+    <div class="product-modal">
+      <button class="modal-close" aria-label="关闭">✕</button>
+      <div class="modal-img">
+        <img src="" alt="" loading="lazy" />
+      </div>
+      <div class="modal-content">
+        <div class="modal-grade"></div>
+        <h2 class="modal-name"></h2>
+        <div class="modal-divider"></div>
+        <p class="modal-desc"></p>
+        <div class="modal-specs">
+          <div class="modal-spec-row">
+            <span class="modal-spec-label">泥料</span>
+            <span class="modal-spec-value"></span>
+          </div>
+          <div class="modal-spec-row">
+            <span class="modal-spec-label">容量</span>
+            <span class="modal-spec-value"></span>
+          </div>
+          <div class="modal-spec-row">
+            <span class="modal-spec-label">产地</span>
+            <span class="modal-spec-value">江苏宜兴</span>
+          </div>
+        </div>
+        <div class="modal-cta">
+          <a href="contact.html" class="btn btn-primary btn-full" data-i18n="modal-inquiry">联系询价</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="logo-mark-sm">定</span>
+        <span data-i18n="brand">定渊国际</span>
+      </div>
+      <nav class="footer-nav">
+        <a href="about.html" data-i18n="nav-about">关于我们</a>
+        <a href="products.html" data-i18n="nav-products">产品系列</a>
+        <a href="gallery.html" data-i18n="nav-gallery">产品展示</a>
+        <a href="why.html" data-i18n="nav-why">合作优势</a>
+        <a href="contact.html" data-i18n="nav-contact">联系我们</a>
+      </nav>
+      <p class="footer-copy" data-i18n="footer">© 2026 定渊国际 Dingyuan International. 保留所有权利。</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

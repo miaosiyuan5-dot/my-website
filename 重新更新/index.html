@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="定渊国际 — 宜兴紫砂茶具出口，大师级、收藏级、日用级全系列供应，OEM定制，全球外贸" />
+  <meta name="keywords" content="定渊国际,紫砂茶具,宜兴紫砂,紫砂壶出口,Yixing teapot,zisha export" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.yixingdingyuan.cn/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="定渊国际 | 宜兴紫砂茶具出口" />
+  <meta property="og:description" content="大师级、收藏级、日用级紫砂全系列，全球供货与外贸服务" />
+  <meta property="og:image" content="https://www.yixingdingyuan.cn/assets/images/og.jpg" />
+  <meta property="og:url" content="https://www.yixingdingyuan.cn/" />
+  <title>定渊国际 | 宜兴紫砂茶具出口 — Dingyuan International</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="image" href="assets/images/hero-828.webp" type="image/webp" media="(max-width: 828px)" fetchpriority="high" />
+  <link rel="preload" as="image" href="assets/images/hero-1920.webp" type="image/webp" media="(min-width: 829px)" fetchpriority="high" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Lato:wght@300;400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="page-home">
+
+  <!-- Preloader -->
+  <div class="preloader" id="preloader">
+    <div class="preloader-ring">
+      <span class="preloader-char">定</span>
+    </div>
+  </div>
+
+  <!-- Cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <header class="header" id="header">
+    <nav class="nav container">
+      <a href="index.html" class="logo">
+        <span class="logo-mark"><span class="logo-mark-inner">定</span></span>
+        <span class="logo-text">
+          <strong data-i18n="brand">定渊国际</strong>
+          <small data-i18n="brand-en">Dingyuan International</small>
+        </span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" data-i18n="nav-home">首页</a></li>
+        <li><a href="about.html" data-i18n="nav-about">关于我们</a></li>
+        <li><a href="products.html" data-i18n="nav-products">产品系列</a></li>
+        <li><a href="gallery.html" data-i18n="nav-gallery">产品展示</a></li>
+        <li><a href="why.html" data-i18n="nav-why">合作优势</a></li>
+        <li><a href="contact.html" data-i18n="nav-contact">联系我们</a></li>
+      </ul>
+      <div class="nav-right">
+        <button class="lang-btn" id="langBtn" type="button">EN</button>
+        <button class="nav-toggle" id="navToggle" aria-label="菜单">
+          <span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="hero">
+      <canvas id="hero-canvas" aria-hidden="true"></canvas>
+
+      <div class="hero-bg" id="heroBg">
+        <picture>
+          <source media="(max-width: 828px)" srcset="assets/images/hero-828.webp" type="image/webp" />
+          <source media="(max-width: 828px)" srcset="assets/images/hero-828.jpg" type="image/jpeg" />
+          <source srcset="assets/images/hero-1920.webp" type="image/webp" />
+          <img src="assets/images/hero-1920.jpg" alt="" width="1920" height="1080" fetchpriority="high" decoding="async" />
+        </picture>
+        <div class="hero-overlay"></div>
+      </div>
+
+      <div class="container hero-content">
+        <!-- Eyebrow with decorative lines -->
+        <div class="hero-eyebrow-line">
+          <span class="hero-line-decor"></span>
+          <span class="hero-eyebrow-text" data-i18n="hero-tag">宜兴紫砂 · 匠心传承</span>
+          <span class="hero-line-decor"></span>
+        </div>
+
+        <!-- Characters reveal one by one -->
+        <div class="hero-title-wrap" aria-label="定渊国际">
+          <div class="hero-chars">
+            <span class="char-wrap"><em class="char" style="--delay:0.1s">定</em></span>
+            <span class="char-wrap"><em class="char" style="--delay:0.24s">渊</em></span>
+            <span class="char-wrap"><em class="char" style="--delay:0.38s">国</em></span>
+            <span class="char-wrap"><em class="char" style="--delay:0.52s">际</em></span>
+          </div>
+        </div>
+
+        <div class="hero-subtitle-wrap">
+          <p class="hero-subtitle" data-i18n="hero-title-sub">DINGYUAN INTERNATIONAL</p>
+        </div>
+
+        <p class="hero-desc" data-i18n="hero-desc">
+          专注大师级、收藏级、日用级紫砂全系列产品，为全球客户提供稳定供货与专业外贸服务。
+        </p>
+
+        <div class="hero-actions">
+          <a href="gallery.html" class="btn btn-primary" data-i18n="hero-cta1">浏览产品</a>
+          <a href="contact.html" class="btn btn-ghost" data-i18n="hero-cta2">获取报价</a>
+        </div>
+      </div>
+
+      <div class="hero-stats-bar">
+        <div class="container hero-stats">
+          <div class="stat">
+            <strong>3</strong>
+            <span data-i18n="stat1">产品等级</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <strong>全球</strong>
+            <span data-i18n="stat2">出口服务</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <strong>OEM</strong>
+            <span data-i18n="stat3">定制支持</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-scroll-hint">
+        <span>SCROLL</span>
+        <div class="scroll-dot"></div>
+      </div>
+    </section>
+
+    <!-- MARQUEE STRIP -->
+    <div class="marquee-section" aria-hidden="true">
+      <div class="marquee-track">
+        <div class="marquee-item">宜兴紫砂 <span>·</span> YIXING ZISHA <span>·</span> 匠心传承 <span>·</span> HERITAGE CRAFT <span>·</span> 大师级 <span>·</span> MASTER GRADE <span>·</span> 收藏级 <span>·</span> COLLECTOR GRADE <span>·</span> 日用级 <span>·</span> DAILY GRADE <span>·</span> 出口外贸 <span>·</span> GLOBAL EXPORT <span>·</span></div>
+        <div class="marquee-item" aria-hidden="true">宜兴紫砂 <span>·</span> YIXING ZISHA <span>·</span> 匠心传承 <span>·</span> HERITAGE CRAFT <span>·</span> 大师级 <span>·</span> MASTER GRADE <span>·</span> 收藏级 <span>·</span> COLLECTOR GRADE <span>·</span> 日用级 <span>·</span> DAILY GRADE <span>·</span> 出口外贸 <span>·</span> GLOBAL EXPORT <span>·</span></div>
+      </div>
+    </div>
+
+    <!-- PAGE TEASERS -->
+    <section class="home-teasers">
+      <div class="container">
+        <div class="section-header center reveal-up">
+          <span class="eyebrow">探索全站</span>
+          <h2>定渊国际 · 专业紫砂外贸</h2>
+          <div class="divider-gold centered"></div>
+        </div>
+        <div class="home-teasers-grid">
+          <a href="about.html" class="teaser-card reveal-up" style="--delay:0.05s">
+            <div class="teaser-num">01</div>
+            <div class="teaser-title" data-i18n="teaser-about-title">关于我们</div>
+            <div class="teaser-desc" data-i18n="teaser-about-desc">扎根宜兴，深耕紫砂茶具外贸多年</div>
+            <div class="teaser-arrow" data-i18n="teaser-view">了解更多</div>
+          </a>
+          <a href="products.html" class="teaser-card reveal-up" style="--delay:0.1s">
+            <div class="teaser-num">02</div>
+            <div class="teaser-title" data-i18n="teaser-products-title">产品系列</div>
+            <div class="teaser-desc" data-i18n="teaser-products-desc">大师级、收藏级、日用级三大系列</div>
+            <div class="teaser-arrow" data-i18n="teaser-view">了解更多</div>
+          </a>
+          <a href="gallery.html" class="teaser-card reveal-up" style="--delay:0.15s">
+            <div class="teaser-num">03</div>
+            <div class="teaser-title" data-i18n="teaser-gallery-title">产品展示</div>
+            <div class="teaser-desc" data-i18n="teaser-gallery-desc">实拍精品，每件均有品质保证</div>
+            <div class="teaser-arrow" data-i18n="teaser-view">了解更多</div>
+          </a>
+          <a href="why.html" class="teaser-card reveal-up" style="--delay:0.2s">
+            <div class="teaser-num">04</div>
+            <div class="teaser-title" data-i18n="teaser-why-title">合作优势</div>
+            <div class="teaser-desc" data-i18n="teaser-why-desc">产区直供，外贸全流程专业服务</div>
+            <div class="teaser-arrow" data-i18n="teaser-view">了解更多</div>
+          </a>
+          <a href="contact.html" class="teaser-card reveal-up" style="--delay:0.25s">
+            <div class="teaser-num">05</div>
+            <div class="teaser-title" data-i18n="teaser-contact-title">联系我们</div>
+            <div class="teaser-desc" data-i18n="teaser-contact-desc">24小时回复，获取专属采购方案</div>
+            <div class="teaser-arrow" data-i18n="teaser-view">了解更多</div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- PARALLAX QUOTE -->
+    <section class="home-quote reveal-up">
+      <div class="home-quote-bg">
+        <picture>
+          <source srcset="assets/images/product-5-1200.webp" type="image/webp" />
+          <img src="assets/images/product-5-800.jpg" alt="" loading="lazy" decoding="async" />
+        </picture>
+      </div>
+      <div class="home-quote-overlay"></div>
+      <div class="home-quote-glyph" aria-hidden="true">渊</div>
+      <div class="home-quote-content">
+        <p class="home-quote-text" data-i18n="quote-text">一壶一世界，匠心铸千年</p>
+        <p class="home-quote-sub" data-i18n="quote-sub">Yixing · Heritage · Excellence</p>
+      </div>
+    </section>
+
+    <!-- PRODUCT PREVIEW -->
+    <section class="section gallery" style="background:var(--cream)">
+      <div class="container">
+        <div class="section-header center reveal-up">
+          <span class="eyebrow" data-i18n="gallery-label">产品展示</span>
+          <h2 data-i18n="gallery-title">精选实拍</h2>
+          <div class="divider-gold centered"></div>
+        </div>
+        <div class="gallery-grid">
+          <figure class="gallery-item large reveal-up" style="--delay:0s">
+            <picture>
+              <source srcset="assets/images/product-1-1200.webp 1200w, assets/images/product-1-800.webp 800w" type="image/webp" />
+              <source srcset="assets/images/product-1-1200.jpg 1200w, assets/images/product-1-800.jpg 800w" type="image/jpeg" />
+              <img src="assets/images/product-1-800.jpg" alt="竹纹紫砂壶" width="800" height="1000" loading="lazy" decoding="async" />
+            </picture>
+            <figcaption>
+              <span class="gallery-num">01</span>
+              <span data-i18n="g1">水墨竹纹 · 大师手作</span>
+            </figcaption>
+          </figure>
+          <div class="gallery-col">
+            <figure class="gallery-item reveal-up" style="--delay:0.15s">
+              <picture>
+                <source srcset="assets/images/product-2-800.webp 800w" type="image/webp" />
+                <img src="assets/images/product-2-480.jpg" alt="紫砂茶壶" width="480" height="600" loading="lazy" decoding="async" />
+              </picture>
+              <figcaption><span class="gallery-num">02</span><span data-i18n="g2">经典器型</span></figcaption>
+            </figure>
+            <figure class="gallery-item reveal-up" style="--delay:0.3s">
+              <picture>
+                <source srcset="assets/images/product-3-800.webp 800w" type="image/webp" />
+                <img src="assets/images/product-3-480.jpg" alt="紫砂茶具" width="480" height="600" loading="lazy" decoding="async" />
+              </picture>
+              <figcaption><span class="gallery-num">03</span><span data-i18n="g3">匠心细节</span></figcaption>
+            </figure>
+          </div>
+          <figure class="gallery-item wide reveal-up" style="--delay:0.15s">
+            <picture>
+              <source srcset="assets/images/product-5-1200.webp 1200w" type="image/webp" />
+              <img src="assets/images/product-5-800.jpg" alt="紫砂工艺" width="800" height="450" loading="lazy" decoding="async" />
+            </picture>
+            <figcaption><span class="gallery-num">04</span><span data-i18n="g5">传统工艺</span></figcaption>
+          </figure>
+          <figure class="gallery-item reveal-up" style="--delay:0.3s">
+            <picture>
+              <source srcset="assets/images/product-4-800.webp 800w" type="image/webp" />
+              <img src="assets/images/product-4-480.jpg" alt="茶器展示" width="480" height="640" loading="lazy" decoding="async" />
+            </picture>
+            <figcaption><span class="gallery-num">05</span><span data-i18n="g4">产区实拍</span></figcaption>
+          </figure>
+        </div>
+        <div style="text-align:center;margin-top:3rem;">
+          <a href="gallery.html" class="btn btn-ghost-dark" data-i18n="teaser-view">了解更多</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="logo-mark-sm">定</span>
+        <span data-i18n="brand">定渊国际</span>
+      </div>
+      <nav class="footer-nav">
+        <a href="about.html" data-i18n="nav-about">关于我们</a>
+        <a href="products.html" data-i18n="nav-products">产品系列</a>
+        <a href="gallery.html" data-i18n="nav-gallery">产品展示</a>
+        <a href="why.html" data-i18n="nav-why">合作优势</a>
+        <a href="contact.html" data-i18n="nav-contact">联系我们</a>
+      </nav>
+      <p class="footer-copy" data-i18n="footer">© 2026 定渊国际 Dingyuan International. 保留所有权利。</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
