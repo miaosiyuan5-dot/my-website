@@ -1,0 +1,243 @@
+/* ============================================================
+   移动端样式修复片段  mobile-fixes.css
+   ------------------------------------------------------------
+   解决常见手机端问题：
+     1. 固定导航栏遮挡正文
+     2. 按钮 / 可点击区域太小（不好戳）
+     3. 字体太小看不清
+     4. 提供一套折叠（汉堡）菜单样式
+     5. 横向溢出导致页面能左右拖动
+     6. 图片溢出屏幕
+
+   用法：
+     1. 把本文件放进 css 目录，在每个 HTML 的 <head> 里、
+        在你原有样式表【之后】引入，确保覆盖生效：
+          <link rel="stylesheet" href="css/style.css">
+          <link rel="stylesheet" href="css/mobile-fixes.css">
+     2. 折叠菜单需要一点 HTML 结构和一行 JS，见文件最底部注释。
+
+   提示：把下面 .site-header / .nav-toggle / .nav-menu 等类名，
+        换成你项目里实际用的类名即可。
+   ============================================================ */
+
+/* ---------- 0. 全局：禁止横向溢出 + 盒模型统一 ---------- */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* 图片永不超出容器 */
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ---------- 1. 固定导航不再遮挡正文 ---------- */
+/* 假设你的头部是 .site-header 且 position: fixed。
+   用 scroll-padding + 给 body 留出顶部空间来解决遮挡。 */
+:root {
+  --header-height: 60px; /* 按你导航实际高度改 */
+}
+
+.site-header {
+  height: var(--header-height);
+}
+
+/* 给正文容器留出导航高度，避免被盖住 */
+body {
+  /* 若导航是 fixed，取消下一行注释 */
+  /* padding-top: var(--header-height); */
+}
+
+/* 锚点跳转时，标题不被固定导航盖住 */
+html {
+  scroll-padding-top: calc(var(--header-height) + 12px);
+}
+
+/* ---------- 2. 触摸目标够大（按钮 / 链接） ---------- */
+/* WCAG / 苹果设计规范建议可点击区域至少 44x44px */
+@media (max-width: 768px) {
+  button,
+  .btn,
+  a.button,
+  input[type='submit'],
+  input[type='button'],
+  .nav-menu a {
+    min-height: 44px;
+    min-width: 44px;
+    padding: 12px 18px;
+    font-size: 16px; /* iOS 上 <16px 的输入框会触发自动放大，统一 16px */
+    line-height: 1.2;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* 输入框同理，16px 防止聚焦时页面被强制缩放 */
+  input,
+  select,
+  textarea {
+    font-size: 16px;
+  }
+}
+
+/* ---------- 3. 字体在手机上放大、行距加宽 ---------- */
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+    line-height: 1.65;
+    -webkit-text-size-adjust: 100%; /* 防止系统强制改字号 */
+  }
+  h1 {
+    font-size: 1.7rem;
+    line-height: 1.25;
+  }
+  h2 {
+    font-size: 1.4rem;
+    line-height: 1.3;
+  }
+  h3 {
+    font-size: 1.2rem;
+  }
+  p,
+  li {
+    font-size: 1rem;
+  }
+
+  /* 正文左右留白，别贴边 */
+  .container,
+  main,
+  section {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+/* ---------- 4. 折叠（汉堡）菜单 ---------- */
+/* 默认（桌面）：菜单横排，汉堡按钮隐藏 */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  width: 44px;
+  height: 44px;
+  padding: 10px;
+}
+.nav-toggle .bar {
+  display: block;
+  width: 24px;
+  height: 2px;
+  margin: 5px auto;
+  background: currentColor;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+@media (max-width: 768px) {
+  /* 显示汉堡按钮 */
+  .nav-toggle {
+    display: block;
+  }
+
+  /* 菜单默认收起：从顶部滑下的面板 */
+  .nav-menu {
+    position: fixed;
+    top: var(--header-height);
+    left: 0;
+    right: 0;
+    background: #fff;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    margin: 0;
+    padding: 8px 0;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    transform: translateY(-130%);
+    transition: transform 0.28s ease;
+    z-index: 999;
+    max-height: calc(100vh - var(--header-height));
+    overflow-y: auto;
+  }
+
+  /* 加了 .open 时展开 */
+  .nav-menu.open {
+    transform: translateY(0);
+  }
+
+  .nav-menu a {
+    width: 100%;
+    justify-content: flex-start;
+    padding: 14px 20px;
+    border-bottom: 1px solid #eee;
+  }
+
+  /* 汉堡变叉号（菜单展开时） */
+  .nav-toggle.active .bar:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+  .nav-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .nav-toggle.active .bar:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+}
+
+/* ---------- 5. 表格在手机上可横向滚动而非撑破布局 ---------- */
+@media (max-width: 768px) {
+  table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* ============================================================
+   折叠菜单需要的 HTML 结构（放进你的导航里）：
+
+   <header class="site-header">
+     <a href="index.html" class="logo">宜兴定园</a>
+     <button class="nav-toggle" aria-label="菜单" aria-expanded="false">
+       <span class="bar"></span>
+       <span class="bar"></span>
+       <span class="bar"></span>
+     </button>
+     <nav class="nav-menu">
+       <a href="index.html">首页</a>
+       <a href="about.html">关于</a>
+       <a href="gallery.html">相册</a>
+       <a href="products.html">产品</a>
+       <a href="contact.html">联系</a>
+     </nav>
+   </header>
+
+   配套 JS（放页面底部或你的 main.js 里）：
+
+   <script>
+     (function () {
+       var toggle = document.querySelector('.nav-toggle');
+       var menu = document.querySelector('.nav-menu');
+       if (toggle && menu) {
+         toggle.addEventListener('click', function () {
+           var open = menu.classList.toggle('open');
+           toggle.classList.toggle('active', open);
+           toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+         });
+         // 点菜单项后自动收起
+         menu.querySelectorAll('a').forEach(function (link) {
+           link.addEventListener('click', function () {
+             menu.classList.remove('open');
+             toggle.classList.remove('active');
+             toggle.setAttribute('aria-expanded', 'false');
+           });
+         });
+       }
+     })();
+   </script>
+   ============================================================ */
