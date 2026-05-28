@@ -4,7 +4,7 @@
   /* ── TRANSLATIONS ── */
   const translations = {
     zh: {
-      brand: "定渊国际", "brand-en": "Dingyuan International",
+      brand: "缪思渊牛", "brand-en": "Dingyuan International",
       "nav-home": "首页", "nav-about": "关于我们", "nav-products": "产品系列",
       "nav-gallery": "产品展示", "nav-why": "合作优势", "nav-contact": "联系我们",
       "hero-tag": "宜兴紫砂 · 匠心传承",
