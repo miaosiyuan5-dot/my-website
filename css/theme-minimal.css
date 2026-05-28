@@ -1,0 +1,227 @@
+/* ============================================================
+   极简留白主题  theme-minimal.css
+   ------------------------------------------------------------
+   风格参考：PO/ET 紫砂茶具站
+   核心：极细几何无衬线英文 + 思源黑体细字重中文
+        + 暖米白底 + 陶土红点缀 + 大量留白
+
+   字体（均来自 Google Fonts，免费可商用）：
+     - Questrial：几何无衬线，用于英文/数字标题，细而圆，禅意来源
+     - Mulish：人文无衬线，用于英文正文，易读
+     - Noto Sans SC：思源黑体，中文全字重，用 Light(300) 营造轻盈感
+
+   用法：
+     1. 把本文件放进 css 目录。
+     2. 在每个 HTML 的 <head> 里加入下面这段字体预连接 + 引入
+        （放在你原有样式表之前）：
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Questrial&family=Mulish:wght@300;400;600&family=Noto+Sans+SC:wght@300;400;500&display=swap" rel="stylesheet">
+
+     3. 再引入本文件（放在你原有 style.css 之后，确保覆盖）：
+        <link rel="stylesheet" href="css/theme-minimal.css">
+
+   提示：若国内访问 Google Fonts 慢，可把上面链接换成国内镜像，
+        例如把 fonts.googleapis.com 换成 fonts.font.im。
+   ============================================================ */
+
+/* ---------- 配色变量 ---------- */
+:root {
+  /* 主色：暖米白背景 */
+  --color-bg: #f5f1e8;
+  --color-bg-card: #efe9dc;      /* 卡片、区块的浅一层底色 */
+
+  /* 文字 */
+  --color-text: #2b2722;         /* 主文字：近黑的暖棕 */
+  --color-text-soft: #6b6357;    /* 次要文字：柔和棕灰 */
+  --color-text-faint: #a59c8c;   /* 浅提示文字、占位 */
+
+  /* 点缀色：陶土红（紫砂色） */
+  --color-accent: #a0522d;       /* 主强调：砖红 */
+  --color-accent-deep: #7c3f22;  /* 深一点，用于 hover */
+
+  /* 线条 / 分隔 */
+  --color-line: #ddd5c5;
+
+  /* 字体族 */
+  --font-display: 'Questrial', 'Noto Sans SC', sans-serif;          /* 大标题 */
+  --font-body: 'Mulish', 'Noto Sans SC', sans-serif;               /* 正文 */
+  --font-cn: 'Noto Sans SC', sans-serif;                           /* 纯中文场景 */
+
+  /* 字重 */
+  --weight-light: 300;
+  --weight-regular: 400;
+  --weight-medium: 500;
+
+  /* 间距尺度（留白核心，宁可大不要小） */
+  --space-xs: 8px;
+  --space-sm: 16px;
+  --space-md: 32px;
+  --space-lg: 64px;
+  --space-xl: 120px;
+
+  /* 圆角 */
+  --radius: 14px;
+  --radius-pill: 999px;
+
+  /* 内容最大宽度 + 阅读行宽 */
+  --max-width: 1100px;
+  --reading-width: 660px;
+}
+
+/* ---------- 基础 ---------- */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-weight: var(--weight-regular);
+  font-size: 17px;
+  line-height: 1.75;          /* 行距宽，呼吸感 */
+  letter-spacing: 0.01em;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* ---------- 标题：细、大、留白 ---------- */
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: var(--weight-light);
+  color: var(--color-text);
+  line-height: 1.15;
+  letter-spacing: 0.005em;
+  margin: 0 0 var(--space-sm);
+}
+
+h1 {
+  font-size: clamp(2.4rem, 6vw, 4.2rem);   /* 随屏幕自适应 */
+  margin-bottom: var(--space-md);
+}
+h2 {
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+}
+h3 {
+  font-size: clamp(1.3rem, 2.5vw, 1.7rem);
+}
+
+/* 纯中文标题：用思源黑体 Light，更协调 */
+.title-cn {
+  font-family: var(--font-cn);
+  font-weight: var(--weight-light);
+  letter-spacing: 0.08em;     /* 中文加点字距更有禅意 */
+}
+
+/* 小标号 / 栏目签（仿 "YIXING STUDIO — EST. 1983"） */
+.eyebrow {
+  font-family: var(--font-body);
+  font-weight: var(--weight-semibold, 600);
+  font-size: 0.78rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+/* ---------- 正文 ---------- */
+p {
+  margin: 0 0 var(--space-sm);
+  color: var(--color-text-soft);
+  max-width: var(--reading-width);
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+a:hover {
+  color: var(--color-accent-deep);
+}
+
+/* 强调词（仿标题里那个红色的 "raised"） */
+.accent {
+  color: var(--color-accent);
+}
+
+/* ---------- 布局容器 ---------- */
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+}
+
+section {
+  padding: var(--space-xl) 0;   /* 区块之间大量留白 */
+}
+
+/* ---------- 按钮：胶囊形，黑白对比（仿 The teapots / tea pets） ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  min-height: 52px;
+  padding: 0 28px;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  border: 1.5px solid var(--color-text);
+}
+.btn-primary {
+  background: var(--color-text);
+  color: var(--color-bg);
+}
+.btn-primary:hover {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  color: #fff;
+}
+.btn-outline {
+  background: transparent;
+  color: var(--color-text);
+}
+.btn-outline:hover {
+  background: var(--color-text);
+  color: var(--color-bg);
+}
+
+/* ---------- 卡片 ---------- */
+.card {
+  background: var(--color-bg-card);
+  border-radius: var(--radius);
+  padding: var(--space-md);
+}
+
+/* ---------- 分隔线 ---------- */
+hr,
+.divider {
+  border: 0;
+  border-top: 1px solid var(--color-line);
+  margin: var(--space-lg) 0;
+}
+
+/* ---------- 图片 ---------- */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ---------- 选中文字的颜色也走主题 ---------- */
+::selection {
+  background: var(--color-accent);
+  color: #fff;
+}
