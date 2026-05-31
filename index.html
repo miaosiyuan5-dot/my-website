@@ -1,255 +1,443 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="宜兴紫砂茶具出口，大师级、收藏级、日用级全系列供应，OEM定制，全球外贸" />
-  <meta name="keywords" content="紫砂茶具,宜兴紫砂,紫砂壶出口,Yixing teapot,zisha export" />
-  <meta name="robots" content="index, follow" />
+  <title>Yixing Zisha Teapots — Handcrafted Artisan Teapots from China | Dingyuan</title>
+  <meta name="description" content="Discover authentic Yixing Zisha teapots handcrafted by master artisans in Yixing, China. 100% natural Zisha clay, unique engraving, shipped worldwide. Shop our curated collection." />
+  <meta name="keywords" content="Yixing teapot, Zisha teapot, purple clay teapot, Chinese teapot, handmade teapot, gongfu tea" />
   <link rel="canonical" href="https://www.yixingdingyuan.cn/" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="Yixing Zisha Teapots — Handcrafted Artisan Teapots" />
+  <meta property="og:description" content="Authentic Yixing Zisha teapots by master artisans. 100% natural clay, unique engraving, worldwide shipping." />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="宜興定源 | 宜兴紫砂茶具出口" />
-  <meta property="og:description" content="大师级、收藏级、日用级紫砂全系列，全球供货与外贸服务" />
-  <meta property="og:image" content="https://www.yixingdingyuan.cn/assets/images/og.jpg" />
-  <meta property="og:url" content="https://www.yixingdingyuan.cn/" />
-  <title>宜興定源 | 宜兴紫砂茶具出口 — Dingyuan International</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preload" as="image" href="assets/images/hero-828.webp" type="image/webp" media="(max-width: 828px)" fetchpriority="high" />
-  <link rel="preload" as="image" href="assets/images/hero-1920.webp" type="image/webp" media="(min-width: 829px)" fetchpriority="high" />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;500&family=Noto+Sans+SC:wght@300;400&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
+  <!-- Scroll progress bar -->
 </head>
-<body class="page-home">
+<body>
 
-  <header class="header-v2" id="header">
-    <nav class="nav container">
-      <a href="index.html" class="logo-v2">
-        <strong>宜興定源</strong>
-        <small>Dingyuan International</small>
+  <!-- Scroll progress bar -->
+  <div class="scroll-progress" aria-hidden="true"></div>
+
+  <!-- ============================================================
+       Navigation
+       ============================================================ -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container">
+      <!-- Logo -->
+      <a href="index.html" class="nav-logo" aria-label="Dingyuan Yixing Teapots — Home">
+        <span class="logo-en">Dingyuan</span>
+        <span class="logo-zh">定渊国际</span>
       </a>
-      <ul class="nav-links-v2" id="navLinks">
-        <li><a href="index.html" class="active">首页</a></li>
-        <li><a href="about.html">关于</a></li>
-        <li><a href="products.html">产品</a></li>
-        <li><a href="gallery.html">展示</a></li>
-        <li><a href="contact.html">联系</a></li>
+
+      <!-- Desktop links -->
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="collections.html">Collections</a></li>
+        <li><a href="craftsmanship.html">Craftsmanship</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
-      <div class="nav-right">
-        <button class="lang-btn-v2" id="langBtn" type="button">EN</button>
-        <button class="nav-toggle" id="navToggle" aria-label="菜单">
-          <span></span><span></span>
+
+      <!-- Icons -->
+      <div class="nav-icons">
+        <button class="nav-icon-btn" aria-label="Search">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+        <button class="nav-icon-btn" aria-label="Shopping cart (0 items)">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+          <span class="cart-count" aria-label="0 items in cart">0</span>
+        </button>
+        <!-- Hamburger (mobile) -->
+        <button class="hamburger" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="mobile-menu">
+          <span></span><span></span><span></span>
         </button>
       </div>
-    </nav>
-  </header>
+    </div>
+  </nav>
 
-  <main>
+  <!-- Mobile fullscreen menu -->
+  <div class="mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+    <a href="index.html">Home</a>
+    <a href="collections.html">Collections</a>
+    <a href="craftsmanship.html">Craftsmanship</a>
+    <a href="about.html">About Us</a>
+    <a href="contact.html">Contact</a>
+  </div>
 
-    <!-- ① HERO -->
-    <section class="hero-v2" id="hero">
-      <div class="hero-v2-bg">
-        <picture>
-          <source media="(max-width: 828px)" srcset="assets/images/hero-828.webp" type="image/webp" />
-          <source media="(max-width: 828px)" srcset="assets/images/hero-828.jpg" type="image/jpeg" />
-          <source srcset="assets/images/hero-1920.webp" type="image/webp" />
-          <img src="assets/images/hero-1920.jpg" alt="" width="1920" height="1080" fetchpriority="high" decoding="async" />
-        </picture>
-        <div class="hero-v2-overlay"></div>
-      </div>
-      <div class="hero-v2-content">
-        <p class="hero-v2-eyebrow">Yixing · Zisha · Heritage</p>
-        <h1 class="hero-v2-title">宜兴紫砂</h1>
-        <p class="hero-v2-sub">DINGYUAN INTERNATIONAL</p>
-        <div class="hero-v2-line"></div>
-        <a href="gallery.html" class="hero-v2-cta">探索产品 &nbsp;/&nbsp; View Collection</a>
-      </div>
-    </section>
-
-    <!-- 静态品牌标语（替代跑马灯） -->
-    <div class="brand-tagline">
-      Handcrafted in Yixing since the Song Dynasty
+  <!-- ============================================================
+       Hero — Full screen
+       ============================================================ -->
+  <section class="hero" aria-label="Hero banner">
+    <!-- Background: craftsman's hands engraving a teapot -->
+    <div class="hero-bg">
+      <img
+        src="https://placehold.co/1920x1080/3A3028/C8B68E?text=Craftsman+Hands+Engraving"
+        alt="Master artisan carefully engraving traditional motifs onto a Yixing Zisha teapot — a centuries-old craft from Yixing, China"
+        width="1920" height="1080"
+        fetchpriority="high"
+      />
     </div>
 
-    <!-- ② 品牌故事 -->
-    <section class="brand-story">
-      <div class="story-image">
-        <img src="assets/images/product-5-800.jpg" alt="宜兴紫砂工坊" loading="lazy" decoding="async" />
-      </div>
-      <div class="story-text">
-        <p class="en-label reveal">Our Story</p>
-        <h2 class="reveal" style="transition-delay:0.1s">一壶，一世界</h2>
-        <p class="reveal" style="transition-delay:0.2s">
-          宜兴，太湖之滨，紫砂矿脉绵延千年。<br>
-          这里的泥，烧制成壶后会"呼吸"——<br>
-          吸纳茶香，日久包浆，与主人共同老去。
-        </p>
-        <p class="reveal" style="transition-delay:0.3s">
-          我们扎根产区，直接与匠人合作，<br>
-          为全球的茶人寻找值得传承的器物。
-        </p>
-      </div>
-    </section>
-
-    <!-- ③ 产品展示（非对称大图布局） -->
-    <section class="section-v2 gallery-v2">
-      <div class="container">
-        <div class="section-header-v2 reveal">
-          <p class="en-label">Our Collection</p>
-          <h2>精选实拍</h2>
+    <div class="container">
+      <div class="hero-content">
+        <span class="hero-eyebrow">Yixing · China · Since 960 AD</span>
+        <h1>Where <em>Clay</em><br>Becomes Art</h1>
+        <span class="hero-zh">宜兴紫砂 · 百年传承</span>
+        <p>Each teapot is hand-thrown and engraved by a single master artisan — a living testament to over a thousand years of Zisha craftsmanship from Yixing, Jiangsu.</p>
+        <div class="hero-actions">
+          <a href="collections.html" class="btn-primary">Explore Collections</a>
+          <a href="craftsmanship.html" class="btn-outline-light">Our Craft</a>
         </div>
+      </div>
+    </div>
 
-        <div class="gallery-v2-top">
-          <figure class="gallery-v2-main reveal" style="transition-delay:0s">
-            <picture>
-              <source srcset="assets/images/product-1-1200.webp 1200w, assets/images/product-1-800.webp 800w" type="image/webp" />
-              <img src="assets/images/product-1-800.jpg" alt="竹纹紫砂壶" loading="lazy" decoding="async" />
-            </picture>
-            <figcaption class="fig-caption">水墨竹纹 · 大师手作</figcaption>
-          </figure>
-          <div class="gallery-v2-side">
-            <figure class="gallery-v2-side-item reveal" style="transition-delay:0.15s">
-              <picture>
-                <source srcset="assets/images/product-2-800.webp 800w" type="image/webp" />
-                <img src="assets/images/product-2-480.jpg" alt="紫砂茶壶" loading="lazy" decoding="async" />
-              </picture>
-              <figcaption class="fig-caption">经典器型</figcaption>
-            </figure>
-            <figure class="gallery-v2-side-item reveal" style="transition-delay:0.3s">
-              <picture>
-                <source srcset="assets/images/product-3-800.webp 800w" type="image/webp" />
-                <img src="assets/images/product-3-480.jpg" alt="紫砂茶具" loading="lazy" decoding="async" />
-              </picture>
-              <figcaption class="fig-caption">匠心细节</figcaption>
-            </figure>
+    <!-- Scroll indicator -->
+    <div class="hero-scroll" aria-hidden="true">
+      <span>Scroll</span>
+      <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       Features — 3 Core USPs
+       ============================================================ -->
+  <section class="features" aria-labelledby="features-heading">
+    <div class="container">
+      <div class="section-title">
+        <span class="subtitle">Why Choose Us</span>
+        <h2 id="features-heading">The Marks of Authentic Zisha</h2>
+        <span class="zh-title">正宗紫砂三大特征</span>
+        <div class="title-divider"></div>
+      </div>
+
+      <div class="features-grid">
+        <!-- Card 1: 100% Handmade -->
+        <article class="feature-card reveal reveal-delay-1">
+          <div class="feature-icon" aria-hidden="true">
+            <!-- Hand icon -->
+            <svg viewBox="0 0 24 24"><path d="M18 11V6a2 2 0 00-2-2 2 2 0 00-2 2"/><path d="M14 10V4a2 2 0 00-2-2 2 2 0 00-2 2v2"/><path d="M10 10.5V6a2 2 0 00-2-2 2 2 0 00-2 2v8"/><path d="M18 8a2 2 0 114 0v6a8 8 0 01-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 012.83-2.82L7 15"/></svg>
           </div>
-        </div>
+          <h3>100% Handmade</h3>
+          <div class="zh">全手工制作</div>
+          <p>Every teapot is shaped entirely by hand — no molds, no machines. Each piece carries the unique imprint of the artisan who made it.</p>
+        </article>
 
-        <div class="gallery-v2-bottom">
-          <figure class="gallery-v2-bottom-item reveal" style="transition-delay:0.1s">
-            <picture>
-              <source srcset="assets/images/product-5-1200.webp 1200w" type="image/webp" />
-              <img src="assets/images/product-5-800.jpg" alt="紫砂工艺" loading="lazy" decoding="async" />
-            </picture>
-            <figcaption class="fig-caption">传统工艺</figcaption>
-          </figure>
-          <figure class="gallery-v2-bottom-item reveal" style="transition-delay:0.25s">
-            <picture>
-              <source srcset="assets/images/product-4-800.webp 800w" type="image/webp" />
-              <img src="assets/images/product-4-480.jpg" alt="茶器展示" loading="lazy" decoding="async" />
-            </picture>
-            <figcaption class="fig-caption">产区实拍</figcaption>
-          </figure>
-        </div>
-
-        <div class="section-cta reveal" style="transition-delay:0.3s">
-          <a href="gallery.html" class="text-link">查看全部 / View All</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ④ 关于紫砂 -->
-    <section class="about-zisha section-v2">
-      <div class="container">
-        <div class="zisha-grid">
-          <div class="zisha-text">
-            <p class="en-label reveal">The Clay</p>
-            <h2 class="reveal" style="transition-delay:0.1s">为什么是紫砂</h2>
-            <p class="reveal" style="transition-delay:0.2s">紫砂矿仅产于宜兴丁蜀镇，分紫泥、朱泥、段泥三大类。其双重气孔结构赋予茶壶独特的透气性，既不夺茶香，又能保温。</p>
-            <p class="reveal" style="transition-delay:0.3s">一把好壶，需经七十二道工序，全程手工成型，无法机器复制。</p>
+        <!-- Card 2: Natural Zisha Clay -->
+        <article class="feature-card reveal reveal-delay-2">
+          <div class="feature-icon" aria-hidden="true">
+            <!-- Layers/clay icon -->
+            <svg viewBox="0 0 24 24"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
           </div>
-          <div class="zisha-keywords">
-            <div class="keyword-item reveal" style="transition-delay:0.1s">
-              <span class="kw-cn">紫泥</span>
-              <span class="kw-en">Purple Clay</span>
+          <h3>Natural Zisha Clay</h3>
+          <div class="zh">原矿紫砂泥</div>
+          <p>Sourced directly from the Huanglongshan mines in Yixing — the world's only deposit of authentic Zisha clay, rich in mineral microporosity.</p>
+        </article>
+
+        <!-- Card 3: Unique Engraving -->
+        <article class="feature-card reveal reveal-delay-3">
+          <div class="feature-icon" aria-hidden="true">
+            <!-- Pen/engraving icon -->
+            <svg viewBox="0 0 24 24"><path d="M17 3a2.828 2.828 0 114 4L7.5 20.5 2 22l1.5-5.5L17 3z"/></svg>
+          </div>
+          <h3>Unique Engraving</h3>
+          <div class="zh">独特刻绘艺术</div>
+          <p>Each teapot is adorned with calligraphy, poetry, or landscape motifs carved by hand — making every piece a one-of-a-kind work of art.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       Featured Products — 4 cards
+       ============================================================ -->
+  <section class="products-section" aria-labelledby="featured-heading">
+    <div class="container">
+      <div class="section-title">
+        <span class="subtitle">Featured Collection</span>
+        <h2 id="featured-heading">Artisan Picks</h2>
+        <span class="zh-title">匠心精选</span>
+        <p>A curated selection of our most beloved teapots, each a marriage of form and function.</p>
+        <div class="title-divider"></div>
+      </div>
+
+      <div class="products-grid">
+        <!-- Product 1 -->
+        <article class="product-card reveal reveal-delay-1">
+          <a href="product.html" class="product-card-image" aria-label="View Classic Round Teapot">
+            <span class="product-card-badge">Bestseller</span>
+            <img
+              src="https://placehold.co/480x480/E4DECE/3A3028?text=Classic+Round"
+              alt="Classic Round Zisha Teapot — Purple Clay, 200ml, handmade in Yixing"
+              loading="lazy"
+              width="480" height="480"
+            />
+            <div class="product-card-overlay">
+              <button class="quick-view-btn">Quick View</button>
             </div>
-            <div class="keyword-item reveal" style="transition-delay:0.2s">
-              <span class="kw-cn">朱泥</span>
-              <span class="kw-en">Red Clay</span>
+          </a>
+          <div class="product-card-info">
+            <h3>Classic Round Teapot</h3>
+            <div class="zh-name">经典圆壶 · Purple Clay</div>
+            <div class="price">$188 <span class="price-original">$240</span></div>
+          </div>
+        </article>
+
+        <!-- Product 2 -->
+        <article class="product-card reveal reveal-delay-2">
+          <a href="product.html" class="product-card-image" aria-label="View Stone Scoop Teapot">
+            <img
+              src="https://placehold.co/480x480/D4C4A8/3A3028?text=Stone+Scoop"
+              alt="Stone Scoop Zisha Teapot — Beige Clay, 280ml, unique ladle-form shape"
+              loading="lazy"
+              width="480" height="480"
+            />
+            <div class="product-card-overlay">
+              <button class="quick-view-btn">Quick View</button>
             </div>
-            <div class="keyword-item reveal" style="transition-delay:0.3s">
-              <span class="kw-cn">段泥</span>
-              <span class="kw-en">Beige Clay</span>
+          </a>
+          <div class="product-card-info">
+            <h3>Stone Scoop Teapot</h3>
+            <div class="zh-name">石瓢壶 · Beige Clay</div>
+            <div class="price">$256</div>
+          </div>
+        </article>
+
+        <!-- Product 3 -->
+        <article class="product-card reveal reveal-delay-3">
+          <a href="product.html" class="product-card-image" aria-label="View Dragon Egg Teapot">
+            <span class="product-card-badge">New</span>
+            <img
+              src="https://placehold.co/480x480/C4A882/3A3028?text=Dragon+Egg"
+              alt="Dragon Egg Zisha Teapot — Red Clay, 160ml, oval form with engraved dragon"
+              loading="lazy"
+              width="480" height="480"
+            />
+            <div class="product-card-overlay">
+              <button class="quick-view-btn">Quick View</button>
+            </div>
+          </a>
+          <div class="product-card-info">
+            <h3>Dragon Egg Teapot</h3>
+            <div class="zh-name">龙蛋壶 · Red Clay</div>
+            <div class="price">$312</div>
+          </div>
+        </article>
+
+        <!-- Product 4 -->
+        <article class="product-card reveal reveal-delay-4">
+          <a href="product.html" class="product-card-image" aria-label="View Antique Round Teapot">
+            <img
+              src="https://placehold.co/480x480/B8A878/3A3028?text=Antique+Round"
+              alt="Antique Round Zisha Teapot — Purple Clay, 350ml, traditional Song Dynasty form"
+              loading="lazy"
+              width="480" height="480"
+            />
+            <div class="product-card-overlay">
+              <button class="quick-view-btn">Quick View</button>
+            </div>
+          </a>
+          <div class="product-card-info">
+            <h3>Antique Round Teapot</h3>
+            <div class="zh-name">仿古圆壶 · Purple Clay</div>
+            <div class="price">$398</div>
+          </div>
+        </article>
+      </div>
+
+      <div style="text-align:center; margin-top: 3rem;">
+        <a href="collections.html" class="btn-outline">View All Collections</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       Process — 4-step craft overview
+       ============================================================ -->
+  <section class="process-section" aria-labelledby="process-heading">
+    <div class="container">
+      <div class="section-title">
+        <span class="subtitle">The Making</span>
+        <h2 id="process-heading">Four Pillars of Zisha Craft</h2>
+        <span class="zh-title">紫砂工艺四步骤</span>
+        <p>From raw mountain ore to a vessel that transforms every pour — a journey measured in days, guided by generations of knowledge.</p>
+        <div class="title-divider"></div>
+      </div>
+
+      <div class="process-grid">
+        <!-- Step 1 -->
+        <article class="process-step reveal reveal-delay-1">
+          <span class="step-number">01</span>
+          <h3>Mining Clay</h3>
+          <span class="zh">选矿取泥</span>
+          <p>Only ore from the Huanglongshan deposit in Yixing passes our strict selection — rich in iron, silica, and alumina for optimal porosity.</p>
+        </article>
+
+        <!-- Step 2 -->
+        <article class="process-step reveal reveal-delay-2">
+          <span class="step-number">02</span>
+          <h3>Hand Throwing</h3>
+          <span class="zh">打泥片围身</span>
+          <p>The artisan beats the clay into even slabs by hand, then coaxes them into form without a wheel — an ancient technique unchanged for centuries.</p>
+        </article>
+
+        <!-- Step 3 -->
+        <article class="process-step reveal reveal-delay-3">
+          <span class="step-number">03</span>
+          <h3>Engraving</h3>
+          <span class="zh">刻绘题字</span>
+          <p>While the clay is leather-hard, the artisan carves calligraphy or landscapes with bamboo tools — each stroke deliberate, each line irreversible.</p>
+        </article>
+
+        <!-- Step 4 -->
+        <article class="process-step reveal reveal-delay-4">
+          <span class="step-number">04</span>
+          <h3>Firing</h3>
+          <span class="zh">龙窑烧制</span>
+          <p>Fired at 1180°C in a traditional dragon kiln, the clay vitrifies into the dense, slightly textured surface that gives Zisha its legendary tea-aging properties.</p>
+        </article>
+      </div>
+
+      <div style="text-align:center; margin-top: 3rem;">
+        <a href="craftsmanship.html" class="btn-outline-light">Full Craftsmanship Story</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       Brand Story
+       ============================================================ -->
+  <section class="brand-story" aria-labelledby="story-heading">
+    <div class="container">
+      <div class="brand-story-inner">
+        <!-- Image -->
+        <div class="brand-story-image reveal">
+          <img
+            src="https://placehold.co/640x800/5A725A/F8F5F0?text=Artisan+Workshop"
+            alt="Interior of a traditional Yixing Zisha workshop — an artisan shapes clay on a wooden workbench surrounded by finished teapots"
+            loading="lazy"
+            width="640" height="800"
+          />
+        </div>
+
+        <!-- Text -->
+        <div class="brand-story-text reveal">
+          <span class="subtitle">Our Story</span>
+          <h2 id="story-heading">A Living Tradition,<br>Brought to the World</h2>
+          <span class="zh-title">百年传承 · 走向世界</span>
+
+          <p>Dingyuan was founded with one mission: to bring the world's finest Yixing Zisha teapots to tea lovers everywhere. We work directly with master artisans who have inherited their craft through family lineages stretching back multiple generations.</p>
+
+          <p>Every teapot we offer is certified authentic — made from natural, unblended Zisha ore, shaped entirely by hand, and engraved with original artwork. We accept no compromises, because neither does the clay.</p>
+
+          <div class="brand-stats">
+            <div class="stat">
+              <h4>30+</h4>
+              <p>Master Artisans</p>
+            </div>
+            <div class="stat">
+              <h4>1000+</h4>
+              <p>Years of Heritage</p>
+            </div>
+            <div class="stat">
+              <h4>60+</h4>
+              <p>Countries Shipped</p>
             </div>
           </div>
+
+          <a href="about.html" class="btn-primary">Learn More About Us</a>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- ⑤ 合作信息（三列卡片） -->
-    <section class="coop-section section-v2">
-      <div class="container">
-        <div class="section-header-v2 center reveal">
-          <p class="en-label">Why Us</p>
-          <h2>合作优势</h2>
+  <!-- ============================================================
+       Footer
+       ============================================================ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-inner">
+        <!-- Brand col -->
+        <div class="footer-brand">
+          <span class="logo-en">Dingyuan</span>
+          <span class="logo-zh">定渊国际</span>
+          <p>Authentic Yixing Zisha teapots — handcrafted by master artisans, shipped worldwide with care and cultural pride.</p>
+          <div class="footer-social">
+            <!-- Instagram -->
+            <a href="#" aria-label="Follow us on Instagram">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <!-- Facebook -->
+            <a href="#" aria-label="Follow us on Facebook">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+            </a>
+            <!-- Pinterest -->
+            <a href="#" aria-label="Follow us on Pinterest">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.236 2.636 7.855 6.356 9.312-.088-.791-.167-2.005.035-2.868.181-.78 1.172-4.97 1.172-4.97s-.299-.598-.299-1.482c0-1.388.806-2.428 1.808-2.428.852 0 1.265.64 1.265 1.408 0 .858-.546 2.14-.828 3.33-.236.995.499 1.806 1.476 1.806 1.772 0 3.138-1.868 3.138-4.564 0-2.387-1.716-4.056-4.165-4.056-2.836 0-4.5 2.127-4.5 4.326 0 .856.33 1.775.741 2.277a.3.3 0 01.069.284c-.075.313-.243.995-.277 1.134-.044.183-.146.222-.337.134-1.249-.581-2.03-2.407-2.03-3.874 0-3.154 2.292-6.052 6.608-6.052 3.469 0 6.165 2.473 6.165 5.776 0 3.447-2.173 6.22-5.19 6.22-1.013 0-1.966-.527-2.292-1.148l-.623 2.378c-.226.869-.835 1.958-1.244 2.621.937.29 1.931.446 2.962.446 5.523 0 10-4.477 10-10S17.523 2 12 2z"/></svg>
+            </a>
+            <!-- YouTube -->
+            <a href="#" aria-label="Watch us on YouTube">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 00-1.95 1.96A29 29 0 001 12a29 29 0 00.46 5.58A2.78 2.78 0 003.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 001.95-1.95A29 29 0 0023 12a29 29 0 00-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg>
+            </a>
+          </div>
         </div>
-        <div class="coop-grid">
-          <div class="coop-card reveal" style="transition-delay:0.05s">
-            <p class="coop-num">01</p>
-            <h3>产区直供</h3>
-            <p>扎根宜兴丁蜀产区，直接与匠人合作，省去中间环节，保证品质与价格透明。</p>
+
+        <!-- Quick links -->
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="collections.html">Collections</a></li>
+            <li><a href="craftsmanship.html">Craftsmanship</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Clay types -->
+        <div class="footer-col">
+          <h4>Collections</h4>
+          <ul>
+            <li><a href="collections.html">Purple Clay (Zini)</a></li>
+            <li><a href="collections.html">Red Clay (Hongni)</a></li>
+            <li><a href="collections.html">Beige Clay (Duanni)</a></li>
+            <li><a href="collections.html">Small Capacity (&lt;200ml)</a></li>
+            <li><a href="collections.html">Large Capacity (350ml+)</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <span>info@yixingdingyuan.cn</span>
           </div>
-          <div class="coop-card reveal" style="transition-delay:0.15s">
-            <p class="coop-num">02</p>
-            <h3>OEM 定制</h3>
-            <p>支持品牌定制开发，从器型设计到泥料选择，全程配合，打造专属系列。</p>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .99h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 8.91A16 16 0 0015.09 17.9l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+            <span>WhatsApp: +86 138 0000 0000</span>
           </div>
-          <div class="coop-card reveal" style="transition-delay:0.25s">
-            <p class="coop-num">03</p>
-            <h3>全球发货</h3>
-            <p>熟悉国际物流与报关流程，服务覆盖欧美、东南亚、日韩等主要市场。</p>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>Yixing, Jiangsu, China</span>
           </div>
         </div>
       </div>
-    </section>
 
-    <!-- ⑥ 联系 CTA -->
-    <section class="cta-section">
-      <div class="cta-inner container">
-        <p class="en-label light reveal">Get in Touch</p>
-        <h2 class="reveal" style="transition-delay:0.1s">准备好开始合作了吗？</h2>
-        <p class="reveal" style="transition-delay:0.2s">24 小时内回复，为您提供专属采购方案。</p>
-        <a href="contact.html" class="text-link light reveal" style="transition-delay:0.3s">立即联系 / Contact Us</a>
+      <!-- Bottom bar -->
+      <div class="footer-bottom">
+        <p>&copy; 2025 Dingyuan International (定渊国际). All rights reserved.</p>
+        <div class="payment-icons" aria-label="Accepted payment methods">
+          <span class="payment-icon">VISA</span>
+          <span class="payment-icon">MC</span>
+          <span class="payment-icon">PayPal</span>
+          <span class="payment-icon">T/T</span>
+          <span class="payment-icon">Alipay</span>
+        </div>
       </div>
-    </section>
-
-  </main>
-
-  <!-- ⑦ Footer -->
-  <footer class="footer">
-    <div class="container footer-inner">
-      <div class="footer-brand">
-        <span>宜興定源</span>
-      </div>
-      <nav class="footer-nav">
-        <a href="about.html">关于我们</a>
-        <a href="products.html">产品系列</a>
-        <a href="gallery.html">产品展示</a>
-        <a href="why.html">合作优势</a>
-        <a href="contact.html">联系我们</a>
-      </nav>
-      <p class="footer-copy">© 2026 宜興定源 Dingyuan International. 保留所有权利。</p>
     </div>
   </footer>
 
-  <script src="js/main.js" defer></script>
-  <script>
-    // Reveal on scroll
-    const revealObs = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) entry.target.classList.add('visible');
-      });
-    }, { threshold: 0.15 });
-    document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
-
-    // Mobile nav toggle
-    const navToggle = document.getElementById('navToggle');
-    const navLinks  = document.getElementById('navLinks');
-    if (navToggle && navLinks) {
-      navToggle.addEventListener('click', () => {
-        navLinks.classList.toggle('open');
-      });
-    }
-  </script>
+  <script src="js/main.js"></script>
 </body>
 </html>

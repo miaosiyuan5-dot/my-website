@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Collections — Yixing Zisha Teapots | Dingyuan</title>
+  <meta name="description" content="Browse our full collection of authentic Yixing Zisha teapots — Purple Clay, Red Clay, and Beige Clay. Filter by material and capacity. Worldwide shipping." />
+  <meta name="keywords" content="Yixing teapot collection, Zisha purple clay, Hongni red clay, Duanni beige clay, buy teapot" />
+  <link rel="canonical" href="https://www.yixingdingyuan.cn/collections.html" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="no-hero">
+
+  <!-- Scroll progress bar -->
+  <div class="scroll-progress" aria-hidden="true"></div>
+
+  <!-- ============================================================
+       Navigation
+       ============================================================ -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container">
+      <a href="index.html" class="nav-logo" aria-label="Dingyuan — Home">
+        <span class="logo-en">Dingyuan</span>
+        <span class="logo-zh">定渊国际</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="collections.html" class="active">Collections</a></li>
+        <li><a href="craftsmanship.html">Craftsmanship</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-icons">
+        <button class="nav-icon-btn" aria-label="Search">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+        <button class="nav-icon-btn" aria-label="Shopping cart">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+          <span class="cart-count">0</span>
+        </button>
+        <button class="hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+    <a href="index.html">Home</a>
+    <a href="collections.html">Collections</a>
+    <a href="craftsmanship.html">Craftsmanship</a>
+    <a href="about.html">About Us</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <!-- ============================================================
+       Page Header
+       ============================================================ -->
+  <header class="page-header" role="banner">
+    <div class="container">
+      <h1>Our Collections</h1>
+      <span class="zh">紫砂壶精选</span>
+      <p>Thirty masterworks from our atelier — each one a unique expression of the Zisha tradition.</p>
+    </div>
+  </header>
+
+  <!-- ============================================================
+       Filter Bar (sticky)
+       ============================================================ -->
+  <div class="filter-bar" role="search" aria-label="Filter teapots">
+    <div class="container">
+      <!-- Clay filter -->
+      <div class="filter-group">
+        <label>Clay</label>
+        <div class="filter-pills" role="group" aria-label="Filter by clay type">
+          <button class="filter-pill active" data-filter-clay="all">All</button>
+          <button class="filter-pill" data-filter-clay="purple">Purple Clay</button>
+          <button class="filter-pill" data-filter-clay="red">Red Clay</button>
+          <button class="filter-pill" data-filter-clay="beige">Beige Clay</button>
+        </div>
+      </div>
+
+      <!-- Capacity filter -->
+      <div class="filter-group">
+        <label>Capacity</label>
+        <div class="filter-pills" role="group" aria-label="Filter by capacity">
+          <button class="filter-pill active" data-filter-cap="all">All</button>
+          <button class="filter-pill" data-filter-cap="small">100ml–200ml</button>
+          <button class="filter-pill" data-filter-cap="medium">200ml–350ml</button>
+          <button class="filter-pill" data-filter-cap="large">350ml+</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       Products Grid (infinite scroll)
+       ============================================================ -->
+  <section class="products-section" style="padding: 3rem 0;" aria-label="Product grid">
+    <div class="container">
+      <!-- Grid — JS will populate this -->
+      <div class="products-grid grid-3" id="collections-grid" aria-live="polite" aria-label="Teapot products"></div>
+
+      <!-- Infinite scroll sentinel + spinner -->
+      <div class="load-more-area" id="load-more-area" style="display:none;" aria-live="polite" aria-label="Loading more products">
+        <div class="loading-spinner">
+          <div class="spinner-ring" aria-hidden="true"></div>
+          <span>Loading more teapots…</span>
+        </div>
+      </div>
+
+      <!-- Invisible sentinel element that triggers loading when scrolled into view -->
+      <div id="scroll-sentinel" style="height:1px; margin-top: 1rem;" aria-hidden="true"></div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       Footer
+       ============================================================ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <span class="logo-en">Dingyuan</span>
+          <span class="logo-zh">定渊国际</span>
+          <p>Authentic Yixing Zisha teapots — handcrafted by master artisans, shipped worldwide.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+            <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+            <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 00-1.95 1.96A29 29 0 001 12a29 29 0 00.46 5.58A2.78 2.78 0 003.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 001.95-1.95A29 29 0 0023 12a29 29 0 00-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="collections.html">Collections</a></li>
+            <li><a href="craftsmanship.html">Craftsmanship</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Collections</h4>
+          <ul>
+            <li><a href="collections.html">Purple Clay (Zini)</a></li>
+            <li><a href="collections.html">Red Clay (Hongni)</a></li>
+            <li><a href="collections.html">Beige Clay (Duanni)</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <span>info@yixingdingyuan.cn</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>Yixing, Jiangsu, China</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Dingyuan International. All rights reserved.</p>
+        <div class="payment-icons">
+          <span class="payment-icon">VISA</span>
+          <span class="payment-icon">MC</span>
+          <span class="payment-icon">PayPal</span>
+          <span class="payment-icon">T/T</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

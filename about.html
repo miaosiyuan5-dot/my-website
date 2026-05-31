@@ -1,192 +1,264 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="关于定渊国际 — 扎根宜兴紫砂产区，深耕茶具外贸多年，整合大师手作与日用精品三大产品线" />
+  <title>About Us — Dingyuan Yixing Zisha Teapots</title>
+  <meta name="description" content="Learn about Dingyuan's mission, the 1000-year history of Yixing Zisha pottery, and the master artisans behind every teapot we offer. Authenticity guaranteed." />
+  <meta name="keywords" content="Yixing Zisha history, Dingyuan teapots, master artisans, purple clay tradition, Chinese pottery heritage" />
   <link rel="canonical" href="https://www.yixingdingyuan.cn/about.html" />
-  <title>关于我们 | 定渊国际 — 宜兴紫砂茶具</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Lato:wght@300;400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
-<body class="inner-page page-about">
+<body class="no-hero">
 
-  <div class="cursor" id="cursor"></div>
-  <div class="cursor-follower" id="cursorFollower"></div>
+  <div class="scroll-progress" aria-hidden="true"></div>
 
-  <header class="header scrolled" id="header">
-    <nav class="nav container">
-      <a href="index.html" class="logo">
-        <span class="logo-mark"><span class="logo-mark-inner">定</span></span>
-        <span class="logo-text">
-          <strong data-i18n="brand">定渊国际</strong>
-          <small data-i18n="brand-en">Dingyuan International</small>
-        </span>
+  <!-- Navigation -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container">
+      <a href="index.html" class="nav-logo" aria-label="Dingyuan — Home">
+        <span class="logo-en">Dingyuan</span>
+        <span class="logo-zh">定渊国际</span>
       </a>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="index.html" data-i18n="nav-home">首页</a></li>
-        <li><a href="about.html" data-i18n="nav-about">关于我们</a></li>
-        <li><a href="products.html" data-i18n="nav-products">产品系列</a></li>
-        <li><a href="gallery.html" data-i18n="nav-gallery">产品展示</a></li>
-        <li><a href="why.html" data-i18n="nav-why">合作优势</a></li>
-        <li><a href="contact.html" data-i18n="nav-contact">联系我们</a></li>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="collections.html">Collections</a></li>
+        <li><a href="craftsmanship.html">Craftsmanship</a></li>
+        <li><a href="about.html" class="active">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
-      <div class="nav-right">
-        <button class="lang-btn" id="langBtn" type="button">EN</button>
-        <button class="nav-toggle" id="navToggle" aria-label="菜单"><span></span><span></span></button>
+      <div class="nav-icons">
+        <button class="nav-icon-btn" aria-label="Search">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+        <button class="nav-icon-btn" aria-label="Cart">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+          <span class="cart-count">0</span>
+        </button>
+        <button class="hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
       </div>
-    </nav>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+    <a href="index.html">Home</a>
+    <a href="collections.html">Collections</a>
+    <a href="craftsmanship.html">Craftsmanship</a>
+    <a href="about.html">About Us</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <!-- Page Header -->
+  <header class="page-header">
+    <div class="container">
+      <h1>About Dingyuan</h1>
+      <span class="zh">关于定渊国际</span>
+      <p>A bridge between Yixing's ancient clay tradition and tea lovers around the world.</p>
+    </div>
   </header>
 
-  <main>
-    <!-- PAGE HERO -->
-    <div class="page-hero">
-      <div class="page-hero-bg">
-        <picture>
-          <source srcset="assets/images/product-1-1200.webp" type="image/webp" />
-          <img src="assets/images/product-1-800.jpg" alt="" loading="eager" decoding="async" />
-        </picture>
-      </div>
-      <div class="container page-hero-content">
-        <nav class="breadcrumb">
-          <a href="index.html">首页</a>
-          <span class="breadcrumb-sep">›</span>
-          <span data-i18n="nav-about">关于我们</span>
-        </nav>
-        <h1 data-i18n="about-title">传承紫砂工艺，连接全球市场</h1>
-        <p data-i18n="about-p1">定渊国际扎根宜兴紫砂产区，深耕茶具外贸多年。我们整合大师手作、收藏珍品与日用精品三大产品线，为海外经销商、茶文化品牌及电商平台提供一站式采购方案。</p>
-      </div>
-      <div class="page-hero-glyph" aria-hidden="true">渊</div>
-    </div>
-
-    <!-- ABOUT SECTION -->
-    <section class="section about">
-      <div class="container about-grid">
-        <div class="about-visual reveal-left">
-          <div class="about-img-wrap">
-            <picture>
-              <source srcset="assets/images/product-1-800.webp 800w, assets/images/product-1-480.webp 480w" type="image/webp" sizes="(max-width:768px) 92vw, 520px" />
-              <img src="assets/images/product-1-800.jpg" alt="紫砂茶具" width="800" height="1000" loading="lazy" decoding="async" />
-            </picture>
-          </div>
-          <div class="about-badge" data-i18n="about-badge">源头直供</div>
-          <div class="about-img-accent"></div>
+  <!-- ============================================================
+       History of Yixing Zisha
+       ============================================================ -->
+  <section class="about-history" aria-labelledby="history-heading">
+    <div class="container">
+      <div class="about-history-inner">
+        <div class="about-history-image reveal">
+          <img
+            src="https://placehold.co/560x750/3A3028/C8B68E?text=Yixing+Historic+Workshop"
+            alt="Historic Yixing workshop with rows of handmade Zisha teapots drying on wooden shelves — an image of the living tradition dating back to the Song Dynasty"
+            loading="lazy" width="560" height="750"
+          />
         </div>
-        <div class="about-text reveal-right">
-          <span class="eyebrow" data-i18n="about-label">关于我们</span>
-          <h2 data-i18n="about-title">传承紫砂工艺，连接全球市场</h2>
-          <div class="divider-gold"></div>
-          <p data-i18n="about-p1">定渊国际扎根宜兴紫砂产区，深耕茶具外贸多年。我们整合大师手作、收藏珍品与日用精品三大产品线，为海外经销商、茶文化品牌及电商平台提供一站式采购方案。</p>
-          <p data-i18n="about-p2">从选泥、成型、烧制到质检包装，全程严格把控品质。配合成熟的国际物流与多语种客服体系，让中国传统茶器走向世界。</p>
-          <ul class="about-features">
-            <li data-i18n="about-f1">宜兴产区直采，品质可追溯</li>
-            <li data-i18n="about-f2">大师级 / 收藏级 / 日用级分级供应</li>
-            <li data-i18n="about-f3">外贸全流程支持，中英文双语服务</li>
+
+        <div class="about-history-text reveal">
+          <span class="subtitle">A Thousand-Year Tradition</span>
+          <h2 id="history-heading">The History of Yixing Zisha</h2>
+          <p>The story of Yixing Zisha pottery begins in the Song Dynasty (960–1279 AD), when craftspeople in the Yixing region of Jiangsu Province first discovered that the mineral-rich clay from Huanglongshan — unlike any clay found elsewhere — could be formed into teapots of extraordinary beauty and functional excellence without glaze.</p>
+          <p>By the Ming Dynasty (1368–1644), Yixing Zisha teapots had become inseparable from the gongfu tea ceremony. Scholar-officials and poets commissioned personalised pots bearing their seal and calligraphy; the names of master potters like Shi Dabin (时大彬) and Chen Hongshou (陈鸿寿) became as celebrated as the literati they served.</p>
+          <p>The Qing Dynasty saw Yixing teapots travel beyond China's borders — to Japan, South-East Asia, and eventually Europe, where they became prototypes for the early Delft and Meissen red stoneware tradition. By the twentieth century, Yixing pottery had been recognised as an Intangible Cultural Heritage of China, with the title of "Craft Master" (工艺美术师) bestowed by the state to fewer than five hundred living practitioners.</p>
+          <p>Today, the tradition continues in the workshops of Yixing — still using the same ore, the same hand techniques, the same bamboo tools — while a new generation of artisans brings fresh artistic vision to an ancient form.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       Brand Philosophy (quote section)
+       ============================================================ -->
+  <section class="philosophy-section" aria-labelledby="philosophy-heading">
+    <div class="container">
+      <div class="philosophy-inner">
+        <div class="section-title reveal">
+          <span class="subtitle">Our Philosophy</span>
+          <h2 id="philosophy-heading">What We Believe</h2>
+          <div class="title-divider"></div>
+        </div>
+
+        <blockquote class="philosophy-quote reveal">
+          A teapot is not a product. It is a conversation between the clay, the artisan, the tea, and the person who drinks it.
+        </blockquote>
+        <span class="philosophy-zh reveal">壶不是商品，而是泥与人、匠与茶之间永恒的对话。</span>
+
+        <div class="features-grid reveal" style="margin-top: 3rem; text-align: left;">
+          <div>
+            <h3 style="font-family: var(--font-heading-en); font-size: 1.125rem; color: var(--color-primary); margin-bottom: 0.75rem;">Uncompromising Authenticity</h3>
+            <p style="font-size: 0.9375rem; color: var(--color-text-muted); line-height: 1.7;">We source only original mine ore, verify each artisan's credentials and lineage, and reject any teapot that shows signs of mold use, chemical treatment, or blended clay.</p>
+          </div>
+          <div>
+            <h3 style="font-family: var(--font-heading-en); font-size: 1.125rem; color: var(--color-primary); margin-bottom: 0.75rem;">Fair Partnership</h3>
+            <p style="font-size: 0.9375rem; color: var(--color-text-muted); line-height: 1.7;">Our artisans set their own prices. We take a fixed logistics margin and never negotiate down. The craftsperson's livelihood must be as sustainable as the clay tradition they carry.</p>
+          </div>
+          <div>
+            <h3 style="font-family: var(--font-heading-en); font-size: 1.125rem; color: var(--color-primary); margin-bottom: 0.75rem;">Cultural Stewardship</h3>
+            <p style="font-size: 0.9375rem; color: var(--color-text-muted); line-height: 1.7;">Part of every sale funds the Dingyuan Apprenticeship Programme, which places young people from Yixing with senior craft masters for three-year residencies — ensuring the next generation can inherit what centuries built.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       Artisan Team — 3 people
+       ============================================================ -->
+  <section class="team-section" aria-labelledby="team-heading">
+    <div class="container">
+      <div class="section-title">
+        <span class="subtitle">The Makers</span>
+        <h2 id="team-heading">Our Master Artisans</h2>
+        <span class="zh-title">定渊签约匠人</span>
+        <p>Every teapot in our collection is traceable to a single artisan. These are three of the masters whose work you will find here.</p>
+        <div class="title-divider"></div>
+      </div>
+
+      <div class="team-grid">
+
+        <!-- Artisan 1 -->
+        <article class="team-card reveal reveal-delay-1">
+          <div class="team-card-image">
+            <img
+              src="https://placehold.co/320x320/5A725A/F8F5F0?text=Chen+Wei"
+              alt="Portrait of Chen Wei — Master Artisan, specialising in round-form Zisha teapots"
+              loading="lazy" width="320" height="320"
+            />
+          </div>
+          <h3>Chen Wei</h3>
+          <span class="zh-name">陈威</span>
+          <span class="role">Senior Craft Master · 高级工艺美术师</span>
+          <p>With 38 years at the wheel — or rather, away from it — Chen Wei is renowned for his mastery of the Classic Round and Antique Round forms. He trained under the late Gu Jingzhou's student, and his personal seal is among the most sought-after in Yixing. His pots are held in collections at the Palace Museum and the Victoria & Albert Museum.</p>
+        </article>
+
+        <!-- Artisan 2 -->
+        <article class="team-card reveal reveal-delay-2">
+          <div class="team-card-image">
+            <img
+              src="https://placehold.co/320x320/C8B68E/3A3028?text=Lin+Fang"
+              alt="Portrait of Lin Fang — Master Artisan, known for her engraving work and angular geometric Zisha forms"
+              loading="lazy" width="320" height="320"
+            />
+          </div>
+          <h3>Lin Fang</h3>
+          <span class="zh-name">林芳</span>
+          <span class="role">Craft Master · Engraving Specialist</span>
+          <p>Lin Fang began studying clay carving (陶刻) at age fourteen in her grandmother's workshop. Today she is one of fewer than forty female holders of the National Senior Craft Master title. Her signature style combines Song-era landscape motifs with spare, contemporary negative space — a sensibility formed by her parallel practice as a ink-wash painter.</p>
+        </article>
+
+        <!-- Artisan 3 -->
+        <article class="team-card reveal reveal-delay-3">
+          <div class="team-card-image">
+            <img
+              src="https://placehold.co/320x320/3A3028/C8B68E?text=Zhang+Bo"
+              alt="Portrait of Zhang Bo — Young Master Artisan specialising in innovative forms and beige Duanni clay work"
+              loading="lazy" width="320" height="320"
+            />
+          </div>
+          <h3>Zhang Bo</h3>
+          <span class="zh-name">张博</span>
+          <span class="role">Craft Master · Form Innovator</span>
+          <p>The youngest of our core artisans at 31, Zhang Bo graduated from the Jiangsu Ceramic Institute before spending five years as an apprentice under Chen Wei. His work explores the boundary between classical Zisha forms and contemporary sculpture — particularly his use of Duanni (缎泥) clay, whose pale mineral tones complement his architectural, precision-formed pots.</p>
+        </article>
+
+      </div><!-- /.team-grid -->
+    </div>
+  </section>
+
+  <!-- ============================================================
+       Contact CTA
+       ============================================================ -->
+  <section style="background: var(--color-bg); padding: 4rem 0; text-align: center;" aria-label="Contact invitation">
+    <div class="container">
+      <div class="section-title">
+        <span class="subtitle">Get in Touch</span>
+        <h2>Questions? We'd Love to Hear from You</h2>
+        <span class="zh-title">有任何问题，欢迎联系我们</span>
+        <p>Whether you're looking for a specific style, clay type, or a bespoke commission — our team is here to help you find the perfect teapot.</p>
+        <div class="title-divider"></div>
+      </div>
+      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem;">
+        <a href="contact.html" class="btn-primary">Contact Us</a>
+        <a href="collections.html" class="btn-outline">Browse Collection</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <span class="logo-en">Dingyuan</span>
+          <span class="logo-zh">定渊国际</span>
+          <p>Authentic Yixing Zisha teapots — handcrafted by master artisans, shipped worldwide.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+            <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+            <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 00-1.95 1.96A29 29 0 001 12a29 29 0 00.46 5.58A2.78 2.78 0 003.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 001.95-1.95A29 29 0 0023 12a29 29 0 00-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="collections.html">Collections</a></li>
+            <li><a href="craftsmanship.html">Craftsmanship</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
-      </div>
-    </section>
-
-    <!-- TIMELINE -->
-    <section class="timeline">
-      <div class="container">
-        <div class="section-header reveal-up">
-          <span class="eyebrow light">发展历程</span>
-          <h2 style="color:var(--cream)">从产区到世界</h2>
-          <div class="divider-gold"></div>
+        <div class="footer-col">
+          <h4>Our Artisans</h4>
+          <ul>
+            <li><a href="about.html">Chen Wei 陈威</a></li>
+            <li><a href="about.html">Lin Fang 林芳</a></li>
+            <li><a href="about.html">Zhang Bo 张博</a></li>
+          </ul>
         </div>
-        <div class="timeline-list">
-          <div class="timeline-item reveal-up" style="--delay:0.1s">
-            <div class="timeline-year">2012</div>
-            <h3>扎根宜兴，初创启航</h3>
-            <p>定渊国际在宜兴丁蜀镇成立，开始整合本地手工工坊资源，初步建立质量管理体系。</p>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <span>info@yixingdingyuan.cn</span>
           </div>
-          <div class="timeline-item reveal-up" style="--delay:0.2s">
-            <div class="timeline-year">2015</div>
-            <h3>开拓海外市场</h3>
-            <p>首次参加广交会，与日本、韩国、东南亚地区经销商建立合作，完成外贸资质认证。</p>
-          </div>
-          <div class="timeline-item reveal-up" style="--delay:0.3s">
-            <div class="timeline-year">2018</div>
-            <h3>三大产品线成型</h3>
-            <p>正式确立大师级、收藏级、日用级三大产品线分级体系，为不同市场客户提供精准匹配方案。</p>
-          </div>
-          <div class="timeline-item reveal-up" style="--delay:0.4s">
-            <div class="timeline-year">2021</div>
-            <h3>深耕欧美市场</h3>
-            <p>进入欧洲、北美茶文化精品市场，与多个高端茶品牌及博物馆礼品店建立长期供货协议。</p>
-          </div>
-          <div class="timeline-item reveal-up" style="--delay:0.5s">
-            <div class="timeline-year">2024</div>
-            <h3>OEM定制服务全面升级</h3>
-            <p>建立专属OEM研发团队，支持客户品牌定制、器型开发及礼盒方案，实现差异化市场竞争。</p>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>Yixing, Jiangsu, China</span>
           </div>
         </div>
       </div>
-    </section>
-
-    <!-- CRAFTSMEN / STRENGTHS -->
-    <section class="craftsmen">
-      <div class="container">
-        <div class="section-header center reveal-up">
-          <span class="eyebrow">品质承诺</span>
-          <h2>我们的核心优势</h2>
-          <div class="divider-gold centered"></div>
-        </div>
-        <div class="craftsmen-grid">
-          <div class="craftsmen-card reveal-up" style="--delay:0.1s">
-            <div class="craftsmen-num">01</div>
-            <h3>工艺师团队</h3>
-            <p>与超过30位宜兴本地工艺美术师长期合作，涵盖国家级、省级、市级各层次，保障大师级产品的艺术价值。</p>
-          </div>
-          <div class="craftsmen-card reveal-up" style="--delay:0.2s">
-            <div class="craftsmen-num">02</div>
-            <h3>严格品控</h3>
-            <p>建立五道质检工序：原料检验、成型检验、烧制后检验、出库检验、打包检验，每件产品均有记录可查。</p>
-          </div>
-          <div class="craftsmen-card reveal-up" style="--delay:0.3s">
-            <div class="craftsmen-num">03</div>
-            <h3>物流保障</h3>
-            <p>与多家国际物流公司合作，提供海运、空运及快递多种方案，专业茶具包装，确保零损坏率送达。</p>
-          </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Dingyuan International. All rights reserved.</p>
+        <div class="payment-icons">
+          <span class="payment-icon">VISA</span>
+          <span class="payment-icon">MC</span>
+          <span class="payment-icon">PayPal</span>
+          <span class="payment-icon">T/T</span>
         </div>
       </div>
-    </section>
-
-    <!-- CTA BANNER -->
-    <section style="background:var(--ink);padding:5rem 0;text-align:center;border-top:1px solid rgba(201,169,110,0.1)">
-      <div class="container">
-        <div class="reveal-up">
-          <span class="eyebrow light">开启合作</span>
-          <h2 style="font-family:var(--font-display);font-size:clamp(2rem,4vw,3rem);font-weight:300;color:var(--cream);margin:0.5rem 0 1.5rem;">与定渊国际携手，让紫砂走向世界</h2>
-          <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
-            <a href="gallery.html" class="btn btn-primary">查看产品</a>
-            <a href="contact.html" class="btn btn-ghost">联系我们</a>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="container footer-inner">
-      <div class="footer-brand">
-        <span class="logo-mark-sm">定</span>
-        <span data-i18n="brand">定渊国际</span>
-      </div>
-      <nav class="footer-nav">
-        <a href="about.html" data-i18n="nav-about">关于我们</a>
-        <a href="products.html" data-i18n="nav-products">产品系列</a>
-        <a href="gallery.html" data-i18n="nav-gallery">产品展示</a>
-        <a href="why.html" data-i18n="nav-why">合作优势</a>
-        <a href="contact.html" data-i18n="nav-contact">联系我们</a>
-      </nav>
-      <p class="footer-copy" data-i18n="footer">© 2026 定渊国际 Dingyuan International. 保留所有权利。</p>
     </div>
   </footer>
 
-  <script src="js/main.js" defer></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
