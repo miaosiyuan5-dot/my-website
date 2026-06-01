@@ -454,7 +454,7 @@
      12. Init All
      ============================================================ */
   function init() {
-    initCursor();
+    // initCursor() disabled — using default browser cursor
     initNavbar();
     initScrollProgress();
     initMobileMenu();

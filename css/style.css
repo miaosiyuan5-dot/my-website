@@ -82,12 +82,7 @@ body {
   color: var(--color-text);
   background-color: var(--color-bg);
   overflow-x: hidden;
-  cursor: none; /* Hide default cursor on desktop */
-}
-
-/* Show default cursor on mobile */
-@media (max-width: 768px) {
-  body { cursor: auto; }
+  cursor: auto;
 }
 
 img {
@@ -150,53 +145,8 @@ section {
   }
 }
 
-/* --------------------------------------------------------------------------
-   Custom Cursor (Desktop only)
-   -------------------------------------------------------------------------- */
-.cursor-ring {
-  position: fixed;
-  width: 16px;
-  height: 16px;
-  border: 1.5px solid rgba(58, 48, 40, 0.5);
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 99999;
-  transform: translate(-50%, -50%);
-  transition: width 0.2s ease, height 0.2s ease, border-color 0.2s ease, opacity 0.2s ease;
-  will-change: transform;
-}
-
-.cursor-dot {
-  position: fixed;
-  width: 4px;
-  height: 4px;
-  background-color: var(--color-primary);
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 99999;
-  transform: translate(-50%, -50%);
-  transition: opacity 0.2s ease;
-  will-change: transform;
-}
-
-.cursor-ring.cursor-hover {
-  width: 36px;
-  height: 36px;
-  border-color: var(--color-accent1);
-  border-width: 2px;
-  opacity: 0.8;
-}
-
-.cursor-ring.cursor-hidden,
-.cursor-dot.cursor-hidden {
-  opacity: 0;
-}
-
-@media (max-width: 768px) {
-  .cursor-ring, .cursor-dot {
-    display: none;
-  }
-}
+/* Custom cursor disabled — using default browser cursor */
+.cursor-ring, .cursor-dot { display: none; }
 
 /* --------------------------------------------------------------------------
    Navigation
@@ -248,6 +198,30 @@ section {
   font-size: 0.75rem;
   color: var(--color-accent2);
   letter-spacing: 0.1em;
+}
+
+/* Language toggle button */
+.lang-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 0.3rem 0.75rem;
+  border: 1px solid var(--color-accent2);
+  background: transparent;
+  color: var(--color-primary);
+  font-family: var(--font-body-en);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  border-radius: var(--border-radius);
+  text-decoration: none;
+  transition: background var(--transition-fast), color var(--transition-fast);
+  white-space: nowrap;
+}
+.lang-toggle:hover {
+  background: var(--color-accent2);
+  color: var(--color-white);
 }
 
 /* Navbar links */
