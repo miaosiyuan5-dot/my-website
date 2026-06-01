@@ -80,7 +80,7 @@
     if (!navbar) return;
 
     function updateNav() {
-      if (window.scrollY > 40) {
+      if (window.scrollY > 100) {
         navbar.classList.add('scrolled');
       } else {
         navbar.classList.remove('scrolled');
@@ -88,7 +88,7 @@
     }
 
     window.addEventListener('scroll', updateNav, { passive: true });
-    updateNav(); // run once on load
+    updateNav();
   }
 
   /* ============================================================
@@ -212,7 +212,43 @@
   }
 
   /* ============================================================
-     8. Button Click Press Effect
+     8. Back to Top Button
+     ============================================================ */
+  function initBackToTop() {
+    const btn = document.getElementById('backToTop');
+    if (!btn) return;
+
+    window.addEventListener('scroll', function () {
+      if (window.scrollY > window.innerHeight) {
+        btn.classList.add('visible');
+      } else {
+        btn.classList.remove('visible');
+      }
+    }, { passive: true });
+
+    btn.addEventListener('click', function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
+  /* ============================================================
+     9. Smooth Scroll for nav links
+     ============================================================ */
+  function initSmoothScroll() {
+    document.querySelectorAll('.nav-scroll, .nav-scroll-mobile').forEach(function (link) {
+      link.addEventListener('click', function (e) {
+        const href = link.getAttribute('href');
+        if (!href || href.charAt(0) !== '#') return;
+        const target = document.querySelector(href);
+        if (!target) return;
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+  }
+
+  /* ============================================================
+     10. Button Click Press Effect + Loading State
      ============================================================ */
   function initButtonEffects() {
     document.addEventListener('click', function (e) {
@@ -222,6 +258,21 @@
       setTimeout(function () {
         btn.style.transform = '';
       }, 120);
+    });
+
+    document.addEventListener('click', function (e) {
+      const btn = e.target.closest('.btn-primary, .btn-add-cart');
+      if (!btn) return;
+      if (btn.dataset.loading === 'true') return;
+      const original = btn.textContent;
+      btn.dataset.loading = 'true';
+      btn.textContent = 'Loading...';
+      btn.disabled = true;
+      setTimeout(function () {
+        btn.textContent = original;
+        btn.disabled = false;
+        delete btn.dataset.loading;
+      }, 1000);
     });
   }
 
@@ -461,6 +512,8 @@
     initActiveNav();
     initReveal();
     initLazyImages();
+    initBackToTop();
+    initSmoothScroll();
     initButtonEffects();
     initCollections();
     initProductDetail();
