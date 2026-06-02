@@ -479,33 +479,274 @@
   }
 
   /* ============================================================
-     11. Contact Form
+     11. Contact Form — mailto: submission
      ============================================================ */
   function initContactForm() {
-    const form    = document.getElementById('contact-form');
-    const success = document.getElementById('form-success');
+    var form    = document.getElementById('contact-form');
+    var success = document.getElementById('form-success');
     if (!form) return;
 
     form.addEventListener('submit', function (e) {
       e.preventDefault();
-      // Simulate form submission
-      const submitBtn = form.querySelector('button[type="submit"]');
+
+      var nameEl    = form.querySelector('[name="name"]');
+      var emailEl   = form.querySelector('[name="email"]');
+      var subjectEl = form.querySelector('[name="subject"]');
+      var msgEl     = form.querySelector('[name="message"]');
+
+      var name    = nameEl    ? nameEl.value.trim()    : '';
+      var email   = emailEl   ? emailEl.value.trim()   : '';
+      var subject = subjectEl ? subjectEl.value.trim() : 'Website Enquiry';
+      var msg     = msgEl     ? msgEl.value.trim()     : '';
+
+      var mailSubject = encodeURIComponent('Enquiry from ' + (name || 'Customer') + ' — ' + subject);
+      var mailBody    = encodeURIComponent(
+        'Name: ' + name + '\nEmail: ' + email + '\n\nMessage:\n' + msg
+      );
+
+      var submitBtn = form.querySelector('button[type="submit"]');
       if (submitBtn) {
-        submitBtn.textContent = 'Sending…';
+        submitBtn.textContent = 'Opening email…';
         submitBtn.disabled = true;
       }
+
+      window.open('mailto:info@yixingdingyuan.cn?subject=' + mailSubject + '&body=' + mailBody, '_self');
+
       setTimeout(function () {
         form.style.display = 'none';
         if (success) success.classList.add('visible');
-      }, 1200);
+      }, 1800);
     });
   }
 
   /* ============================================================
-     12. Init All
+     12. Search Overlay
+     ============================================================ */
+  function initSearch() {
+    var overlay   = document.getElementById('search-overlay');
+    var toggleBtn = document.getElementById('search-toggle');
+    var closeBtn  = document.getElementById('search-close');
+    var input     = document.getElementById('search-input');
+    var submitBtn = document.getElementById('search-submit');
+    if (!overlay) return;
+
+    function open() {
+      overlay.classList.add('active');
+      document.body.style.overflow = 'hidden';
+      setTimeout(function () { if (input) input.focus(); }, 120);
+    }
+
+    function close() {
+      overlay.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    if (toggleBtn) toggleBtn.addEventListener('click', open);
+    if (closeBtn)  closeBtn.addEventListener('click', close);
+
+    function doSearch() {
+      var q = input ? input.value.trim() : '';
+      if (!q) return;
+      window.location.href = 'collections.html?q=' + encodeURIComponent(q);
+    }
+
+    if (submitBtn) submitBtn.addEventListener('click', doSearch);
+
+    if (input) {
+      input.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter') doSearch();
+      });
+    }
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') close();
+      if ((e.key === 'k' || e.key === 'K') && (e.ctrlKey || e.metaKey)) {
+        e.preventDefault();
+        open();
+      }
+    });
+
+    // Close when clicking backdrop
+    overlay.addEventListener('click', function (e) {
+      if (e.target === overlay) close();
+    });
+  }
+
+  /* ============================================================
+     13. Cart Drawer
+     ============================================================ */
+  function initCart() {
+    var cart = JSON.parse(localStorage.getItem('dy_cart') || '[]');
+
+    var cartOverlay   = document.getElementById('cart-overlay');
+    var cartDrawer    = document.getElementById('cart-drawer');
+    var cartClose     = document.getElementById('cart-close');
+    var cartToggle    = document.getElementById('cart-toggle');
+    var cartBody      = document.getElementById('cart-drawer-body');
+    var cartFooter    = document.getElementById('cart-drawer-footer');
+    var cartTotal     = document.getElementById('cart-total-amount');
+    var drawerCount   = document.getElementById('cart-drawer-count');
+
+    function saveCart() {
+      localStorage.setItem('dy_cart', JSON.stringify(cart));
+    }
+
+    function totalItems() {
+      return cart.reduce(function (s, i) { return s + i.qty; }, 0);
+    }
+
+    function totalPrice() {
+      return cart.reduce(function (s, i) {
+        var num = parseFloat((i.price || '0').replace(/[^0-9.]/g, '')) || 0;
+        return s + num * i.qty;
+      }, 0);
+    }
+
+    function updateCountBadges() {
+      var n = totalItems();
+      document.querySelectorAll('.cart-count').forEach(function (el) {
+        el.textContent = n;
+      });
+      if (drawerCount) {
+        drawerCount.textContent = n > 0 ? '(' + n + ')' : '';
+      }
+    }
+
+    function renderCart() {
+      if (!cartBody) return;
+      if (cart.length === 0) {
+        cartBody.innerHTML =
+          '<div class="cart-empty">' +
+            '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>' +
+            '<p>Your cart is empty.</p>' +
+          '</div>';
+        if (cartFooter) cartFooter.style.display = 'none';
+        return;
+      }
+
+      var html = '';
+      cart.forEach(function (item, idx) {
+        html +=
+          '<div class="cart-item">' +
+            '<div class="cart-item-info">' +
+              '<div class="cart-item-name">' + item.name + '</div>' +
+              '<div class="cart-item-price">' + (item.price || '') + '</div>' +
+              '<div class="cart-item-controls">' +
+                '<button class="cart-qty-btn" data-action="dec" data-idx="' + idx + '" aria-label="Decrease quantity">−</button>' +
+                '<span class="cart-qty-num">' + item.qty + '</span>' +
+                '<button class="cart-qty-btn" data-action="inc" data-idx="' + idx + '" aria-label="Increase quantity">+</button>' +
+              '</div>' +
+              '<button class="cart-item-remove" data-idx="' + idx + '">Remove</button>' +
+            '</div>' +
+          '</div>';
+      });
+      cartBody.innerHTML = html;
+
+      if (cartFooter) cartFooter.style.display = 'block';
+      if (cartTotal)  cartTotal.textContent = '$' + totalPrice().toFixed(0);
+
+      // Bind quantity buttons
+      cartBody.querySelectorAll('.cart-qty-btn').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var idx    = parseInt(btn.dataset.idx, 10);
+          var action = btn.dataset.action;
+          if (action === 'inc') cart[idx].qty = Math.min(99, cart[idx].qty + 1);
+          if (action === 'dec') {
+            cart[idx].qty = Math.max(1, cart[idx].qty - 1);
+          }
+          saveCart();
+          updateCountBadges();
+          renderCart();
+        });
+      });
+
+      // Bind remove buttons
+      cartBody.querySelectorAll('.cart-item-remove').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var idx = parseInt(btn.dataset.idx, 10);
+          cart.splice(idx, 1);
+          saveCart();
+          updateCountBadges();
+          renderCart();
+        });
+      });
+    }
+
+    function openCart() {
+      if (!cartDrawer) return;
+      renderCart();
+      cartDrawer.classList.add('active');
+      if (cartOverlay) cartOverlay.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeCart() {
+      if (cartDrawer)  cartDrawer.classList.remove('active');
+      if (cartOverlay) cartOverlay.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    if (cartToggle) cartToggle.addEventListener('click', openCart);
+    if (cartClose)  cartClose.addEventListener('click', closeCart);
+    if (cartOverlay) cartOverlay.addEventListener('click', closeCart);
+
+    // Wire "Add to Cart" buttons
+    document.querySelectorAll('.btn-add-cart').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var name  = btn.dataset.product || 'Yixing Teapot';
+        var card  = btn.closest('.product-card, .product-detail-inner');
+        var priceEl = card ? card.querySelector('.price, .current-price') : null;
+        var priceText = priceEl ? priceEl.firstChild.textContent.trim() : '';
+
+        var existing = null;
+        for (var i = 0; i < cart.length; i++) {
+          if (cart[i].name === name) { existing = cart[i]; break; }
+        }
+        if (existing) {
+          existing.qty++;
+        } else {
+          cart.push({ name: name, price: priceText, qty: 1 });
+        }
+        saveCart();
+        updateCountBadges();
+        openCart();
+      });
+    });
+
+    // Wire product detail "add to cart" button
+    var addToCartBtn = document.querySelector('.add-to-cart-btn');
+    if (addToCartBtn) {
+      addToCartBtn.addEventListener('click', function () {
+        var qtyInput = document.querySelector('.qty-input');
+        var qty      = qtyInput ? parseInt(qtyInput.value, 10) : 1;
+        var nameEl   = document.querySelector('.product-name, h1.product-title, .product-detail h1');
+        var name     = nameEl ? nameEl.textContent.trim() : 'Yixing Teapot';
+        var priceEl  = document.querySelector('.current-price, .price');
+        var price    = priceEl ? priceEl.firstChild.textContent.trim() : '';
+
+        var existing = null;
+        for (var i = 0; i < cart.length; i++) {
+          if (cart[i].name === name) { existing = cart[i]; break; }
+        }
+        if (existing) {
+          existing.qty += qty;
+        } else {
+          cart.push({ name: name, price: price, qty: qty });
+        }
+        saveCart();
+        updateCountBadges();
+        openCart();
+      });
+    }
+
+    // Init count display
+    updateCountBadges();
+  }
+
+  /* ============================================================
+     14. Init All
      ============================================================ */
   function init() {
-    // initCursor() disabled — using default browser cursor
     initNavbar();
     initScrollProgress();
     initMobileMenu();
@@ -518,6 +759,8 @@
     initCollections();
     initProductDetail();
     initContactForm();
+    initSearch();
+    initCart();
   }
 
   if (document.readyState === 'loading') {

@@ -6,39 +6,52 @@
   <meta name="description" content="定渊国际产品系列 — 大师级、收藏级、日用级三大紫砂茶具产品线，满足全球不同市场需求" />
   <link rel="canonical" href="https://www.yixingdingyuan.cn/products.html" />
   <title>产品系列 | 定渊国际 — 宜兴紫砂茶具</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Lato:wght@300;400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Noto+Sans+SC:wght@300;400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
-<body class="inner-page page-products">
+<body class="no-hero">
 
-  <div class="cursor" id="cursor"></div>
-  <div class="cursor-follower" id="cursorFollower"></div>
+  <div class="scroll-progress" aria-hidden="true"></div>
 
-  <header class="header scrolled" id="header">
-    <nav class="nav container">
-      <a href="index.html" class="logo">
-        <span class="logo-mark"><span class="logo-mark-inner">定</span></span>
-        <span class="logo-text">
-          <strong data-i18n="brand">定渊国际</strong>
-          <small data-i18n="brand-en">Dingyuan International</small>
-        </span>
+  <nav class="navbar" role="navigation" aria-label="主导航">
+    <div class="container">
+      <a href="index-zh.html" class="nav-logo" aria-label="定渊国际 — 首页">
+        <span class="logo-main">YIXING DINGYUAN</span>
+        <span class="logo-zh">定渊国际</span>
       </a>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="index.html" data-i18n="nav-home">首页</a></li>
-        <li><a href="about.html" data-i18n="nav-about">关于我们</a></li>
-        <li><a href="products.html" data-i18n="nav-products">产品系列</a></li>
-        <li><a href="gallery.html" data-i18n="nav-gallery">产品展示</a></li>
-        <li><a href="why.html" data-i18n="nav-why">合作优势</a></li>
-        <li><a href="contact.html" data-i18n="nav-contact">联系我们</a></li>
+      <ul class="nav-links">
+        <li><a href="index-zh.html">首页</a></li>
+        <li><a href="collections-zh.html">产品系列</a></li>
+        <li><a href="craftsmanship-zh.html">制作工艺</a></li>
+        <li><a href="about-zh.html">关于我们</a></li>
+        <li><a href="contact-zh.html">联系我们</a></li>
       </ul>
-      <div class="nav-right">
-        <button class="lang-btn" id="langBtn" type="button">EN</button>
-        <button class="nav-toggle" id="navToggle" aria-label="菜单"><span></span><span></span></button>
+      <div class="nav-icons">
+        <button class="nav-icon-btn" id="search-toggle" aria-label="搜索">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+        <button class="nav-icon-btn" id="cart-toggle" aria-label="购物车">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+          <span class="cart-count">0</span>
+        </button>
+        <a href="index.html" class="lang-toggle" aria-label="Switch to English">EN</a>
+        <button class="hamburger" aria-label="切换移动菜单" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
       </div>
-    </nav>
-  </header>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" role="dialog" aria-modal="true" aria-label="移动端导航">
+    <a href="index-zh.html">首页</a>
+    <a href="collections-zh.html">产品系列</a>
+    <a href="craftsmanship-zh.html">制作工艺</a>
+    <a href="about-zh.html">关于我们</a>
+    <a href="contact-zh.html">联系我们</a>
+  </div>
 
   <main>
     <!-- PAGE HERO -->
@@ -216,6 +229,38 @@
     </div>
   </footer>
 
-  <script src="js/main.js" defer></script>
+  <button class="back-to-top" id="backToTop" aria-label="Back to top" title="Back to top">↑ Top</button>
+
+  <!-- Search Overlay -->
+  <div class="search-overlay" id="search-overlay" role="dialog" aria-modal="true" aria-label="搜索茶壶">
+    <button class="search-close" id="search-close" aria-label="关闭搜索">✕</button>
+    <div class="search-inner">
+      <span class="search-label">搜索茶壶</span>
+      <div class="search-box">
+        <input type="search" id="search-input" class="search-input" placeholder="例：石瓢壶、紫砂…" autocomplete="off" aria-label="搜索茶壶" />
+        <button class="search-submit" id="search-submit" aria-label="搜索">→</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cart Drawer -->
+  <div class="cart-overlay" id="cart-overlay" aria-hidden="true"></div>
+  <aside class="cart-drawer" id="cart-drawer" role="dialog" aria-modal="true" aria-label="购物车">
+    <div class="cart-drawer-header">
+      <h2>购物车 <span class="cart-drawer-count" id="cart-drawer-count"></span></h2>
+      <button class="cart-close" id="cart-close" aria-label="关闭购物车">✕</button>
+    </div>
+    <div class="cart-drawer-body" id="cart-drawer-body"></div>
+    <div class="cart-drawer-footer" id="cart-drawer-footer" style="display:none;">
+      <div class="cart-total">
+        <span class="cart-total-label">小计</span>
+        <span class="cart-total-amount" id="cart-total-amount">$0</span>
+      </div>
+      <a href="contact-zh.html" class="cart-checkout-btn">询价下单</a>
+      <p class="cart-note">请联系我们安排付款及运输事宜。</p>
+    </div>
+  </aside>
+
+  <script src="js/main.js"></script>
 </body>
 </html>

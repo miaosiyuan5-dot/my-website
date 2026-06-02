@@ -7,6 +7,7 @@
   <meta name="description" content="Contact Dingyuan for wholesale enquiries, bespoke teapot commissions, or general questions. Email info@yixingdingyuan.cn or message us on WhatsApp." />
   <meta name="keywords" content="contact Yixing teapot, wholesale Zisha, custom teapot order, Dingyuan contact" />
   <link rel="canonical" href="https://www.yixingdingyuan.cn/contact.html" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body class="no-hero">
@@ -17,7 +18,7 @@
   <nav class="navbar" role="navigation" aria-label="Main navigation">
     <div class="container">
       <a href="index.html" class="nav-logo" aria-label="Dingyuan — Home">
-        <span class="logo-en">Dingyuan</span>
+        <span class="logo-main">YIXING DINGYUAN</span>
         <span class="logo-zh">定渊国际</span>
       </a>
       <ul class="nav-links">
@@ -28,10 +29,10 @@
         <li><a href="contact.html" class="active">Contact</a></li>
       </ul>
       <div class="nav-icons">
-        <button class="nav-icon-btn" aria-label="Search">
+        <button class="nav-icon-btn" id="search-toggle" aria-label="Search">
           <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
         </button>
-        <button class="nav-icon-btn" aria-label="Cart">
+        <button class="nav-icon-btn" id="cart-toggle" aria-label="Cart">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
           <span class="cart-count">0</span>
         </button>
@@ -284,16 +285,47 @@
       </div>
       <div class="footer-bottom">
         <p>&copy; 2025 Dingyuan International. All rights reserved.</p>
-        <div class="payment-icons">
-          <span class="payment-icon">VISA</span>
-          <span class="payment-icon">MC</span>
-          <span class="payment-icon">PayPal</span>
-          <span class="payment-icon">T/T</span>
-          <span class="payment-icon">Alipay</span>
+        <div class="footer-legal">
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms of Service</a>
+        </div>
+        <div style="display:none;">
         </div>
       </div>
     </div>
   </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Back to top" title="Back to top">↑ Top</button>
+
+  <!-- Search Overlay -->
+  <div class="search-overlay" id="search-overlay" role="dialog" aria-modal="true" aria-label="Search teapots">
+    <button class="search-close" id="search-close" aria-label="Close search">✕</button>
+    <div class="search-inner">
+      <span class="search-label">Search Teapots</span>
+      <div class="search-box">
+        <input type="search" id="search-input" class="search-input" placeholder="Stone Scoop, Purple Clay…" autocomplete="off" aria-label="Search teapots" />
+        <button class="search-submit" id="search-submit" aria-label="Search">→</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cart Drawer -->
+  <div class="cart-overlay" id="cart-overlay" aria-hidden="true"></div>
+  <aside class="cart-drawer" id="cart-drawer" role="dialog" aria-modal="true" aria-label="Shopping cart">
+    <div class="cart-drawer-header">
+      <h2>Your Cart <span class="cart-drawer-count" id="cart-drawer-count"></span></h2>
+      <button class="cart-close" id="cart-close" aria-label="Close cart">✕</button>
+    </div>
+    <div class="cart-drawer-body" id="cart-drawer-body"></div>
+    <div class="cart-drawer-footer" id="cart-drawer-footer" style="display:none;">
+      <div class="cart-total">
+        <span class="cart-total-label">Subtotal</span>
+        <span class="cart-total-amount" id="cart-total-amount">$0</span>
+      </div>
+      <a href="contact.html" class="cart-checkout-btn">Enquire to Order</a>
+      <p class="cart-note">Contact us to arrange payment and shipping.</p>
+    </div>
+  </aside>
 
   <script src="js/main.js"></script>
 </body>
