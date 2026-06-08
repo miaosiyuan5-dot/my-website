@@ -4,207 +4,268 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Collections — Yixing Zisha Teapots | Dingyuan</title>
-  <meta name="description" content="Browse our full collection of authentic Yixing Zisha teapots — Purple Clay, Red Clay, and Beige Clay. Filter by material and capacity. Worldwide shipping." />
-  <meta name="keywords" content="Yixing teapot collection, Zisha purple clay, Hongni red clay, Duanni beige clay, buy teapot" />
+  <meta name="description" content="Browse our curated collection of authentic Yixing Zisha teapots — Master Edition, Signature Edition, and Artisan Objects. Worldwide shipping." />
+  <meta name="keywords" content="Yixing teapot, Zisha teapot, master engraved teapot, Chinese teapot, handmade teapot, gongfu tea" />
   <link rel="canonical" href="https://www.yixingdingyuan.cn/collections.html" />
-  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=EB+Garamond:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --ink:        #2a1f14;
+      --ink-mid:    #5a4a36;
+      --ink-light:  #8a7a68;
+      --sand:       #f5f0e8;
+      --sand-dark:  #e8e0d0;
+      --clay:       #c8bfaa;
+      --gold:       #9a6e3a;
+      --red:        #8b3a1e;
+      --green:      #3d5c38;
+      --border:     rgba(90,74,54,0.18);
+    }
+    body { font-family: 'EB Garamond', Georgia, serif; background: var(--sand); color: var(--ink); min-height: 100vh; }
+
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 48px; height: 64px;
+      background: rgba(245,240,232,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 0.5px solid var(--border);
+    }
+    .nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 17px; font-weight: 600; letter-spacing: 0.12em; color: var(--ink); text-decoration: none; white-space: nowrap; }
+    .nav-links { display: flex; align-items: center; gap: 32px; }
+    .nav-links a { font-size: 13px; letter-spacing: 0.08em; color: var(--ink-mid); text-decoration: none; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--ink); }
+    .nav-right { display: flex; align-items: center; gap: 20px; }
+    .nav-cart { font-size: 13px; letter-spacing: 0.06em; color: var(--ink-mid); cursor: pointer; background: none; border: none; padding: 0; font-family: inherit; }
+    .nav-lang { font-size: 12px; letter-spacing: 0.1em; color: var(--ink-light); text-decoration: none; border: 0.5px solid var(--clay); padding: 4px 10px; border-radius: 2px; transition: all 0.2s; }
+    .nav-lang:hover { background: var(--sand-dark); color: var(--ink); }
+
+    .page-header { padding: 72px 48px 48px; border-bottom: 0.5px solid var(--border); }
+    .page-header-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: flex-end; justify-content: space-between; }
+    .page-label { font-size: 11px; letter-spacing: 0.2em; color: var(--ink-light); text-transform: uppercase; margin-bottom: 12px; }
+    .page-title { font-family: 'Cormorant Garamond', serif; font-size: 52px; font-weight: 400; line-height: 1.1; color: var(--ink); }
+    .page-title em { font-style: italic; color: var(--gold); }
+    .page-sub { font-size: 15px; color: var(--ink-mid); margin-top: 12px; line-height: 1.6; }
+    .page-count { font-size: 13px; color: var(--ink-light); letter-spacing: 0.06em; align-self: flex-end; padding-bottom: 8px; }
+
+    .filter-wrap { padding: 28px 48px; border-bottom: 0.5px solid var(--border); background: var(--sand); position: sticky; top: 64px; z-index: 90; }
+    .filter-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; gap: 12px; }
+    .filter-label { font-size: 11px; letter-spacing: 0.18em; color: var(--ink-light); text-transform: uppercase; margin-right: 4px; }
+    .pill { padding: 8px 20px; border-radius: 2px; font-family: 'EB Garamond', serif; font-size: 15px; cursor: pointer; border: 0.5px solid var(--clay); background: transparent; color: var(--ink-mid); transition: all 0.18s; letter-spacing: 0.02em; }
+    .pill:hover { border-color: var(--ink-mid); color: var(--ink); }
+    .pill.active { background: var(--ink); color: var(--sand); border-color: var(--ink); }
+
+    .grid-wrap { max-width: 1200px; margin: 0 auto; padding: 48px 48px 96px; }
+    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+
+    .card { background: var(--sand-dark); border: 0.5px solid var(--border); cursor: pointer; transition: transform 0.22s, box-shadow 0.22s; overflow: hidden; }
+    .card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(42,31,20,0.10); }
+    .card-img { aspect-ratio: 1 / 1; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; }
+    .img-master { background: #d0c9bc; }
+    .img-craft  { background: #c4bb9e; }
+    .img-vessel { background: #b6ad98; }
+    .card-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .placeholder-text { font-family: 'Cormorant Garamond', serif; font-size: 18px; font-weight: 400; color: var(--ink-mid); text-align: center; padding: 24px; line-height: 1.5; }
+
+    .badge { position: absolute; top: 14px; left: 14px; z-index: 2; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; padding: 4px 10px; font-family: 'EB Garamond', serif; }
+    .badge-master { background: var(--ink); color: var(--sand); }
+    .badge-new    { background: var(--green); color: #e8f0e4; }
+    .badge-hot    { background: var(--red); color: #faf0ec; }
+
+    .card-body { padding: 20px 22px 24px; background: var(--sand); border-top: 0.5px solid var(--border); }
+    .card-series { font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-light); margin-bottom: 8px; }
+    .card-name { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 500; line-height: 1.2; color: var(--ink); margin-bottom: 4px; }
+    .card-meta { font-size: 13px; color: var(--ink-light); margin-bottom: 14px; letter-spacing: 0.03em; }
+    .card-price { font-size: 16px; color: var(--red); }
+    .card-price-original { font-size: 13px; color: var(--ink-light); text-decoration: line-through; margin-left: 6px; }
+    .card-cta { display: inline-block; margin-top: 14px; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-mid); border-bottom: 0.5px solid var(--clay); padding-bottom: 1px; text-decoration: none; transition: color 0.18s, border-color 0.18s; }
+    .card-cta:hover { color: var(--ink); border-color: var(--ink-mid); }
+
+    .empty { grid-column: 1 / -1; text-align: center; padding: 80px 0; font-family: 'Cormorant Garamond', serif; font-size: 22px; color: var(--ink-light); font-style: italic; }
+
+    footer { background: var(--ink); color: var(--clay); padding: 60px 48px 40px; }
+    .footer-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 48px; padding-bottom: 40px; border-bottom: 0.5px solid rgba(200,191,170,0.2); }
+    .footer-brand-name { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 600; letter-spacing: 0.1em; color: var(--sand); margin-bottom: 10px; }
+    .footer-brand-desc { font-size: 14px; line-height: 1.7; color: var(--clay); max-width: 260px; }
+    .footer-heading { font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--clay); margin-bottom: 16px; opacity: 0.7; }
+    .footer-links { list-style: none; }
+    .footer-links li { margin-bottom: 10px; }
+    .footer-links a { font-size: 14px; color: var(--clay); text-decoration: none; transition: color 0.2s; opacity: 0.8; }
+    .footer-links a:hover { color: var(--sand); opacity: 1; }
+    .footer-bottom { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding-top: 28px; font-size: 12px; color: var(--clay); opacity: 0.6; letter-spacing: 0.04em; }
+    .footer-bottom a { color: inherit; text-decoration: none; }
+
+    @media (max-width: 900px) {
+      nav { padding: 0 24px; }
+      .nav-links { display: none; }
+      .page-header { padding: 48px 24px 36px; }
+      .page-header-inner { flex-direction: column; align-items: flex-start; gap: 12px; }
+      .page-title { font-size: 38px; }
+      .filter-wrap { padding: 20px 24px; }
+      .grid-wrap { padding: 32px 24px 72px; }
+      .grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+      footer { padding: 48px 24px 32px; }
+      .footer-inner { grid-template-columns: 1fr 1fr; gap: 32px; }
+    }
+    @media (max-width: 560px) {
+      .grid { grid-template-columns: 1fr; }
+      .filter-inner { flex-wrap: wrap; gap: 8px; }
+      .footer-inner { grid-template-columns: 1fr; }
+    }
+  </style>
 </head>
-<body class="no-hero">
+<body>
 
-  <!-- Scroll progress bar -->
-  <div class="scroll-progress" aria-hidden="true"></div>
+<nav>
+  <a class="nav-logo" href="/index.html">YIXING DINGYUAN 定渊国际</a>
+  <div class="nav-links">
+    <a href="/index.html">Home</a>
+    <a href="/collections.html">Collections</a>
+    <a href="/craftsmanship.html">Our Craft</a>
+    <a href="/about.html">About Us</a>
+    <a href="/contact.html">Contact</a>
+  </div>
+  <div class="nav-right">
+    <button class="nav-cart">Cart (0)</button>
+    <a class="nav-lang" href="/collections-zh.html">中文</a>
+  </div>
+</nav>
 
-  <!-- ============================================================
-       Navigation
-       ============================================================ -->
-  <nav class="navbar" role="navigation" aria-label="Main navigation">
-    <div class="container">
-      <a href="index.html" class="nav-logo" aria-label="Dingyuan — Home">
-        <span class="logo-main">YIXING DINGYUAN</span>
-        <span class="logo-zh">定渊国际</span>
-      </a>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="collections.html" class="active">Collections</a></li>
-        <li><a href="craftsmanship.html">Craftsmanship</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="contact.html">Contact</a></li>
+<header class="page-header">
+  <div class="page-header-inner">
+    <div>
+      <p class="page-label">Dingyuan — Yixing, Jiangsu</p>
+      <h1 class="page-title">Our <em>Collections</em></h1>
+      <p class="page-sub">Each piece is hand-engraved — an original work, never repeated.</p>
+    </div>
+    <p class="page-count" id="count-label">Showing all pieces</p>
+  </div>
+</header>
+
+<div class="filter-wrap">
+  <div class="filter-inner">
+    <span class="filter-label">Series</span>
+    <button class="pill active" data-filter="all">All</button>
+    <button class="pill" data-filter="master">Master Edition</button>
+    <button class="pill" data-filter="craft">Signature Edition</button>
+    <button class="pill" data-filter="vessel">Artisan Objects</button>
+  </div>
+</div>
+
+<main class="grid-wrap">
+  <div class="grid" id="product-grid">
+
+    <!-- MASTER EDITION -->
+    <!-- TO ADD A NEW PRODUCT: copy one <article> block, change data-series="master", update name/meta/price -->
+    <article class="card" data-series="master">
+      <div class="card-img img-master">
+        <span class="badge badge-master">Master Edition</span>
+        <!-- Replace placeholder-text with: <img src="your-image.jpg" alt="Xishi Teapot"> -->
+        <span class="placeholder-text">西施壶<br>Xishi Teapot</span>
+      </div>
+      <div class="card-body">
+        <p class="card-series">Master Edition · Hand-engraved by the artisan</p>
+        <h2 class="card-name">Xishi Teapot</h2>
+        <p class="card-meta">Purple Zisha · 150 ml</p>
+        <span class="card-price">$520</span>
+        <span class="card-price-original">$640</span><br>
+        <a class="card-cta" href="/contact.html">Enquire →</a>
+      </div>
+    </article>
+
+    <!-- SIGNATURE EDITION -->
+    <article class="card" data-series="craft">
+      <div class="card-img img-craft">
+        <span class="badge badge-hot">Bestseller</span>
+        <span class="placeholder-text">仿古圆壶<br>Antique Round</span>
+      </div>
+      <div class="card-body">
+        <p class="card-series">Signature Edition</p>
+        <h2 class="card-name">Antique Round Teapot</h2>
+        <p class="card-meta">Purple Zisha · 350 ml</p>
+        <span class="card-price">$180</span><br>
+        <a class="card-cta" href="/contact.html">Enquire →</a>
+      </div>
+    </article>
+
+    <!-- ARTISAN OBJECTS -->
+    <article class="card" data-series="vessel">
+      <div class="card-img img-vessel">
+        <span class="badge badge-new">New</span>
+        <span class="placeholder-text">壶承<br>Teapot Tray</span>
+      </div>
+      <div class="card-body">
+        <p class="card-series">Artisan Objects</p>
+        <h2 class="card-name">Engraved Teapot Tray</h2>
+        <p class="card-meta">Beige Duanni · Bamboo motif</p>
+        <span class="card-price">$96</span><br>
+        <a class="card-cta" href="/contact.html">Enquire →</a>
+      </div>
+    </article>
+
+  </div>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <p class="footer-brand-name">YIXING DINGYUAN 定渊国际</p>
+      <p class="footer-brand-desc">Authentic Yixing Zisha teapots — handcrafted by master artisans, shipped worldwide.</p>
+    </div>
+    <div>
+      <p class="footer-heading">Quick Links</p>
+      <ul class="footer-links">
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/collections.html">Collections</a></li>
+        <li><a href="/craftsmanship.html">Our Craft</a></li>
+        <li><a href="/about.html">About Us</a></li>
+        <li><a href="/contact.html">Contact</a></li>
       </ul>
-      <div class="nav-icons">
-        <button class="nav-icon-btn" id="search-toggle" aria-label="Search">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-        </button>
-        <button class="nav-icon-btn" id="cart-toggle" aria-label="Shopping cart">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
-          <span class="cart-count">0</span>
-        </button>
-        <a href="collections-zh.html" class="lang-toggle" aria-label="Switch to Chinese">中文</a>
-        <button class="hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
     </div>
-  </nav>
-
-  <!-- Mobile menu -->
-  <div class="mobile-menu" role="dialog" aria-modal="true" aria-label="Mobile navigation">
-    <a href="index.html">Home</a>
-    <a href="collections.html">Collections</a>
-    <a href="craftsmanship.html">Craftsmanship</a>
-    <a href="about.html">About Us</a>
-    <a href="contact.html">Contact</a>
-  </div>
-
-  <!-- ============================================================
-       Page Header
-       ============================================================ -->
-  <header class="page-header" role="banner">
-    <div class="container">
-      <h1>Our Collections</h1>
-      <span class="zh">紫砂壶精选</span>
-      <p>Thirty masterworks from our atelier — each one a unique expression of the Zisha tradition.</p>
-    </div>
-  </header>
-
-  <!-- ============================================================
-       Filter Bar (sticky)
-       ============================================================ -->
-  <div class="filter-bar" role="search" aria-label="Filter teapots">
-    <div class="container">
-      <!-- Clay filter -->
-      <div class="filter-group">
-        <label>Clay</label>
-        <div class="filter-pills" role="group" aria-label="Filter by clay type">
-          <button class="filter-pill active" data-filter-clay="all">All</button>
-          <button class="filter-pill" data-filter-clay="purple">Purple Clay</button>
-          <button class="filter-pill" data-filter-clay="red">Red Clay</button>
-          <button class="filter-pill" data-filter-clay="beige">Beige Clay</button>
-        </div>
-      </div>
-
-      <!-- Capacity filter -->
-      <div class="filter-group">
-        <label>Capacity</label>
-        <div class="filter-pills" role="group" aria-label="Filter by capacity">
-          <button class="filter-pill active" data-filter-cap="all">All</button>
-          <button class="filter-pill" data-filter-cap="small">100ml–200ml</button>
-          <button class="filter-pill" data-filter-cap="medium">200ml–350ml</button>
-          <button class="filter-pill" data-filter-cap="large">350ml+</button>
-        </div>
-      </div>
+    <div>
+      <p class="footer-heading">Contact</p>
+      <ul class="footer-links">
+        <li><a href="mailto:info@yixingdingyuan.cn">info@yixingdingyuan.cn</a></li>
+        <li><a href="tel:+8613800000000">WhatsApp: +86 138 0000 0000</a></li>
+        <li style="opacity:0.6; font-size:13px; margin-top:8px;">No. 88 Zisha Road, Dingshan Town<br>Yixing, Jiangsu 214200, China</li>
+      </ul>
     </div>
   </div>
-
-  <!-- ============================================================
-       Products Grid (infinite scroll)
-       ============================================================ -->
-  <section class="products-section" style="padding: 3rem 0;" aria-label="Product grid">
-    <div class="container">
-      <!-- Grid — JS will populate this -->
-      <div class="products-grid grid-3" id="collections-grid" aria-live="polite" aria-label="Teapot products"></div>
-
-      <!-- Infinite scroll sentinel + spinner -->
-      <div class="load-more-area" id="load-more-area" style="display:none;" aria-live="polite" aria-label="Loading more products">
-        <div class="loading-spinner">
-          <div class="spinner-ring" aria-hidden="true"></div>
-          <span>Loading more teapots…</span>
-        </div>
-      </div>
-
-      <!-- Invisible sentinel element that triggers loading when scrolled into view -->
-      <div id="scroll-sentinel" style="height:1px; margin-top: 1rem;" aria-hidden="true"></div>
-    </div>
-  </section>
-
-  <!-- ============================================================
-       Footer
-       ============================================================ -->
-  <footer class="footer" role="contentinfo">
-    <div class="container">
-      <div class="footer-inner">
-        <div class="footer-brand">
-          <span class="logo-en">Dingyuan</span>
-          <span class="logo-zh">定渊国际</span>
-          <p>Authentic Yixing Zisha teapots — handcrafted by master artisans, shipped worldwide.</p>
-          <div class="footer-social">
-            <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
-            <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
-            <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 00-1.95 1.96A29 29 0 001 12a29 29 0 00.46 5.58A2.78 2.78 0 003.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 001.95-1.95A29 29 0 0023 12a29 29 0 00-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg></a>
-          </div>
-        </div>
-        <div class="footer-col">
-          <h4>Quick Links</h4>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="collections.html">Collections</a></li>
-            <li><a href="craftsmanship.html">Craftsmanship</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Collections</h4>
-          <ul>
-            <li><a href="collections.html">Purple Clay (Zini)</a></li>
-            <li><a href="collections.html">Red Clay (Hongni)</a></li>
-            <li><a href="collections.html">Beige Clay (Duanni)</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Contact</h4>
-          <div class="footer-contact-item">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-            <span>info@yixingdingyuan.cn</span>
-          </div>
-          <div class="footer-contact-item">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            <span>Yixing, Jiangsu, China</span>
-          </div>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; 2025 Dingyuan International. All rights reserved.</p>
-        <div class="footer-legal">
-          <a href="privacy.html">Privacy Policy</a>
-          <a href="terms.html">Terms of Service</a>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <button class="back-to-top" id="backToTop" aria-label="Back to top" title="Back to top">↑ Top</button>
-
-  <!-- Search Overlay -->
-  <div class="search-overlay" id="search-overlay" role="dialog" aria-modal="true" aria-label="Search teapots">
-    <button class="search-close" id="search-close" aria-label="Close search">✕</button>
-    <div class="search-inner">
-      <span class="search-label">Search Teapots</span>
-      <div class="search-box">
-        <input type="search" id="search-input" class="search-input" placeholder="Stone Scoop, Purple Clay…" autocomplete="off" aria-label="Search teapots" />
-        <button class="search-submit" id="search-submit" aria-label="Search">→</button>
-      </div>
-    </div>
+  <div class="footer-bottom">
+    <span>© 2026 Yixing Dingyuan (定渊国际). All rights reserved.</span>
+    <span><a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a></span>
   </div>
+</footer>
 
-  <!-- Cart Drawer -->
-  <div class="cart-overlay" id="cart-overlay" aria-hidden="true"></div>
-  <aside class="cart-drawer" id="cart-drawer" role="dialog" aria-modal="true" aria-label="Shopping cart">
-    <div class="cart-drawer-header">
-      <h2>Your Cart <span class="cart-drawer-count" id="cart-drawer-count"></span></h2>
-      <button class="cart-close" id="cart-close" aria-label="Close cart">✕</button>
-    </div>
-    <div class="cart-drawer-body" id="cart-drawer-body"></div>
-    <div class="cart-drawer-footer" id="cart-drawer-footer" style="display:none;">
-      <div class="cart-total">
-        <span class="cart-total-label">Subtotal</span>
-        <span class="cart-total-amount" id="cart-total-amount">$0</span>
-      </div>
-      <a href="contact.html" class="cart-checkout-btn">Enquire to Order</a>
-      <p class="cart-note">Contact us to arrange payment and shipping.</p>
-    </div>
-  </aside>
+<script>
+  const pills = document.querySelectorAll('.pill');
+  const cards = document.querySelectorAll('.card');
+  const countLabel = document.getElementById('count-label');
+  const seriesNames = { all: 'Showing all pieces', master: 'Master Edition', craft: 'Signature Edition', vessel: 'Artisan Objects' };
 
-  <script src="js/main.js"></script>
+  pills.forEach(pill => {
+    pill.addEventListener('click', () => {
+      pills.forEach(p => p.classList.remove('active'));
+      pill.classList.add('active');
+      const f = pill.dataset.filter;
+      let visible = 0;
+      cards.forEach(card => {
+        const show = f === 'all' || card.dataset.series === f;
+        card.style.display = show ? '' : 'none';
+        if (show) visible++;
+      });
+      const grid = document.getElementById('product-grid');
+      let empty = grid.querySelector('.empty');
+      if (visible === 0) {
+        if (!empty) { empty = document.createElement('p'); empty.className = 'empty'; empty.textContent = 'More pieces coming soon…'; grid.appendChild(empty); }
+      } else { if (empty) empty.remove(); }
+      countLabel.textContent = seriesNames[f];
+    });
+  });
+</script>
+
 </body>
 </html>
