@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Xishi Teapot — Master Edition | Dingyuan</title>
+  <meta name="description" content="Hand-engraved Xishi Teapot in Purple Zisha clay, Master Edition. 150ml. Each piece bears the artisan's personal seal." />
+  <link rel="canonical" href="https://www.yixingdingyuan.cn/product-xishi.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=EB+Garamond:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --ink:        #2a1f14;
+      --ink-mid:    #5a4a36;
+      --ink-light:  #8a7a68;
+      --sand:       #f5f0e8;
+      --sand-dark:  #e8e0d0;
+      --clay:       #c8bfaa;
+      --gold:       #9a6e3a;
+      --red:        #8b3a1e;
+      --green:      #3d5c38;
+      --border:     rgba(90,74,54,0.18);
+    }
+    body { font-family: 'EB Garamond', Georgia, serif; background: var(--sand); color: var(--ink); min-height: 100vh; }
+
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 48px; height: 64px;
+      background: rgba(245,240,232,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 0.5px solid var(--border);
+    }
+    .nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 17px; font-weight: 600; letter-spacing: 0.12em; color: var(--ink); text-decoration: none; white-space: nowrap; }
+    .nav-links { display: flex; align-items: center; gap: 32px; }
+    .nav-links a { font-size: 13px; letter-spacing: 0.08em; color: var(--ink-mid); text-decoration: none; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--ink); }
+    .nav-right { display: flex; align-items: center; gap: 20px; }
+    .nav-cart { font-size: 13px; letter-spacing: 0.06em; color: var(--ink-mid); cursor: pointer; background: none; border: none; padding: 0; font-family: inherit; }
+    .nav-lang { font-size: 12px; letter-spacing: 0.1em; color: var(--ink-light); text-decoration: none; border: 0.5px solid var(--clay); padding: 4px 10px; border-radius: 2px; transition: all 0.2s; }
+    .nav-lang:hover { background: var(--sand-dark); color: var(--ink); }
+
+    /* Breadcrumb */
+    .breadcrumb { max-width: 1200px; margin: 0 auto; padding: 20px 48px 0; font-size: 12px; letter-spacing: 0.08em; color: var(--ink-light); }
+    .breadcrumb a { color: var(--ink-light); text-decoration: none; transition: color 0.2s; }
+    .breadcrumb a:hover { color: var(--ink); }
+    .breadcrumb span { margin: 0 8px; }
+
+    /* Product Detail */
+    .product-section { max-width: 1200px; margin: 0 auto; padding: 40px 48px 80px; display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+    .product-image-wrap { position: relative; aspect-ratio: 1 / 1; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+    .img-master { background: #d0c9bc; }
+    .placeholder-text { font-family: 'Cormorant Garamond', serif; font-size: 24px; font-weight: 400; color: var(--ink-mid); text-align: center; padding: 32px; line-height: 1.5; }
+    .badge { position: absolute; top: 18px; left: 18px; z-index: 2; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; padding: 4px 10px; font-family: 'EB Garamond', serif; }
+    .badge-master { background: var(--ink); color: var(--sand); }
+
+    .product-info { padding-top: 8px; }
+    .product-series { font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ink-light); margin-bottom: 14px; }
+    .product-name { font-family: 'Cormorant Garamond', serif; font-size: 48px; font-weight: 400; line-height: 1.1; color: var(--ink); margin-bottom: 8px; }
+    .product-meta { font-size: 14px; color: var(--ink-light); letter-spacing: 0.04em; margin-bottom: 24px; }
+    .product-price-wrap { display: flex; align-items: baseline; gap: 10px; margin-bottom: 28px; }
+    .product-price { font-size: 28px; color: var(--red); }
+    .product-price-original { font-size: 16px; color: var(--ink-light); text-decoration: line-through; }
+    .product-desc { font-size: 16px; line-height: 1.75; color: var(--ink-mid); margin-bottom: 36px; }
+    .btn-enquire { display: inline-block; background: var(--ink); color: var(--sand); font-family: 'EB Garamond', serif; font-size: 14px; letter-spacing: 0.16em; text-transform: uppercase; text-decoration: none; padding: 16px 40px; border: 1px solid var(--ink); transition: background 0.2s, color 0.2s; }
+    .btn-enquire:hover { background: var(--ink-mid); border-color: var(--ink-mid); }
+
+    /* Tabs */
+    .tabs-section { border-top: 0.5px solid var(--border); background: var(--sand-dark); }
+    .tabs-inner { max-width: 1200px; margin: 0 auto; padding: 0 48px; }
+    .tab-nav { display: flex; border-bottom: 0.5px solid var(--border); }
+    .tab-btn { font-family: 'EB Garamond', serif; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-light); background: none; border: none; cursor: pointer; padding: 20px 28px 18px; border-bottom: 2px solid transparent; transition: color 0.2s, border-color 0.2s; margin-bottom: -0.5px; }
+    .tab-btn:hover { color: var(--ink); }
+    .tab-btn.active { color: var(--ink); border-bottom-color: var(--ink); }
+    .tab-panel { display: none; padding: 40px 0 60px; }
+    .tab-panel.active { display: block; }
+    .tab-panel h3 { font-family: 'Cormorant Garamond', serif; font-size: 24px; font-weight: 400; color: var(--ink); margin-bottom: 16px; }
+    .tab-panel p { font-size: 16px; line-height: 1.8; color: var(--ink-mid); margin-bottom: 14px; }
+    .tab-panel ul { padding-left: 20px; }
+    .tab-panel ul li { font-size: 16px; line-height: 1.8; color: var(--ink-mid); margin-bottom: 6px; }
+
+    /* Related Products */
+    .related-section { max-width: 1200px; margin: 0 auto; padding: 60px 48px 96px; }
+    .related-heading { font-family: 'Cormorant Garamond', serif; font-size: 32px; font-weight: 400; color: var(--ink); margin-bottom: 8px; }
+    .related-sub { font-size: 14px; color: var(--ink-light); margin-bottom: 36px; }
+    .related-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; }
+    .card { background: var(--sand-dark); border: 0.5px solid var(--border); cursor: pointer; transition: transform 0.22s, box-shadow 0.22s; overflow: hidden; text-decoration: none; display: block; }
+    .card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(42,31,20,0.10); }
+    .card-img { aspect-ratio: 1 / 1; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; }
+    .img-craft  { background: #c4bb9e; }
+    .img-vessel { background: #b6ad98; }
+    .badge-hot    { background: var(--red); color: #faf0ec; }
+    .badge-new    { background: var(--green); color: #e8f0e4; }
+    .card-body { padding: 20px 22px 24px; background: var(--sand); border-top: 0.5px solid var(--border); }
+    .card-series { font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-light); margin-bottom: 8px; }
+    .card-name { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 500; line-height: 1.2; color: var(--ink); margin-bottom: 4px; }
+    .card-meta { font-size: 13px; color: var(--ink-light); margin-bottom: 14px; }
+    .card-price { font-size: 16px; color: var(--red); }
+    .card-cta { display: inline-block; margin-top: 14px; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-mid); border-bottom: 0.5px solid var(--clay); padding-bottom: 1px; text-decoration: none; transition: color 0.18s, border-color 0.18s; }
+    .card:hover .card-cta { color: var(--ink); border-color: var(--ink-mid); }
+
+    footer { background: var(--ink); color: var(--clay); padding: 60px 48px 40px; }
+    .footer-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 48px; padding-bottom: 40px; border-bottom: 0.5px solid rgba(200,191,170,0.2); }
+    .footer-brand-name { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 600; letter-spacing: 0.1em; color: var(--sand); margin-bottom: 10px; }
+    .footer-brand-desc { font-size: 14px; line-height: 1.7; color: var(--clay); max-width: 260px; }
+    .footer-heading { font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--clay); margin-bottom: 16px; opacity: 0.7; }
+    .footer-links { list-style: none; }
+    .footer-links li { margin-bottom: 10px; }
+    .footer-links a { font-size: 14px; color: var(--clay); text-decoration: none; transition: color 0.2s; opacity: 0.8; }
+    .footer-links a:hover { color: var(--sand); opacity: 1; }
+    .footer-bottom { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding-top: 28px; font-size: 12px; color: var(--clay); opacity: 0.6; letter-spacing: 0.04em; }
+    .footer-bottom a { color: inherit; text-decoration: none; }
+
+    @media (max-width: 900px) {
+      nav { padding: 0 24px; }
+      .nav-links { display: none; }
+      .breadcrumb { padding: 16px 24px 0; }
+      .product-section { padding: 32px 24px 60px; grid-template-columns: 1fr; gap: 36px; }
+      .product-name { font-size: 36px; }
+      .tabs-inner { padding: 0 24px; }
+      .related-section { padding: 48px 24px 72px; }
+      .related-grid { grid-template-columns: 1fr; }
+      footer { padding: 48px 24px 32px; }
+      .footer-inner { grid-template-columns: 1fr 1fr; gap: 32px; }
+    }
+    @media (max-width: 560px) {
+      .tab-btn { padding: 16px 16px 14px; font-size: 11px; }
+      .footer-inner { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="/index.html">YIXING DINGYUAN 定渊国际</a>
+  <div class="nav-links">
+    <a href="/index.html">Home</a>
+    <a href="/collections.html">Collections</a>
+    <a href="/craftsmanship.html">Our Craft</a>
+    <a href="/about.html">About Us</a>
+    <a href="/contact.html">Contact</a>
+  </div>
+  <div class="nav-right">
+    <button class="nav-cart">Cart (0)</button>
+    <a class="nav-lang" href="/product-xishi-zh.html">中文</a>
+  </div>
+</nav>
+
+<div class="breadcrumb">
+  <a href="/index.html">Home</a>
+  <span>›</span>
+  <a href="/collections.html">Collections</a>
+  <span>›</span>
+  Xishi Teapot
+</div>
+
+<section class="product-section">
+  <div class="product-image-wrap img-master">
+    <span class="badge badge-master">Master Edition</span>
+    <span class="placeholder-text">西施壶<br>Xishi Teapot</span>
+  </div>
+  <div class="product-info">
+    <p class="product-series">Master Edition · Hand-engraved by the artisan</p>
+    <h1 class="product-name">Xishi Teapot</h1>
+    <p class="product-meta">Purple Zisha · 150 ml</p>
+    <div class="product-price-wrap">
+      <span class="product-price">$520</span>
+      <span class="product-price-original">$640</span>
+    </div>
+    <p class="product-desc">A revered round-form teapot from the Zisha canon, shaped by hand and engraved before firing. Each piece is a singular work bearing the artisan's personal seal — never repeated.</p>
+    <a class="btn-enquire" href="/contact.html">Enquire to Purchase →</a>
+  </div>
+</section>
+
+<div class="tabs-section">
+  <div class="tabs-inner">
+    <div class="tab-nav">
+      <button class="tab-btn active" data-tab="description">Description</button>
+      <button class="tab-btn" data-tab="material">Material</button>
+      <button class="tab-btn" data-tab="craftsmanship">Craftsmanship</button>
+      <button class="tab-btn" data-tab="care">Care Guide</button>
+    </div>
+    <div class="tab-panel active" id="tab-description">
+      <h3>About the Xishi Teapot</h3>
+      <p>Xishi teapot is one of the most revered round-form teapots in the Zisha canon. Its feminine, rounded silhouette is said to mirror the beauty of the legendary Xi Shi. The body is shaped by hand using the paddle-and-anvil method, then engraved before firing.</p>
+      <p>Each piece bears the artisan's personal seal — a mark of individual authorship that distinguishes Master Edition work from all other series. No two engravings are alike.</p>
+    </div>
+    <div class="tab-panel" id="tab-material">
+      <h3>Purple Zisha (Zini)</h3>
+      <p>Sourced from Huanglongshan, Yixing — the world's most prized deposit of Zisha ore. The clay fires to a rich, dark reddish-brown with a subtly granular surface texture.</p>
+      <p>High iron content gives Purple Zisha exceptional heat retention and promotes the development of a deep, lustrous patina over years of use. The unglazed interior gradually absorbs the essence of the teas brewed within, enhancing flavour with every session.</p>
+    </div>
+    <div class="tab-panel" id="tab-craftsmanship">
+      <h3>Eight Stages of Making</h3>
+      <ul>
+        <li>Clay preparation — aged Zisha ore is processed, wedged, and rested</li>
+        <li>Slabbing — the clay is beaten into uniform sheets</li>
+        <li>Body forming — paddle-and-anvil shaping of the rounded form</li>
+        <li>Spout, handle, and lid attachment</li>
+        <li>Slow drying to prevent cracking</li>
+        <li>Hand engraving of the decorative motif</li>
+        <li>Single firing at approximately 1180°C in an electric kiln</li>
+        <li>Final inspection and seal application</li>
+      </ul>
+    </div>
+    <div class="tab-panel" id="tab-care">
+      <h3>Caring for Your Teapot</h3>
+      <p><strong>First-use seasoning (开壶):</strong> Simmer the teapot gently in plain water for 20 minutes, then brew a pot of your chosen tea and discard it. Repeat once more. This opens the clay pores and removes any residual kiln dust.</p>
+      <p><strong>Daily use:</strong> Rinse with hot water only — no soap or detergent. The unglazed clay absorbs flavour; soap will taint future brews.</p>
+      <p><strong>Drying:</strong> After use, leave the lid ajar and allow the teapot to air-dry fully before storing.</p>
+      <p><strong>Patina:</strong> Buff the exterior gently with a soft cloth while the teapot is still warm. Over time, the clay develops a deep, living sheen that no factory finish can replicate.</p>
+    </div>
+  </div>
+</div>
+
+<section class="related-section">
+  <h2 class="related-heading">You May Also Like</h2>
+  <p class="related-sub">Other pieces from the collection</p>
+  <div class="related-grid">
+    <a class="card" href="/product-fanggu.html">
+      <div class="card-img img-craft">
+        <span class="badge badge-hot">Bestseller</span>
+        <span class="placeholder-text">仿古圆壶<br>Antique Round</span>
+      </div>
+      <div class="card-body">
+        <p class="card-series">Signature Edition</p>
+        <h3 class="card-name">Antique Round Teapot</h3>
+        <p class="card-meta">Purple Zisha · 350 ml</p>
+        <span class="card-price">$180</span><br>
+        <span class="card-cta">View Details →</span>
+      </div>
+    </a>
+    <a class="card" href="/product-tray.html">
+      <div class="card-img img-vessel">
+        <span class="badge badge-new">New</span>
+        <span class="placeholder-text">壶承<br>Teapot Tray</span>
+      </div>
+      <div class="card-body">
+        <p class="card-series">Artisan Objects</p>
+        <h3 class="card-name">Engraved Teapot Tray</h3>
+        <p class="card-meta">Beige Duanni · Bamboo motif</p>
+        <span class="card-price">$96</span><br>
+        <span class="card-cta">View Details →</span>
+      </div>
+    </a>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <p class="footer-brand-name">YIXING DINGYUAN 定渊国际</p>
+      <p class="footer-brand-desc">Authentic Yixing Zisha teapots — handcrafted by master artisans, shipped worldwide.</p>
+    </div>
+    <div>
+      <p class="footer-heading">Quick Links</p>
+      <ul class="footer-links">
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/collections.html">Collections</a></li>
+        <li><a href="/craftsmanship.html">Our Craft</a></li>
+        <li><a href="/about.html">About Us</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="footer-heading">Contact</p>
+      <ul class="footer-links">
+        <li><a href="mailto:info@yixingdingyuan.cn">info@yixingdingyuan.cn</a></li>
+        <li><a href="tel:+8613800000000">WhatsApp: +86 138 0000 0000</a></li>
+        <li style="opacity:0.6; font-size:13px; margin-top:8px;">No. 88 Zisha Road, Dingshan Town<br>Yixing, Jiangsu 214200, China</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Yixing Dingyuan (定渊国际). All rights reserved.</span>
+    <span><a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a></span>
+  </div>
+</footer>
+
+<script>
+  const tabBtns = document.querySelectorAll('.tab-btn');
+  const tabPanels = document.querySelectorAll('.tab-panel');
+  tabBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      tabBtns.forEach(b => b.classList.remove('active'));
+      tabPanels.forEach(p => p.classList.remove('active'));
+      btn.classList.add('active');
+      document.getElementById('tab-' + btn.dataset.tab).classList.add('active');
+    });
+  });
+</script>
+
+</body>
+</html>
