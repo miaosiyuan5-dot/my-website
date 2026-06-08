@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Collections — Yixing Zisha Teapots | Dingyuan</title>
-  <meta name="description" content="Browse our full collection of authentic Yixing Zisha teapots — Purple Clay, Red Clay, and Beige Clay. Filter by material and capacity. Worldwide shipping." />
+  <meta name="description" content="Browse our curated Yixing Zisha teapots — Master Grade engravings, Daily-Use classics, and Zisha decorative pieces. Worldwide shipping." />
   <meta name="keywords" content="Yixing teapot collection, Zisha purple clay, Hongni red clay, Duanni beige clay, buy teapot" />
   <link rel="canonical" href="https://www.yixingdingyuan.cn/collections.html" />
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
@@ -63,12 +63,26 @@
     <div class="container">
       <h1>Our Collections</h1>
       <span class="zh">紫砂壶精选</span>
-      <p>Thirty masterworks from our atelier — each one a unique expression of the Zisha tradition.</p>
+      <p>Three tiers of craftsmanship — Master Grade engravings, everyday classics, and Zisha decorative pieces, all from Yixing's finest artisans.</p>
     </div>
   </header>
 
+  <!-- Grade filter bar -->
+  <div class="filter-bar" role="search" aria-label="Filter by grade">
+    <div class="container">
+      <div class="filter-group">
+        <div class="filter-pills" role="group" aria-label="Filter by grade">
+          <button class="filter-pill active" data-grade="all">All</button>
+          <button class="filter-pill" data-grade="master">Master Grade</button>
+          <button class="filter-pill" data-grade="daily">Daily Use</button>
+          <button class="filter-pill" data-grade="derivative">Zisha Décor</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- ============================================================
-       Products Grid (infinite scroll)
+       Products Grid
        ============================================================ -->
   <section class="products-section" style="padding: 3rem 0;" aria-label="Product grid">
     <div class="container">
@@ -117,9 +131,9 @@
         <div class="footer-col">
           <h4>Collections</h4>
           <ul>
-            <li><a href="collections.html">Purple Clay (Zini)</a></li>
-            <li><a href="collections.html">Red Clay (Hongni)</a></li>
-            <li><a href="collections.html">Beige Clay (Duanni)</a></li>
+            <li><a href="collections.html">Master Grade</a></li>
+            <li><a href="collections.html">Daily Use</a></li>
+            <li><a href="collections.html">Zisha Décor</a></li>
           </ul>
         </div>
         <div class="footer-col">
@@ -180,84 +194,84 @@
   <script>
   (function() {
     const allProducts = [
-      { name: 'Xishi Teapot · Purple Clay',     clay: 'purple', cap: 'small',  usd: '$180', img: 'Xishi+Purple',      badge: 'Bestseller' },
-      { name: 'Fanggu Teapot · Red Clay',        clay: 'red',    cap: 'medium', usd: '$256', img: 'Fanggu+Red',        badge: '' },
-      { name: 'Shipiao Teapot · Beige Clay',     clay: 'beige',  cap: 'small',  usd: '$310', img: 'Shipiao+Beige',     badge: 'New' },
-      { name: 'Dezhong Teapot · Purple Clay',    clay: 'purple', cap: 'large',  usd: '$395', img: 'Dezhong+Purple',    badge: '' },
-      { name: 'Duoqiu Teapot · Red Clay',        clay: 'red',    cap: 'medium', usd: '$232', img: 'Duoqiu+Red',        badge: '' },
-      { name: 'Dragon Egg · Beige Clay',         clay: 'beige',  cap: 'small',  usd: '$278', img: 'Longdan+Beige',     badge: 'New' },
-      { name: 'Bamboo Node · Purple Clay',       clay: 'purple', cap: 'medium', usd: '$345', img: 'Zhujie+Purple',     badge: '' },
-      { name: 'Flat Pear · Red Clay',            clay: 'red',    cap: 'small',  usd: '$228', img: 'Bianli+Red',        badge: '' },
-      { name: 'Han Flat · Beige Clay',           clay: 'beige',  cap: 'medium', usd: '$296', img: 'Hanbian+Beige',     badge: '' },
-      { name: 'Well Fence · Purple Clay',        clay: 'purple', cap: 'large',  usd: '$450', img: 'Jinglan+Purple',    badge: '' },
-      { name: 'Pear Form · Red Clay',            clay: 'red',    cap: 'small',  usd: '$208', img: 'Lixing+Red',        badge: '' },
-      { name: 'Chrysanthemum · Beige Clay',      clay: 'beige',  cap: 'medium', usd: '$335', img: 'Heju+Beige',        badge: 'Bestseller' },
-      { name: 'Square Form · Purple Clay',       clay: 'purple', cap: 'medium', usd: '$373', img: 'Sifang+Purple',     badge: '' },
-      { name: 'Gourd · Red Clay',                clay: 'red',    cap: 'small',  usd: '$248', img: 'Hulu+Red',          badge: '' },
-      { name: 'Lotus Seed · Beige Clay',         clay: 'beige',  cap: 'large',  usd: '$420', img: 'Lianzi+Beige',      badge: '' },
-      { name: 'Low Fence · Purple Clay',         clay: 'purple', cap: 'small',  usd: '$194', img: 'Aijinglan+Purple',  badge: '' },
-      { name: 'Qin Weight · Red Clay',           clay: 'red',    cap: 'medium', usd: '$288', img: 'Qinquan+Red',       badge: 'New' },
-      { name: 'Fish Dragon · Beige Clay',        clay: 'beige',  cap: 'large',  usd: '$535', img: 'YuhuaLong+Beige',   badge: 'Limited' },
-      { name: 'Spring Herald · Purple Clay',     clay: 'purple', cap: 'medium', usd: '$310', img: 'Baochun+Purple',    badge: '' },
-      { name: 'Flat Belly · Red Clay',           clay: 'red',    cap: 'medium', usd: '$270', img: 'Bianfu+Red',        badge: '' },
-      { name: 'Gongchun · Beige Clay',           clay: 'beige',  cap: 'small',  usd: '$363', img: 'Gongchun+Beige',    badge: 'Bestseller' },
-      { name: 'Ziye Shipiao · Purple Clay',      clay: 'purple', cap: 'small',  usd: '$246', img: 'Ziye+Purple',       badge: '' },
-      { name: 'Dabin Hexagon · Red Clay',        clay: 'red',    cap: 'large',  usd: '$493', img: 'Dabin+Red',         badge: '' },
-      { name: 'Round Bead · Beige Clay',         clay: 'beige',  cap: 'small',  usd: '$222', img: 'Yuanzhu+Beige',     badge: '' },
-      { name: 'Pan Form · Purple Clay',          clay: 'purple', cap: 'medium', usd: '$331', img: 'Pan+Purple',        badge: '' },
-      { name: 'Jingzhou Shipiao · Red Clay',     clay: 'red',    cap: 'small',  usd: '$293', img: 'Jingzhou+Red',      badge: 'New' },
-      { name: 'Wendan · Beige Clay',             clay: 'beige',  cap: 'medium', usd: '$266', img: 'Wendan+Beige',      badge: '' },
-      { name: 'Laughing Cherry · Purple Clay',   clay: 'purple', cap: 'large',  usd: '$387', img: 'Xiaoying+Purple',   badge: '' },
-      { name: 'Pumpkin · Red Clay',              clay: 'red',    cap: 'medium', usd: '$303', img: 'Nangua+Red',        badge: 'Bestseller' },
-      { name: 'Beautiful Shoulder · Beige Clay', clay: 'beige',  cap: 'small',  usd: '$236', img: 'Meirenjian+Beige',  badge: '' },
+      {
+        name: 'Engraved Xi Shi Teapot · Purple Clay',
+        grade: 'master',
+        gradeLabel: 'Master Grade',
+        usd: '$950', cny: '¥6,800',
+        img: 'Master+Xishi',
+        color: 'E4DECE/3A3028',
+        badge: 'Flagship',
+        desc: 'Hand-engraved landscape by our master artisan. Each piece includes a signed certificate of authenticity.'
+      },
+      {
+        name: 'Fanggu Teapot · Red Clay',
+        grade: 'daily',
+        gradeLabel: 'Daily Use',
+        usd: '$138', cny: '¥980',
+        img: 'Daily+Fanggu',
+        color: 'C4A882/3A3028',
+        badge: 'Bestseller',
+        desc: 'A timeless classic form in premium red clay — the ideal everyday brewing companion.'
+      },
+      {
+        name: 'Zisha Vase · Beige Clay',
+        grade: 'derivative',
+        gradeLabel: 'Zisha Décor',
+        usd: '$78', cny: '¥560',
+        img: 'Zisha+Vase',
+        color: 'D4C4A8/3A3028',
+        badge: 'New',
+        desc: 'Hand-thrown beige clay vase — elegant as a display piece or functional home accent.'
+      },
     ];
 
-    const BATCH = 8;
-    let rendered = 0;
-    let loading = false;
-
+    let activeGrade = 'all';
     const grid = document.getElementById('collections-grid');
-    const loadArea = document.getElementById('load-more-area');
-    const sentinel = document.getElementById('scroll-sentinel');
 
-    const colors = { purple: 'E4DECE/3A3028', red: 'C4A882/3A3028', beige: 'D4C4A8/3A3028' };
+    const gradeColors = {
+      master:     '#8B6914',
+      daily:      '#5C7A4E',
+      derivative: '#4A6B8A',
+    };
 
-    function renderBatch() {
-      const chunk = allProducts.slice(rendered, rendered + BATCH);
-      chunk.forEach(p => {
-        const col = colors[p.clay] || 'E4DECE/3A3028';
+    function render() {
+      grid.innerHTML = '';
+      const items = activeGrade === 'all' ? allProducts : allProducts.filter(p => p.grade === activeGrade);
+      items.forEach(p => {
         const badge = p.badge ? `<span class="product-card-badge">${p.badge}</span>` : '';
+        const tagColor = gradeColors[p.grade] || '#6B6B6B';
         const article = document.createElement('article');
         article.className = 'product-card';
         article.innerHTML = `
-          <a href="collections.html" class="product-card-image" aria-label="View ${p.name}" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">
+          <a href="product.html" class="product-card-image" aria-label="View ${p.name}">
             ${badge}
-            <img src="https://placehold.co/480x480/${col}?text=${encodeURIComponent(p.img)}"
+            <img src="https://placehold.co/480x480/${p.color}?text=${encodeURIComponent(p.img)}"
                  alt="${p.name}" loading="lazy" width="480" height="480" />
             <div class="product-card-overlay"><button class="quick-view-btn">View Details</button></div>
           </a>
           <div class="product-card-info">
+            <span style="display:inline-block;padding:2px 10px;border-radius:20px;font-size:0.72rem;font-weight:600;letter-spacing:.05em;background:${tagColor};color:#fff;margin-bottom:6px;">${p.gradeLabel}</span>
             <h3>${p.name}</h3>
-            <div class="price">${p.usd}</div>
+            <p style="font-size:0.82rem;color:var(--color-text-muted);margin:4px 0 8px;">${p.desc}</p>
+            <div class="price">${p.usd} <span style="font-size:0.85em;color:var(--color-text-muted);">/ ${p.cny}</span></div>
           </div>`;
         grid.appendChild(article);
       });
-      rendered += chunk.length;
-      loading = false;
-      loadArea.style.display = 'none';
-      if (rendered >= allProducts.length) sentinel.style.display = 'none';
+      document.getElementById('load-more-area').style.display = 'none';
+      document.getElementById('scroll-sentinel').style.display = 'none';
     }
 
-    const observer = new IntersectionObserver(entries => {
-      if (entries[0].isIntersecting && !loading && rendered < allProducts.length) {
-        loading = true;
-        loadArea.style.display = 'block';
-        setTimeout(renderBatch, 600);
-      }
-    }, { rootMargin: '200px' });
-    observer.observe(sentinel);
+    document.querySelectorAll('[data-grade]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('[data-grade]').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        activeGrade = btn.dataset.grade;
+        render();
+      });
+    });
 
-    renderBatch();
+    render();
   })();
   </script>
 </body>
