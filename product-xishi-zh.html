@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>西施壶，大师款 — 宜兴紫砂 | 定渊国际</title>
+  <meta name="description" content="西施壶，大师款。紫泥，150ml，大师亲笔刻绘。正宗宜兴工艺。¥3,800。" />
+  <link rel="canonical" href="https://www.yixingdingyuan.cn/product-xishi-zh.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=EB+Garamond:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --ink:        #2a1f14;
+      --ink-mid:    #5a4a36;
+      --ink-light:  #8a7a68;
+      --sand:       #f5f0e8;
+      --sand-dark:  #e8e0d0;
+      --clay:       #c8bfaa;
+      --gold:       #9a6e3a;
+      --red:        #8b3a1e;
+      --green:      #3d5c38;
+      --border:     rgba(90,74,54,0.18);
+    }
+    body { font-family: 'EB Garamond', 'Noto Serif SC', Georgia, serif; background: var(--sand); color: var(--ink); min-height: 100vh; }
+
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 48px; height: 64px;
+      background: rgba(245,240,232,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 0.5px solid var(--border);
+    }
+    .nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 17px; font-weight: 600; letter-spacing: 0.12em; color: var(--ink); text-decoration: none; white-space: nowrap; }
+    .nav-links { display: flex; align-items: center; gap: 28px; }
+    .nav-links a { font-size: 14px; letter-spacing: 0.06em; color: var(--ink-mid); text-decoration: none; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--ink); }
+    .nav-right { display: flex; align-items: center; gap: 20px; }
+    .nav-cart { font-size: 13px; letter-spacing: 0.04em; color: var(--ink-mid); cursor: pointer; background: none; border: none; padding: 0; font-family: inherit; }
+    .nav-lang { font-size: 12px; letter-spacing: 0.08em; color: var(--ink-light); text-decoration: none; border: 0.5px solid var(--clay); padding: 4px 10px; border-radius: 2px; transition: all 0.2s; }
+    .nav-lang:hover { background: var(--sand-dark); color: var(--ink); }
+
+    .breadcrumb { max-width: 1200px; margin: 0 auto; padding: 20px 48px 0; font-size: 13px; color: var(--ink-light); }
+    .breadcrumb a { color: var(--ink-light); text-decoration: none; transition: color 0.2s; }
+    .breadcrumb a:hover { color: var(--ink); }
+    .breadcrumb span { margin: 0 8px; }
+
+    .product-wrap { max-width: 1200px; margin: 0 auto; padding: 40px 48px 72px; }
+    .product-detail { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+    .product-img-area { aspect-ratio: 1 / 1; background: #d0c9bc; display: flex; align-items: center; justify-content: center; position: relative; }
+    .product-placeholder { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 400; color: var(--ink-mid); text-align: center; padding: 32px; line-height: 1.6; }
+    .badge { position: absolute; top: 16px; left: 16px; z-index: 2; font-size: 11px; letter-spacing: 0.1em; padding: 4px 10px; font-family: inherit; }
+    .badge-master { background: var(--ink); color: var(--sand); }
+    .badge-new    { background: var(--green); color: #e8f0e4; }
+    .badge-hot    { background: var(--red); color: #faf0ec; }
+
+    .product-info { padding-top: 8px; }
+    .product-series { font-size: 12px; letter-spacing: 0.12em; color: var(--ink-light); margin-bottom: 12px; }
+    .product-name { font-family: 'Cormorant Garamond', serif; font-size: 44px; font-weight: 400; line-height: 1.1; color: var(--ink); margin-bottom: 8px; }
+    .product-meta { font-size: 14px; color: var(--ink-light); margin-bottom: 20px; }
+    .product-price-row { display: flex; align-items: baseline; gap: 10px; margin-bottom: 24px; }
+    .product-price { font-size: 28px; color: var(--red); font-family: 'Cormorant Garamond', serif; }
+    .product-price-original { font-size: 16px; color: var(--ink-light); text-decoration: line-through; }
+    .product-desc { font-size: 16px; line-height: 1.9; color: var(--ink-mid); margin-bottom: 32px; }
+    .product-cta { display: inline-block; background: var(--ink); color: var(--sand); padding: 14px 36px; font-size: 14px; letter-spacing: 0.1em; text-decoration: none; transition: background 0.2s; }
+    .product-cta:hover { background: var(--ink-mid); }
+
+    .tabs-section { max-width: 1200px; margin: 0 auto; padding: 0 48px 72px; }
+    .tabs-nav { display: flex; border-bottom: 0.5px solid var(--border); }
+    .tab-btn { font-family: inherit; font-size: 14px; letter-spacing: 0.08em; color: var(--ink-light); background: none; border: none; padding: 14px 28px 14px 0; cursor: pointer; border-bottom: 2px solid transparent; margin-bottom: -0.5px; transition: color 0.2s, border-color 0.2s; }
+    .tab-btn:hover { color: var(--ink); }
+    .tab-btn.active { color: var(--ink); border-bottom-color: var(--ink); }
+    .tab-panel { display: none; padding: 36px 0 0; }
+    .tab-panel.active { display: block; }
+    .tab-panel h3 { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 500; color: var(--ink); margin-bottom: 16px; }
+    .tab-panel p { font-size: 16px; line-height: 1.9; color: var(--ink-mid); margin-bottom: 12px; }
+    .tab-panel ul { padding-left: 20px; margin-top: 8px; }
+    .tab-panel ul li { font-size: 16px; line-height: 1.9; color: var(--ink-mid); margin-bottom: 4px; }
+
+    .related-section { background: var(--sand-dark); border-top: 0.5px solid var(--border); padding: 64px 48px; }
+    .related-inner { max-width: 1200px; margin: 0 auto; }
+    .related-heading { font-family: 'Cormorant Garamond', serif; font-size: 28px; font-weight: 400; color: var(--ink); margin-bottom: 36px; }
+    .related-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; }
+    .card { background: var(--sand-dark); border: 0.5px solid var(--border); transition: transform 0.22s, box-shadow 0.22s; overflow: hidden; }
+    .card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(42,31,20,0.10); }
+    .card-img { aspect-ratio: 1 / 1; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; }
+    .img-craft  { background: #c4bb9e; }
+    .img-vessel { background: #b6ad98; }
+    .placeholder-text { font-family: 'Cormorant Garamond', serif; font-size: 18px; font-weight: 400; color: var(--ink-mid); text-align: center; padding: 24px; line-height: 1.5; }
+    .card-body { padding: 20px 22px 24px; background: var(--sand); border-top: 0.5px solid var(--border); }
+    .card-series { font-size: 11px; letter-spacing: 0.12em; color: var(--ink-light); margin-bottom: 8px; }
+    .card-name { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 500; line-height: 1.2; color: var(--ink); margin-bottom: 4px; }
+    .card-meta { font-size: 13px; color: var(--ink-light); margin-bottom: 14px; }
+    .card-price { font-size: 16px; color: var(--red); }
+    .card-cta { display: inline-block; margin-top: 14px; font-size: 13px; letter-spacing: 0.1em; color: var(--ink-mid); border-bottom: 0.5px solid var(--clay); padding-bottom: 1px; text-decoration: none; transition: color 0.18s, border-color 0.18s; }
+    .card-cta:hover { color: var(--ink); border-color: var(--ink-mid); }
+
+    footer { background: var(--ink); color: var(--clay); padding: 60px 48px 40px; }
+    .footer-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 48px; padding-bottom: 40px; border-bottom: 0.5px solid rgba(200,191,170,0.2); }
+    .footer-brand-name { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 600; letter-spacing: 0.1em; color: var(--sand); margin-bottom: 10px; }
+    .footer-brand-desc { font-size: 14px; line-height: 1.8; color: var(--clay); max-width: 260px; }
+    .footer-heading { font-size: 11px; letter-spacing: 0.16em; color: var(--clay); margin-bottom: 16px; opacity: 0.7; }
+    .footer-links { list-style: none; }
+    .footer-links li { margin-bottom: 10px; }
+    .footer-links a { font-size: 14px; color: var(--clay); text-decoration: none; transition: color 0.2s; opacity: 0.8; }
+    .footer-links a:hover { color: var(--sand); opacity: 1; }
+    .footer-bottom { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding-top: 28px; font-size: 12px; color: var(--clay); opacity: 0.6; }
+    .footer-bottom a { color: inherit; text-decoration: none; }
+
+    @media (max-width: 900px) {
+      nav { padding: 0 24px; }
+      .nav-links { display: none; }
+      .breadcrumb { padding: 16px 24px 0; }
+      .product-wrap { padding: 28px 24px 48px; }
+      .product-detail { grid-template-columns: 1fr; gap: 32px; }
+      .product-name { font-size: 36px; }
+      .tabs-section { padding: 0 24px 48px; }
+      .related-section { padding: 48px 24px; }
+      .related-grid { grid-template-columns: 1fr; }
+      footer { padding: 48px 24px 32px; }
+      .footer-inner { grid-template-columns: 1fr 1fr; gap: 32px; }
+    }
+    @media (max-width: 560px) {
+      .tab-btn { padding: 12px 12px 12px 0; font-size: 13px; }
+      .footer-inner { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="/index-zh.html">YIXING DINGYUAN 定渊国际</a>
+  <div class="nav-links">
+    <a href="/index-zh.html">首页</a>
+    <a href="/collections-zh.html">全部作品</a>
+    <a href="/craftsmanship.html">制作工艺</a>
+    <a href="/about.html">关于我们</a>
+    <a href="/contact.html">联系我们</a>
+  </div>
+  <div class="nav-right">
+    <button class="nav-cart">购物车 (0)</button>
+    <a class="nav-lang" href="/product-xishi.html">EN</a>
+  </div>
+</nav>
+
+<div class="breadcrumb">
+  <a href="/index-zh.html">首页</a>
+  <span>／</span>
+  <a href="/collections-zh.html">全部作品</a>
+  <span>／</span>
+  西施壶
+</div>
+
+<main>
+  <div class="product-wrap">
+    <div class="product-detail">
+      <div class="product-img-area">
+        <span class="badge badge-master">大师款</span>
+        <span class="product-placeholder">西施壶<br>亲手刻绘</span>
+      </div>
+      <div class="product-info">
+        <p class="product-series">大师款 · 大师亲笔刻绘</p>
+        <h1 class="product-name">西施壶</h1>
+        <p class="product-meta">紫泥 · 150ml</p>
+        <div class="product-price-row">
+          <span class="product-price">¥3,800</span>
+          <span class="product-price-original">¥4,500</span>
+        </div>
+        <p class="product-desc">西施壶是紫砂经典圆器之首，以其饱满圆润的壶身著称，相传其造型灵感源于中国古代四大美人之一西施。本款为大师亲笔刻绘，每一把壶上的图案均不重复，壶底钤有制壶人印章，是可传世的茶器孤品。</p>
+        <a class="product-cta" href="/contact.html">咨询购买 →</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="tabs-section">
+    <div class="tabs-nav">
+      <button class="tab-btn active" data-tab="description">产品介绍</button>
+      <button class="tab-btn" data-tab="material">泥料特性</button>
+      <button class="tab-btn" data-tab="craftsmanship">制作工艺</button>
+      <button class="tab-btn" data-tab="care">养壶指南</button>
+    </div>
+    <div class="tab-panel active" id="tab-description">
+      <h3>关于西施壶</h3>
+      <p>西施壶是紫砂圆器中最受推崇的器形之一，壶身圆润饱满，线条婉约，如美人之姿，故以西施为名。壶身采用传统打身筒工艺，一拍一筑，成形后由大师亲手刻绘，图案取材自然、诗词或山水，每把皆不重复。</p>
+      <p>壶底钤有制壶人亲手印章，是正宗宜兴大师款紫砂壶的品质保证，亦是一件值得珍藏与传承的茶器艺品。</p>
+    </div>
+    <div class="tab-panel" id="tab-material">
+      <h3>紫泥（原矿）</h3>
+      <p>取自江苏宜兴黄龙山，是全球唯一的正宗紫砂泥料产地。紫泥呈深红棕色，含铁量高，烧成后质地细腻、透气保温，是泡养乌龙、普洱、红茶的首选泥料。</p>
+      <p>紫砂双重气孔结构能有效调节泡茶温度，长期使用后壶身会逐渐包浆，色泽愈发温润，是真正会"活"起来的茶器。</p>
+    </div>
+    <div class="tab-panel" id="tab-craftsmanship">
+      <h3>八道工序</h3>
+      <ul>
+        <li>炼泥 — 原矿破碎、澄洗、陈腐，方可使用</li>
+        <li>打泥片 — 将泥料拍打成均匀的泥片</li>
+        <li>打身筒 — 以拍身筒工艺将泥片围合成壶身</li>
+        <li>装嘴、把、盖 — 各部位泥浆粘合，手工修整</li>
+        <li>阴干 — 在阴凉处自然缓慢晾干，防止开裂</li>
+        <li>刻绘 — 在半干坯体上以铁刀刻划纹饰</li>
+        <li>烧制 — 约1180°C单次烧成</li>
+        <li>出窑验收 — 大师逐一检验，盖章确认</li>
+      </ul>
+    </div>
+    <div class="tab-panel" id="tab-care">
+      <h3>养壶指南</h3>
+      <p><strong>开壶：</strong>新壶使用前，先将壶放入清水中慢火煮20至30分钟，再用所泡茶叶冲泡数次，方可正式使用。</p>
+      <p><strong>日常清洁：</strong>每次泡茶后用热水冲洗，切勿使用清洁剂或肥皂，以免破坏包浆。泡茶后及时倒出茶叶，不留隔夜茶。</p>
+      <p><strong>晾干：</strong>每次使用后将壶盖打开，放置于通风处自然晾干，避免异味渗入。</p>
+      <p><strong>养壶：</strong>趁壶身尚有余温时，用干净软布轻轻擦拭壶身。日积月累，紫砂壶将呈现出深邃温润的包浆光泽，这正是一把有故事的老壶最迷人之处。</p>
+    </div>
+  </div>
+</main>
+
+<section class="related-section">
+  <div class="related-inner">
+    <h2 class="related-heading">您可能也喜欢</h2>
+    <div class="related-grid">
+      <article class="card">
+        <div class="card-img img-craft">
+          <span class="badge badge-hot">热销</span>
+          <span class="placeholder-text">仿古圆壶<br>精品款</span>
+        </div>
+        <div class="card-body">
+          <p class="card-series">精品款</p>
+          <h2 class="card-name">仿古圆壶</h2>
+          <p class="card-meta">紫泥 · 350ml</p>
+          <span class="card-price">¥1,280</span><br>
+          <a class="card-cta" href="/product-fanggu-zh.html">查看详情 →</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-img img-vessel">
+          <span class="badge badge-new">新品</span>
+          <span class="placeholder-text">刻绘壶承<br>器物系列</span>
+        </div>
+        <div class="card-body">
+          <p class="card-series">器物系列</p>
+          <h2 class="card-name">手刻壶承</h2>
+          <p class="card-meta">段泥 · 竹节纹</p>
+          <span class="card-price">¥680</span><br>
+          <a class="card-cta" href="/product-tray-zh.html">查看详情 →</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <p class="footer-brand-name">YIXING DINGYUAN 定渊国际</p>
+      <p class="footer-brand-desc">正宗宜兴紫砂刻绘作品，大师亲制，全球发货。</p>
+    </div>
+    <div>
+      <p class="footer-heading">快速导航</p>
+      <ul class="footer-links">
+        <li><a href="/index-zh.html">首页</a></li>
+        <li><a href="/collections-zh.html">全部作品</a></li>
+        <li><a href="/craftsmanship.html">制作工艺</a></li>
+        <li><a href="/about.html">关于我们</a></li>
+        <li><a href="/contact.html">联系我们</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="footer-heading">联系方式</p>
+      <ul class="footer-links">
+        <li><a href="mailto:info@yixingdingyuan.cn">info@yixingdingyuan.cn</a></li>
+        <li><a href="tel:+8613800000000">微信/WhatsApp: +86 138 0000 0000</a></li>
+        <li style="opacity:0.6; font-size:13px; margin-top:8px;">江苏省宜兴市丁蜀镇<br>紫砂路88号</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 定渊国际 (Yixing Dingyuan). 版权所有。</span>
+    <span><a href="/privacy.html">隐私政策</a> · <a href="/terms.html">服务条款</a></span>
+  </div>
+</footer>
+
+<script>
+  const tabBtns = document.querySelectorAll('.tab-btn');
+  const tabPanels = document.querySelectorAll('.tab-panel');
+  tabBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      tabBtns.forEach(b => b.classList.remove('active'));
+      tabPanels.forEach(p => p.classList.remove('active'));
+      btn.classList.add('active');
+      document.getElementById('tab-' + btn.dataset.tab).classList.add('active');
+    });
+  });
+</script>
+
+</body>
+</html>
