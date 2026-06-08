@@ -145,68 +145,8 @@
   </div>
 </header>
 
-<div class="filter-wrap">
-  <div class="filter-inner">
-    <span class="filter-label">Series</span>
-    <button class="pill active" data-filter="all">All</button>
-    <button class="pill" data-filter="master">Master Edition</button>
-    <button class="pill" data-filter="craft">Signature Edition</button>
-    <button class="pill" data-filter="vessel">Artisan Objects</button>
-  </div>
-</div>
-
 <main class="grid-wrap">
-  <div class="grid" id="product-grid">
-
-    <!-- MASTER EDITION -->
-    <!-- TO ADD A NEW PRODUCT: copy one <article> block, change data-series="master", update name/meta/price -->
-    <article class="card" data-series="master">
-      <div class="card-img img-master">
-        <span class="badge badge-master">Master Edition</span>
-        <!-- Replace placeholder-text with: <img src="your-image.jpg" alt="Xishi Teapot"> -->
-        <span class="placeholder-text">西施壶<br>Xishi Teapot</span>
-      </div>
-      <div class="card-body">
-        <p class="card-series">Master Edition · Hand-engraved by the artisan</p>
-        <h2 class="card-name">Xishi Teapot</h2>
-        <p class="card-meta">Purple Zisha · 150 ml</p>
-        <span class="card-price">$520</span>
-        <span class="card-price-original">$640</span><br>
-        <a class="card-cta" href="/product-xishi.html">View Details →</a>
-      </div>
-    </article>
-
-    <!-- SIGNATURE EDITION -->
-    <article class="card" data-series="craft">
-      <div class="card-img img-craft">
-        <span class="badge badge-hot">Bestseller</span>
-        <span class="placeholder-text">仿古圆壶<br>Antique Round</span>
-      </div>
-      <div class="card-body">
-        <p class="card-series">Signature Edition</p>
-        <h2 class="card-name">Antique Round Teapot</h2>
-        <p class="card-meta">Purple Zisha · 350 ml</p>
-        <span class="card-price">$180</span><br>
-        <a class="card-cta" href="/product-fanggu.html">View Details →</a>
-      </div>
-    </article>
-
-    <!-- ARTISAN OBJECTS -->
-    <article class="card" data-series="vessel">
-      <div class="card-img img-vessel">
-        <span class="badge badge-new">New</span>
-        <span class="placeholder-text">壶承<br>Teapot Tray</span>
-      </div>
-      <div class="card-body">
-        <p class="card-series">Artisan Objects</p>
-        <h2 class="card-name">Engraved Teapot Tray</h2>
-        <p class="card-meta">Beige Duanni · Bamboo motif</p>
-        <span class="card-price">$96</span><br>
-        <a class="card-cta" href="/product-tray.html">View Details →</a>
-      </div>
-    </article>
-
-  </div>
+  <div class="grid" id="product-grid"></div>
 </main>
 
 <footer>
@@ -240,31 +180,36 @@
   </div>
 </footer>
 
+<script src="/data/products.js"></script>
 <script>
-  const pills = document.querySelectorAll('.pill');
-  const cards = document.querySelectorAll('.card');
+  const imgClassMap = { master: 'img-master', craft: 'img-craft', vessel: 'img-vessel' };
+  const grid = document.getElementById('product-grid');
   const countLabel = document.getElementById('count-label');
-  const seriesNames = { all: 'Showing all pieces', master: 'Master Edition', craft: 'Signature Edition', vessel: 'Artisan Objects' };
 
-  pills.forEach(pill => {
-    pill.addEventListener('click', () => {
-      pills.forEach(p => p.classList.remove('active'));
-      pill.classList.add('active');
-      const f = pill.dataset.filter;
-      let visible = 0;
-      cards.forEach(card => {
-        const show = f === 'all' || card.dataset.series === f;
-        card.style.display = show ? '' : 'none';
-        if (show) visible++;
-      });
-      const grid = document.getElementById('product-grid');
-      let empty = grid.querySelector('.empty');
-      if (visible === 0) {
-        if (!empty) { empty = document.createElement('p'); empty.className = 'empty'; empty.textContent = 'More pieces coming soon…'; grid.appendChild(empty); }
-      } else { if (empty) empty.remove(); }
-      countLabel.textContent = seriesNames[f];
-    });
+  products.forEach(p => {
+    const badgeHTML = p.badge
+      ? `<span class="badge ${p.badgeClass}">${p.badge}</span>` : '';
+    const origHTML = p.originalPrice
+      ? `<span class="card-price-original">$${p.originalPrice}</span>` : '';
+    const article = document.createElement('article');
+    article.className = 'card';
+    article.dataset.series = p.series;
+    article.innerHTML = `
+      <div class="card-img ${imgClassMap[p.series]}">
+        ${badgeHTML}
+        <span class="placeholder-text">${p.nameCn}<br>${p.name}</span>
+      </div>
+      <div class="card-body">
+        <p class="card-series">${p.seriesLabel}</p>
+        <h2 class="card-name">${p.name}</h2>
+        <p class="card-meta">${p.clay}</p>
+        <span class="card-price">$${p.price}</span>${origHTML}<br>
+        <a class="card-cta" href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">View Details →</a>
+      </div>`;
+    grid.appendChild(article);
   });
+
+  if (countLabel) countLabel.textContent = `Showing ${products.length} pieces`;
 </script>
 
 </body>

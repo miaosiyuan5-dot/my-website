@@ -1,0 +1,62 @@
+const products = [
+  {
+    id: "classic-round-teapot",
+    name: "Classic Round Teapot",
+    nameCn: "经典圆壶",
+    series: "craft",
+    seriesLabel: "Signature Edition",
+    clay: "Purple Zisha · 200ml",
+    price: 188,
+    originalPrice: 240,
+    badge: "Bestseller",
+    badgeClass: "badge-hot",
+    images: [],
+    shortDesc: "The purest expression of Zisha form — a timeless round body with smooth lines, ideal for green and light oolong teas.",
+    inStock: true
+  },
+  {
+    id: "stone-scoop-teapot",
+    name: "Stone Scoop Teapot",
+    nameCn: "石瓢壶",
+    series: "master",
+    seriesLabel: "Master Edition",
+    clay: "Beige Duanni · 280ml",
+    price: 256,
+    originalPrice: null,
+    badge: null,
+    badgeClass: null,
+    images: [],
+    shortDesc: "A scholar's companion — the iconic triangular body and flat lid make the Stone Scoop a masterpiece of functional minimalism.",
+    inStock: true
+  },
+  {
+    id: "dragon-egg-teapot",
+    name: "Dragon Egg Teapot",
+    nameCn: "龙蛋壶",
+    series: "master",
+    seriesLabel: "Master Edition",
+    clay: "Red Hongni · 160ml",
+    price: 312,
+    originalPrice: null,
+    badge: "New",
+    badgeClass: "badge-new",
+    images: [],
+    shortDesc: "Compact and perfectly balanced, the Dragon Egg's oval body is hand-engraved with a coiled dragon rising from clouds.",
+    inStock: true
+  },
+  {
+    id: "antique-round-teapot",
+    name: "Antique Round Teapot",
+    nameCn: "仿古圆壶",
+    series: "craft",
+    seriesLabel: "Signature Edition",
+    clay: "Purple Zisha · 350ml",
+    price: 398,
+    originalPrice: null,
+    badge: null,
+    badgeClass: null,
+    images: [],
+    shortDesc: "Inspired by Song Dynasty prototypes, this generous vessel suits aged pu-erh and roasted oolongs that reward long steeping.",
+    inStock: true
+  }
+];
