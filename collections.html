@@ -68,35 +68,6 @@
   </header>
 
   <!-- ============================================================
-       Filter Bar (sticky)
-       ============================================================ -->
-  <div class="filter-bar" role="search" aria-label="Filter teapots">
-    <div class="container">
-      <!-- Clay filter -->
-      <div class="filter-group">
-        <label>Clay</label>
-        <div class="filter-pills" role="group" aria-label="Filter by clay type">
-          <button class="filter-pill active" data-filter-clay="all">All</button>
-          <button class="filter-pill" data-filter-clay="purple">Purple Clay</button>
-          <button class="filter-pill" data-filter-clay="red">Red Clay</button>
-          <button class="filter-pill" data-filter-clay="beige">Beige Clay</button>
-        </div>
-      </div>
-
-      <!-- Capacity filter -->
-      <div class="filter-group">
-        <label>Capacity</label>
-        <div class="filter-pills" role="group" aria-label="Filter by capacity">
-          <button class="filter-pill active" data-filter-cap="all">All</button>
-          <button class="filter-pill" data-filter-cap="small">100ml–200ml</button>
-          <button class="filter-pill" data-filter-cap="medium">200ml–350ml</button>
-          <button class="filter-pill" data-filter-cap="large">350ml+</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- ============================================================
        Products Grid (infinite scroll)
        ============================================================ -->
   <section class="products-section" style="padding: 3rem 0;" aria-label="Product grid">
@@ -206,5 +177,88 @@
   </aside>
 
   <script src="js/main.js"></script>
+  <script>
+  (function() {
+    const allProducts = [
+      { name: 'Xishi Teapot · Purple Clay',     clay: 'purple', cap: 'small',  usd: '$180', img: 'Xishi+Purple',      badge: 'Bestseller' },
+      { name: 'Fanggu Teapot · Red Clay',        clay: 'red',    cap: 'medium', usd: '$256', img: 'Fanggu+Red',        badge: '' },
+      { name: 'Shipiao Teapot · Beige Clay',     clay: 'beige',  cap: 'small',  usd: '$310', img: 'Shipiao+Beige',     badge: 'New' },
+      { name: 'Dezhong Teapot · Purple Clay',    clay: 'purple', cap: 'large',  usd: '$395', img: 'Dezhong+Purple',    badge: '' },
+      { name: 'Duoqiu Teapot · Red Clay',        clay: 'red',    cap: 'medium', usd: '$232', img: 'Duoqiu+Red',        badge: '' },
+      { name: 'Dragon Egg · Beige Clay',         clay: 'beige',  cap: 'small',  usd: '$278', img: 'Longdan+Beige',     badge: 'New' },
+      { name: 'Bamboo Node · Purple Clay',       clay: 'purple', cap: 'medium', usd: '$345', img: 'Zhujie+Purple',     badge: '' },
+      { name: 'Flat Pear · Red Clay',            clay: 'red',    cap: 'small',  usd: '$228', img: 'Bianli+Red',        badge: '' },
+      { name: 'Han Flat · Beige Clay',           clay: 'beige',  cap: 'medium', usd: '$296', img: 'Hanbian+Beige',     badge: '' },
+      { name: 'Well Fence · Purple Clay',        clay: 'purple', cap: 'large',  usd: '$450', img: 'Jinglan+Purple',    badge: '' },
+      { name: 'Pear Form · Red Clay',            clay: 'red',    cap: 'small',  usd: '$208', img: 'Lixing+Red',        badge: '' },
+      { name: 'Chrysanthemum · Beige Clay',      clay: 'beige',  cap: 'medium', usd: '$335', img: 'Heju+Beige',        badge: 'Bestseller' },
+      { name: 'Square Form · Purple Clay',       clay: 'purple', cap: 'medium', usd: '$373', img: 'Sifang+Purple',     badge: '' },
+      { name: 'Gourd · Red Clay',                clay: 'red',    cap: 'small',  usd: '$248', img: 'Hulu+Red',          badge: '' },
+      { name: 'Lotus Seed · Beige Clay',         clay: 'beige',  cap: 'large',  usd: '$420', img: 'Lianzi+Beige',      badge: '' },
+      { name: 'Low Fence · Purple Clay',         clay: 'purple', cap: 'small',  usd: '$194', img: 'Aijinglan+Purple',  badge: '' },
+      { name: 'Qin Weight · Red Clay',           clay: 'red',    cap: 'medium', usd: '$288', img: 'Qinquan+Red',       badge: 'New' },
+      { name: 'Fish Dragon · Beige Clay',        clay: 'beige',  cap: 'large',  usd: '$535', img: 'YuhuaLong+Beige',   badge: 'Limited' },
+      { name: 'Spring Herald · Purple Clay',     clay: 'purple', cap: 'medium', usd: '$310', img: 'Baochun+Purple',    badge: '' },
+      { name: 'Flat Belly · Red Clay',           clay: 'red',    cap: 'medium', usd: '$270', img: 'Bianfu+Red',        badge: '' },
+      { name: 'Gongchun · Beige Clay',           clay: 'beige',  cap: 'small',  usd: '$363', img: 'Gongchun+Beige',    badge: 'Bestseller' },
+      { name: 'Ziye Shipiao · Purple Clay',      clay: 'purple', cap: 'small',  usd: '$246', img: 'Ziye+Purple',       badge: '' },
+      { name: 'Dabin Hexagon · Red Clay',        clay: 'red',    cap: 'large',  usd: '$493', img: 'Dabin+Red',         badge: '' },
+      { name: 'Round Bead · Beige Clay',         clay: 'beige',  cap: 'small',  usd: '$222', img: 'Yuanzhu+Beige',     badge: '' },
+      { name: 'Pan Form · Purple Clay',          clay: 'purple', cap: 'medium', usd: '$331', img: 'Pan+Purple',        badge: '' },
+      { name: 'Jingzhou Shipiao · Red Clay',     clay: 'red',    cap: 'small',  usd: '$293', img: 'Jingzhou+Red',      badge: 'New' },
+      { name: 'Wendan · Beige Clay',             clay: 'beige',  cap: 'medium', usd: '$266', img: 'Wendan+Beige',      badge: '' },
+      { name: 'Laughing Cherry · Purple Clay',   clay: 'purple', cap: 'large',  usd: '$387', img: 'Xiaoying+Purple',   badge: '' },
+      { name: 'Pumpkin · Red Clay',              clay: 'red',    cap: 'medium', usd: '$303', img: 'Nangua+Red',        badge: 'Bestseller' },
+      { name: 'Beautiful Shoulder · Beige Clay', clay: 'beige',  cap: 'small',  usd: '$236', img: 'Meirenjian+Beige',  badge: '' },
+    ];
+
+    const BATCH = 8;
+    let rendered = 0;
+    let loading = false;
+
+    const grid = document.getElementById('collections-grid');
+    const loadArea = document.getElementById('load-more-area');
+    const sentinel = document.getElementById('scroll-sentinel');
+
+    const colors = { purple: 'E4DECE/3A3028', red: 'C4A882/3A3028', beige: 'D4C4A8/3A3028' };
+
+    function renderBatch() {
+      const chunk = allProducts.slice(rendered, rendered + BATCH);
+      chunk.forEach(p => {
+        const col = colors[p.clay] || 'E4DECE/3A3028';
+        const badge = p.badge ? `<span class="product-card-badge">${p.badge}</span>` : '';
+        const article = document.createElement('article');
+        article.className = 'product-card';
+        article.innerHTML = `
+          <a href="collections.html" class="product-card-image" aria-label="View ${p.name}" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">
+            ${badge}
+            <img src="https://placehold.co/480x480/${col}?text=${encodeURIComponent(p.img)}"
+                 alt="${p.name}" loading="lazy" width="480" height="480" />
+            <div class="product-card-overlay"><button class="quick-view-btn">View Details</button></div>
+          </a>
+          <div class="product-card-info">
+            <h3>${p.name}</h3>
+            <div class="price">${p.usd}</div>
+          </div>`;
+        grid.appendChild(article);
+      });
+      rendered += chunk.length;
+      loading = false;
+      loadArea.style.display = 'none';
+      if (rendered >= allProducts.length) sentinel.style.display = 'none';
+    }
+
+    const observer = new IntersectionObserver(entries => {
+      if (entries[0].isIntersecting && !loading && rendered < allProducts.length) {
+        loading = true;
+        loadArea.style.display = 'block';
+        setTimeout(renderBatch, 600);
+      }
+    }, { rootMargin: '200px' });
+    observer.observe(sentinel);
+
+    renderBatch();
+  })();
+  </script>
 </body>
 </html>

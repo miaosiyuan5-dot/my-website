@@ -482,41 +482,6 @@
      11. Contact Form — mailto: submission
      ============================================================ */
   function initContactForm() {
-    var form    = document.getElementById('contact-form');
-    var success = document.getElementById('form-success');
-    if (!form) return;
-
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-
-      var nameEl    = form.querySelector('[name="name"]');
-      var emailEl   = form.querySelector('[name="email"]');
-      var subjectEl = form.querySelector('[name="subject"]');
-      var msgEl     = form.querySelector('[name="message"]');
-
-      var name    = nameEl    ? nameEl.value.trim()    : '';
-      var email   = emailEl   ? emailEl.value.trim()   : '';
-      var subject = subjectEl ? subjectEl.value.trim() : 'Website Enquiry';
-      var msg     = msgEl     ? msgEl.value.trim()     : '';
-
-      var mailSubject = encodeURIComponent('Enquiry from ' + (name || 'Customer') + ' — ' + subject);
-      var mailBody    = encodeURIComponent(
-        'Name: ' + name + '\nEmail: ' + email + '\n\nMessage:\n' + msg
-      );
-
-      var submitBtn = form.querySelector('button[type="submit"]');
-      if (submitBtn) {
-        submitBtn.textContent = 'Opening email…';
-        submitBtn.disabled = true;
-      }
-
-      window.open('mailto:info@yixingdingyuan.cn?subject=' + mailSubject + '&body=' + mailBody, '_self');
-
-      setTimeout(function () {
-        form.style.display = 'none';
-        if (success) success.classList.add('visible');
-      }, 1800);
-    });
   }
 
   /* ============================================================
