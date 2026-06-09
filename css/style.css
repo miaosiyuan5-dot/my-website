@@ -2162,6 +2162,89 @@ body.no-hero .navbar .hamburger span { background: var(--color-primary); }
 }
 
 /* --------------------------------------------------------------------------
+   Team / Artisan Cards
+   -------------------------------------------------------------------------- */
+.team-section { background: var(--color-bg); padding: var(--space-4xl) 0; }
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--card-gap);
+  margin-top: var(--space-3xl);
+}
+
+.team-card {
+  text-align: center;
+  padding: var(--card-pad);
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-lg);
+  transition: box-shadow var(--transition-base), transform var(--transition-base);
+}
+
+.team-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-4px);
+}
+
+.team-card-image {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto var(--space-xl);
+  border: 3px solid var(--color-border);
+}
+
+.team-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.team-card h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-bottom: 0.2rem;
+}
+
+.team-card .zh-name {
+  display: block;
+  font-family: var(--font-zh);
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.1em;
+}
+
+.team-card .role {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  margin-bottom: var(--space-lg);
+}
+
+.team-card p {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  line-height: 1.8;
+  text-align: left;
+}
+
+@media (max-width: 960px) {
+  .team-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 600px) {
+  .team-grid { grid-template-columns: 1fr; }
+}
+
+/* --------------------------------------------------------------------------
    Contact Page
    -------------------------------------------------------------------------- */
 .contact-page {

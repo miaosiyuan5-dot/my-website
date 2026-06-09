@@ -82,23 +82,76 @@
   </div>
 
   <!-- ============================================================
-       Products Grid
+       Products Grid — static, manually maintained
        ============================================================ -->
   <section class="products-section" style="padding: 3rem 0;" aria-label="Product grid">
     <div class="container">
-      <!-- Grid — JS will populate this -->
-      <div class="products-grid grid-3" id="collections-grid" aria-live="polite" aria-label="Teapot products"></div>
+      <div class="products-grid grid-3" id="collections-grid" aria-live="polite" aria-label="Teapot products">
 
-      <!-- Infinite scroll sentinel + spinner -->
-      <div class="load-more-area" id="load-more-area" style="display:none;" aria-live="polite" aria-label="Loading more products">
-        <div class="loading-spinner">
-          <div class="spinner-ring" aria-hidden="true"></div>
-          <span>Loading more teapots…</span>
-        </div>
+        <!-- ── Product 1: Master Grade ───────────────────────── -->
+        <article class="product-card" data-grade="master">
+          <a href="product.html" class="product-card-image" aria-label="View Engraved Xi Shi Teapot · Purple Clay">
+            <span class="product-card-badge">Flagship</span>
+            <img src="https://placehold.co/480x480/E4DECE/3A3028?text=Master+Xishi"
+                 alt="Engraved Xi Shi Teapot in Purple Clay" loading="lazy" width="480" height="480" />
+            <div class="product-card-overlay"><button class="quick-view-btn">View Details</button></div>
+          </a>
+          <div class="product-card-info">
+            <span style="display:inline-block;padding:2px 10px;border-radius:20px;font-size:0.72rem;font-weight:600;letter-spacing:.05em;background:#8B6914;color:#fff;margin-bottom:6px;">Master Grade</span>
+            <h3>Engraved Xi Shi Teapot · Purple Clay</h3>
+            <p style="font-size:0.82rem;color:var(--color-text-muted);margin:4px 0 8px;">Hand-engraved landscape by our master artisan. Each piece includes a signed certificate of authenticity.</p>
+            <div class="price">$950 <span style="font-size:0.85em;color:var(--color-text-muted);">/ ¥6,800</span></div>
+            <button class="btn-add-cart"
+              data-id="master-xishi"
+              data-name="Engraved Xi Shi Teapot · Purple Clay"
+              data-price="950"
+              data-img="https://placehold.co/480x480/E4DECE/3A3028?text=Master+Xishi">Add to Cart</button>
+          </div>
+        </article>
+
+        <!-- ── Product 2: Daily Use ───────────────────────────── -->
+        <article class="product-card" data-grade="daily">
+          <a href="product.html" class="product-card-image" aria-label="View Fanggu Teapot · Red Clay">
+            <span class="product-card-badge">Bestseller</span>
+            <img src="https://placehold.co/480x480/C4A882/3A3028?text=Daily+Fanggu"
+                 alt="Fanggu Teapot in Red Clay" loading="lazy" width="480" height="480" />
+            <div class="product-card-overlay"><button class="quick-view-btn">View Details</button></div>
+          </a>
+          <div class="product-card-info">
+            <span style="display:inline-block;padding:2px 10px;border-radius:20px;font-size:0.72rem;font-weight:600;letter-spacing:.05em;background:#5C7A4E;color:#fff;margin-bottom:6px;">Daily Use</span>
+            <h3>Fanggu Teapot · Red Clay</h3>
+            <p style="font-size:0.82rem;color:var(--color-text-muted);margin:4px 0 8px;">A timeless classic form in premium red clay — the ideal everyday brewing companion.</p>
+            <div class="price">$138 <span style="font-size:0.85em;color:var(--color-text-muted);">/ ¥980</span></div>
+            <button class="btn-add-cart"
+              data-id="daily-fanggu"
+              data-name="Fanggu Teapot · Red Clay"
+              data-price="138"
+              data-img="https://placehold.co/480x480/C4A882/3A3028?text=Daily+Fanggu">Add to Cart</button>
+          </div>
+        </article>
+
+        <!-- ── Product 3: Zisha Décor ─────────────────────────── -->
+        <article class="product-card" data-grade="derivative">
+          <a href="product.html" class="product-card-image" aria-label="View Zisha Vase · Beige Clay">
+            <span class="product-card-badge">New</span>
+            <img src="https://placehold.co/480x480/D4C4A8/3A3028?text=Zisha+Vase"
+                 alt="Zisha Vase in Beige Clay" loading="lazy" width="480" height="480" />
+            <div class="product-card-overlay"><button class="quick-view-btn">View Details</button></div>
+          </a>
+          <div class="product-card-info">
+            <span style="display:inline-block;padding:2px 10px;border-radius:20px;font-size:0.72rem;font-weight:600;letter-spacing:.05em;background:#4A6B8A;color:#fff;margin-bottom:6px;">Zisha Décor</span>
+            <h3>Zisha Vase · Beige Clay</h3>
+            <p style="font-size:0.82rem;color:var(--color-text-muted);margin:4px 0 8px;">Hand-thrown beige clay vase — elegant as a display piece or functional home accent.</p>
+            <div class="price">$78 <span style="font-size:0.85em;color:var(--color-text-muted);">/ ¥560</span></div>
+            <button class="btn-add-cart"
+              data-id="decor-vase"
+              data-name="Zisha Vase · Beige Clay"
+              data-price="78"
+              data-img="https://placehold.co/480x480/D4C4A8/3A3028?text=Zisha+Vase">Add to Cart</button>
+          </div>
+        </article>
+
       </div>
-
-      <!-- Invisible sentinel element that triggers loading when scrolled into view -->
-      <div id="scroll-sentinel" style="height:1px; margin-top: 1rem;" aria-hidden="true"></div>
     </div>
   </section>
 
@@ -192,86 +245,19 @@
 
   <script src="js/main.js"></script>
   <script>
+  /* Grade filter — works directly on static HTML cards */
   (function() {
-    const allProducts = [
-      {
-        name: 'Engraved Xi Shi Teapot · Purple Clay',
-        grade: 'master',
-        gradeLabel: 'Master Grade',
-        usd: '$950', cny: '¥6,800',
-        img: 'Master+Xishi',
-        color: 'E4DECE/3A3028',
-        badge: 'Flagship',
-        desc: 'Hand-engraved landscape by our master artisan. Each piece includes a signed certificate of authenticity.'
-      },
-      {
-        name: 'Fanggu Teapot · Red Clay',
-        grade: 'daily',
-        gradeLabel: 'Daily Use',
-        usd: '$138', cny: '¥980',
-        img: 'Daily+Fanggu',
-        color: 'C4A882/3A3028',
-        badge: 'Bestseller',
-        desc: 'A timeless classic form in premium red clay — the ideal everyday brewing companion.'
-      },
-      {
-        name: 'Zisha Vase · Beige Clay',
-        grade: 'derivative',
-        gradeLabel: 'Zisha Décor',
-        usd: '$78', cny: '¥560',
-        img: 'Zisha+Vase',
-        color: 'D4C4A8/3A3028',
-        badge: 'New',
-        desc: 'Hand-thrown beige clay vase — elegant as a display piece or functional home accent.'
-      },
-    ];
-
-    let activeGrade = 'all';
     const grid = document.getElementById('collections-grid');
-
-    const gradeColors = {
-      master:     '#8B6914',
-      daily:      '#5C7A4E',
-      derivative: '#4A6B8A',
-    };
-
-    function render() {
-      grid.innerHTML = '';
-      const items = activeGrade === 'all' ? allProducts : allProducts.filter(p => p.grade === activeGrade);
-      items.forEach(p => {
-        const badge = p.badge ? `<span class="product-card-badge">${p.badge}</span>` : '';
-        const tagColor = gradeColors[p.grade] || '#6B6B6B';
-        const article = document.createElement('article');
-        article.className = 'product-card';
-        article.innerHTML = `
-          <a href="product.html" class="product-card-image" aria-label="View ${p.name}">
-            ${badge}
-            <img src="https://placehold.co/480x480/${p.color}?text=${encodeURIComponent(p.img)}"
-                 alt="${p.name}" loading="lazy" width="480" height="480" />
-            <div class="product-card-overlay"><button class="quick-view-btn">View Details</button></div>
-          </a>
-          <div class="product-card-info">
-            <span style="display:inline-block;padding:2px 10px;border-radius:20px;font-size:0.72rem;font-weight:600;letter-spacing:.05em;background:${tagColor};color:#fff;margin-bottom:6px;">${p.gradeLabel}</span>
-            <h3>${p.name}</h3>
-            <p style="font-size:0.82rem;color:var(--color-text-muted);margin:4px 0 8px;">${p.desc}</p>
-            <div class="price">${p.usd} <span style="font-size:0.85em;color:var(--color-text-muted);">/ ${p.cny}</span></div>
-          </div>`;
-        grid.appendChild(article);
-      });
-      document.getElementById('load-more-area').style.display = 'none';
-      document.getElementById('scroll-sentinel').style.display = 'none';
-    }
-
-    document.querySelectorAll('[data-grade]').forEach(btn => {
-      btn.addEventListener('click', () => {
-        document.querySelectorAll('[data-grade]').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        activeGrade = btn.dataset.grade;
-        render();
+    document.querySelectorAll('[data-grade]').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        const grade = this.dataset.grade;
+        document.querySelectorAll('[data-grade]').forEach(function(b) { b.classList.remove('active'); });
+        this.classList.add('active');
+        grid.querySelectorAll('.product-card').forEach(function(card) {
+          card.style.display = (grade === 'all' || card.dataset.grade === grade) ? '' : 'none';
+        });
       });
     });
-
-    render();
   })();
   </script>
 </body>
