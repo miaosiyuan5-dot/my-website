@@ -594,6 +594,11 @@ body.no-hero .navbar .hamburger span { background: var(--color-primary); }
 
 .btn-outline-light:active { transform: scale(0.95); }
 
+.btn-outline-light.btn-hero {
+  padding: 1rem 2.5rem;
+  font-size: 1.05rem;
+}
+
 /* Add to Cart (product cards) */
 .btn-add-cart {
   display: inline-flex;
@@ -771,6 +776,36 @@ body.no-hero .navbar .hamburger span { background: var(--color-primary); }
   position: absolute;
   inset: 0;
   background: rgba(0,0,0,0.12);
+}
+
+/* Video / image hero background */
+.hero-media {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: #2A1A10;
+}
+
+.hero-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(18, 10, 6, 0.62) 0%,
+    rgba(28, 16, 10, 0.42) 45%,
+    rgba(18, 10, 6, 0.72) 100%
+  );
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-video { display: none; }
 }
 
 /* Legacy .hero-bg — for pages that still use image */

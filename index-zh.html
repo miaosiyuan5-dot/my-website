@@ -57,13 +57,19 @@
 
   <!-- Hero -->
   <section class="hero" aria-label="首页横幅">
-    <div class="hero-bg">
-      <img
-        src="https://placehold.co/1920x1080/3A3028/C8B68E?text=Craftsman+Hands+Engraving"
-        alt="匠人精心在宜兴紫砂壶上刻绘传统纹饰——千年传承的制壶工艺"
-        width="1920" height="1080"
-        fetchpriority="high"
-      />
+    <div class="hero-media" aria-hidden="true">
+      <video
+        class="hero-video"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="none"
+        poster="https://images.unsplash.com/photo-1576675466969-38eedda42571?w=1920&q=75&auto=format&fit=crop"
+      >
+        <source src="https://videos.pexels.com/video-files/3195394/3195394-uhd_2560_1440_25fps.mp4" type="video/mp4">
+      </video>
+      <div class="hero-overlay"></div>
     </div>
     <div class="container">
       <div class="hero-content">
@@ -72,14 +78,14 @@
         <span class="hero-zh">宜兴紫砂·百年传承</span>
         <p>每一把茶壶皆由单一匠人全手工捏塑、亲手刻绘——承载着宜兴紫砂千年不变的工艺精髓，是活着的文化遗产。</p>
         <div class="hero-actions">
-          <a href="collections-zh.html" class="btn-primary">探索产品系列</a>
-          <a href="craftsmanship-zh.html" class="btn-outline-light">了解工艺</a>
+          <a href="#collections" class="btn-primary btn-hero nav-scroll">探索产品系列</a>
+          <a href="contact-zh.html" class="btn-outline-light btn-hero">批发询价</a>
         </div>
       </div>
     </div>
-    <div class="hero-scroll" aria-hidden="true">
+    <div class="hero-scroll-hint" aria-hidden="true">
       <span>向下滚动</span>
-      <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+      <span class="scroll-arrow">↓</span>
     </div>
   </section>
 
