@@ -248,10 +248,10 @@
   /* Grade filter — works directly on static HTML cards */
   (function() {
     const grid = document.getElementById('collections-grid');
-    document.querySelectorAll('[data-grade]').forEach(function(btn) {
+    document.querySelectorAll('.filter-pill[data-grade]').forEach(function(btn) {
       btn.addEventListener('click', function() {
         const grade = this.dataset.grade;
-        document.querySelectorAll('[data-grade]').forEach(function(b) { b.classList.remove('active'); });
+        document.querySelectorAll('.filter-pill[data-grade]').forEach(function(b) { b.classList.remove('active'); });
         this.classList.add('active');
         grid.querySelectorAll('.product-card').forEach(function(card) {
           card.style.display = (grade === 'all' || card.dataset.grade === grade) ? '' : 'none';
