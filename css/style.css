@@ -508,6 +508,18 @@ body.no-hero .navbar .hamburger span { background: var(--color-primary); }
   font-size: 1.05rem;
 }
 
+/* On dark hero backgrounds, swap the primary fill for gold so the CTA
+   doesn't blend into the dark-brown gradient behind it. */
+.hero .btn-primary {
+  background: var(--color-gold);
+  color: var(--color-primary-dark);
+}
+
+.hero .btn-primary:hover {
+  background: var(--color-gold-light);
+  box-shadow: var(--shadow-md);
+}
+
 /* Secondary: dark border, transparent fill */
 .btn-secondary {
   display: inline-flex;
