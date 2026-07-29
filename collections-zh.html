@@ -179,14 +179,24 @@
   (function() {
     const allProducts = [
       {
-        name: '刻绘西施壶·紫泥',
+        name: '水仙奇石提梁壶 · 仲壶定一合作',
         grade: 'master',
         gradeLabel: '大师级',
         cny: '¥6,800', usd: '$950',
-        img: 'Master+Xishi',
-        color: 'E4DECE/3A3028',
+        imgUrl: 'images/products/tiliang-narcissus-front.jpg',
+        detailUrl: 'product-zh.html',
         badge: '主打款',
-        desc: '大师亲制，壶身手工刻绘山水，每件附大师钤印证书。'
+        desc: '黄松（仲壶）与首席弟子定一合作绘画刻绘，壶身水仙郁郁葱葱、长满太湖石侧，上品通转合作提梁壶，难得一见。底刻洛浦仙祝寿诗，盖刻“可得神仙 象庐定一作水仙也”。'
+      },
+      {
+        name: '咏蝉诗耳把三足壶 · 定一刻绘',
+        grade: 'master',
+        gradeLabel: '大师级',
+        cny: '¥6,800', usd: '$950',
+        imgUrl: 'images/products/earhandle-cicada-front.jpg',
+        detailUrl: 'product-earhandle-zh.html',
+        badge: '新品',
+        desc: '正堂工手老师制器，定一仿古熟刻咏蝉诗：“白露凉风吹，朱明落照移。鸣条噪林柳，流响遍台池。”壶嘴略弯出水爽利，桥钮耳把配三足底，浑然天成。'
       },
       {
         name: '仿古壶·朱泥',
@@ -225,12 +235,15 @@
       items.forEach(p => {
         const badge = p.badge ? `<span class="product-card-badge">${p.badge}</span>` : '';
         const tagColor = gradeColors[p.grade] || '#6B6B6B';
+        const imgSrc = p.imgUrl || `https://placehold.co/480x480/${p.color}?text=${encodeURIComponent(p.img)}`;
         const article = document.createElement('article');
         article.className = 'product-card';
+        article.dataset.grade = p.grade;
+        const detailHref = p.detailUrl || 'product-zh.html';
         article.innerHTML = `
-          <a href="product-zh.html" class="product-card-image" aria-label="查看${p.name}">
+          <a href="${detailHref}" class="product-card-image" aria-label="查看${p.name}">
             ${badge}
-            <img src="https://placehold.co/480x480/${p.color}?text=${encodeURIComponent(p.img)}"
+            <img src="${imgSrc}"
                  alt="${p.name}" loading="lazy" width="480" height="480" />
             <div class="product-card-overlay"><button class="quick-view-btn">快速查看</button></div>
           </a>
