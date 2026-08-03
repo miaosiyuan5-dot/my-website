@@ -52,7 +52,7 @@ PRODUCTS = [
         "en": {
             "title": "Flat Round Teapot · Benshan Duanni",
             "zh_subtitle": "扁圆素壶 · 本山段泥",
-            "meta_desc": "Flat-round teapot in authentic Benshan Duanni clay — warm golden tone, plain elegance for daily brewing. $138.",
+            "meta_desc": "Flat-round teapot in authentic Benshan Duanni clay — warm golden tone, plain elegance for daily brewing. $238.",
             "keywords": "Benshan Duanni, flat teapot, Yixing Zisha, daily teapot, Dingyuan",
             "breadcrumb": "Flat Round · Benshan Duanni",
             "short": "A flat-round form in authentic Benshan Duanni clay — warm golden tone, visible sand grains, plain elegance for daily brewing.",
@@ -71,7 +71,7 @@ PRODUCTS = [
         "zh": {
             "title": "扁圆素壶 · 本山段泥",
             "en_subtitle": "Flat Round Teapot · Benshan Duanni",
-            "meta_desc": "扁圆器型本山段泥素壶，色泽温润金黄，适合日常泡茶赏玩。¥980。",
+            "meta_desc": "扁圆器型本山段泥素壶，色泽温润金黄，适合日常泡茶赏玩。¥1,680。",
             "keywords": "本山段泥, 扁圆壶, 宜兴紫砂, 日常壶, 定渊国际",
             "breadcrumb": "扁圆素壶 · 本山段泥",
             "short": "扁圆器型，本山段泥，色泽温润金黄，素器清雅，适合日常泡茶赏玩。",
@@ -95,7 +95,7 @@ PRODUCTS = [
         "en": {
             "title": "Flat Teapot · Qinghui Duanni",
             "zh_subtitle": "宽扁素壶 · 青灰段泥",
-            "meta_desc": "Wide flat teapot in Qinghui Duanni — cool elegant tone, rich sandy texture, plain polished surface. $138.",
+            "meta_desc": "Wide flat teapot in Qinghui Duanni — cool elegant tone, rich sandy texture, plain polished surface. $238.",
             "keywords": "Qinghui Duanni, flat teapot, Yixing Zisha, daily teapot, Dingyuan",
             "breadcrumb": "Flat · Qinghui Duanni",
             "short": "Refined from Qinghui Duanni clay — cool, elegant tone with rich sandy texture. Wide flat body, plain polished surface.",
@@ -114,7 +114,7 @@ PRODUCTS = [
         "zh": {
             "title": "宽扁素壶 · 青灰段泥",
             "en_subtitle": "Flat Teapot · Qinghui Duanni",
-            "meta_desc": "青灰段泥宽扁素壶，色泽素雅冷润，砂感丰富，适合日常泡茶。¥980。",
+            "meta_desc": "青灰段泥宽扁素壶，色泽素雅冷润，砂感丰富，适合日常泡茶。¥1,680。",
             "keywords": "青灰段泥, 宽扁壶, 宜兴紫砂, 日常壶, 定渊国际",
             "breadcrumb": "宽扁素壶 · 青灰段泥",
             "short": "青灰段泥炼制，色泽素雅冷润，砂感丰富，宽扁沉稳，素面光器。",
@@ -138,7 +138,7 @@ PRODUCTS = [
         "en": {
             "title": "Flat Teapot · Qinghui Duanni · Upturned Handle",
             "zh_subtitle": "宽扁素壶 · 青灰段泥 · 端把款",
-            "meta_desc": "Qinghui Duanni wide flat teapot with upturned handle spur — plain polished daily brewing piece. $138.",
+            "meta_desc": "Qinghui Duanni wide flat teapot with upturned handle spur — plain polished daily brewing piece. $238.",
             "keywords": "Qinghui Duanni, upturned handle, flat teapot, Yixing Zisha, Dingyuan",
             "breadcrumb": "Flat · Qinghui · Upturned Handle",
             "short": "Refined from Qinghui Duanni clay — cool, elegant tone with rich sandy texture. Wide flat body, plain polished surface.",
@@ -158,7 +158,7 @@ PRODUCTS = [
         "zh": {
             "title": "宽扁素壶 · 青灰段泥 · 端把款",
             "en_subtitle": "Flat Teapot · Qinghui Duanni · Upturned Handle",
-            "meta_desc": "青灰段泥宽扁素壶端把款，色泽素雅，砂感丰富，适合日常泡茶。¥980。",
+            "meta_desc": "青灰段泥宽扁素壶端把款，色泽素雅，砂感丰富，适合日常泡茶。¥1,680。",
             "keywords": "青灰段泥, 端把, 宽扁壶, 宜兴紫砂, 定渊国际",
             "breadcrumb": "宽扁素壶 · 端把款",
             "short": "青灰段泥炼制，色泽素雅冷润，砂感丰富，宽扁沉稳，素面光器。",
@@ -258,7 +258,7 @@ def related_section(lang, current_slug):
           <div class="product-card-info">
             <h3>{esc(p['en']['title'])}</h3>
             <div class="zh-name">{p['zh']['title']}</div>
-            <div class="price">$138</div>
+            <div class="price">$238</div>
           </div>
         </article>"""
             )
@@ -291,7 +291,7 @@ def related_section(lang, current_slug):
           <div class="product-card-info">
             <h3>{p['zh']['title']}</h3>
             <div class="zh-name">{p['en']['title']}</div>
-            <div class="price">¥980</div>
+            <div class="price">¥1,680</div>
           </div>
         </article>"""
         )
@@ -338,7 +338,7 @@ def render_en(product):
     "offers": {{
       "@type": "Offer",
       "priceCurrency": "USD",
-      "price": "138",
+      "price": "238",
       "availability": "https://schema.org/InStock"
     }}
   }}
@@ -406,8 +406,8 @@ def render_en(product):
           <span class="product-zh-title">{p['zh']['title']}</span>
 
           <div class="product-price-block">
-            <span class="product-price">$138</span>
-            <span style="font-size:0.95rem;color:var(--color-text-muted);margin-left:0.5rem;">/ ¥980</span>
+            <span class="product-price">$238</span>
+            <span style="font-size:0.95rem;color:var(--color-text-muted);margin-left:0.5rem;">/ ¥1,680</span>
           </div>
 
           <div class="product-option-group">
@@ -423,7 +423,7 @@ def render_en(product):
             <button class="btn-primary add-to-cart-btn"
               data-id="{p['id']}"
               data-name="{esc(d['title'])}"
-              data-price="138"
+              data-price="238"
               data-img="{img0}"
               aria-label="Add {esc(d['title'])} to cart">
               Add to Cart
@@ -585,7 +585,7 @@ def render_zh(product):
     "offers": {{
       "@type": "Offer",
       "priceCurrency": "CNY",
-      "price": "980",
+      "price": "1680",
       "availability": "https://schema.org/InStock"
     }}
   }}
@@ -653,8 +653,8 @@ def render_zh(product):
           <span class="product-zh-title">{p['en']['title']}</span>
 
           <div class="product-price-block">
-            <span class="product-price">¥980</span>
-            <span style="font-size:0.95rem;color:var(--color-text-muted);margin-left:0.5rem;">/ $138</span>
+            <span class="product-price">¥1,680</span>
+            <span style="font-size:0.95rem;color:var(--color-text-muted);margin-left:0.5rem;">/ $238</span>
           </div>
 
           <div class="product-option-group">
@@ -670,7 +670,7 @@ def render_zh(product):
             <button class="btn-primary add-to-cart-btn"
               data-id="{p['id']}"
               data-name="{d['title']}"
-              data-price="138"
+              data-price="238"
               data-img="{img0}"
               aria-label="加入购物车">
               加入购物车
