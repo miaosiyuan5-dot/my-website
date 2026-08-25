@@ -163,7 +163,13 @@
             <button class="wishlist-btn" aria-label="加入心愿单">
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
             </button>
+          
+          <div class="paypal-checkout-block">
+            <p class="paypal-checkout-label">或使用 PayPal 直接付款</p>
+            <div id="paypal-button-container" class="paypal-button-container" aria-label="PayPal 付款"></div>
           </div>
+
+</div>
 
           <!-- 简短描述 -->
           <div class="product-short-desc">
@@ -338,6 +344,8 @@
     </div>
   </aside>
 
+  <script src="js/payment-config.js"></script>
+  <script src="js/paypal.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
