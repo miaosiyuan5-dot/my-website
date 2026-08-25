@@ -13,8 +13,8 @@ window.DY_PAYPAL = {
    * Per-product ID takes priority; otherwise tier fallback (master = $950, daily = $238).
    */
   hostedButtons: {
-    // 'master-tiliang-narcissus': 'PASTE_BUTTON_ID',
-    master: '',
+    default: '9BSLDUYYHD6UN',
+    master: '9BSLDUYYHD6UN',
     daily: ''
   }
 };

@@ -16,7 +16,8 @@
   var productId = addBtn.getAttribute('data-id') || '';
   var tier = price >= 500 ? 'master' : 'daily';
   var hostedId = (cfg.hostedButtons && cfg.hostedButtons[productId]) ||
-    (cfg.hostedButtons && cfg.hostedButtons[tier]) || '';
+    (cfg.hostedButtons && cfg.hostedButtons[tier]) ||
+    (cfg.hostedButtons && cfg.hostedButtons.default) || '';
 
   var isZh = (document.documentElement.lang || '').indexOf('zh') === 0;
 
