@@ -39,6 +39,17 @@
     return;
   }
 
+  var dailyId = cfg.hostedButtons && cfg.hostedButtons.daily;
+  if (tier === 'daily' && !dailyId && hostedId === (cfg.hostedButtons.master || cfg.hostedButtons.default)) {
+    var contactHref = isZh ? 'contact-zh.html' : 'contact.html';
+    container.innerHTML = '<p class="paypal-setup-note">' +
+      (isZh
+        ? '日用级产品请 <a href="' + contactHref + '">微信/电话 133 0153 1970</a> 联系下单。'
+        : 'For daily teapots ($238), please <a href="' + contactHref + '">contact us via WeChat/phone</a> to order.') +
+      '</p>';
+    return;
+  }
+
   var selector = '#' + containerId;
 
   function render(paypal) {

@@ -25,5 +25,11 @@
   ],
   "rewrites": [
     { "source": "/", "destination": "/index.html" }
+  ],
+  "redirects": [
+    { "source": "/products.html", "destination": "/collections-zh.html", "permanent": true },
+    { "source": "/products", "destination": "/collections-zh.html", "permanent": true },
+    { "source": "/gallery.html", "destination": "/collections-zh.html", "permanent": true },
+    { "source": "/gallery", "destination": "/collections-zh.html", "permanent": true }
   ]
 }
