@@ -10,7 +10,7 @@
   <meta property="og:title" content="Yixing Dingyuan — Handcrafted Zisha Teapots" />
   <meta property="og:description" content="Authentic Yixing Zisha teapots by master artisans. 100% natural clay, unique engraving, worldwide shipping." />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://www.yixingdingyuan.cn/images/hero-main.jpg" />
+  <meta property="og:image" content="https://www.yixingdingyuan.cn/images/products/tiliang-narcissus-front.jpg" />
   <link rel="alternate" hreflang="en" href="https://www.yixingdingyuan.cn/" />
   <link rel="alternate" hreflang="zh-CN" href="https://www.yixingdingyuan.cn/index-zh.html" />
   <link rel="alternate" hreflang="x-default" href="https://www.yixingdingyuan.cn/" />
@@ -20,7 +20,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Noto+Sans+SC:wght@300;400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
-<body>
+<body class="page-home">
 
   <!-- Scroll progress bar -->
   <div class="scroll-progress" aria-hidden="true"></div>
@@ -70,36 +70,35 @@
     <a href="index-zh.html" class="mobile-lang">中文</a>
   </div>
 
-  <!-- ============================================================
-       Hero — Full viewport, video / image background
-       ============================================================ -->
-  <section class="hero" id="hero" aria-label="Hero banner">
-    <div class="hero-media" aria-hidden="true">
-      <img
-        class="hero-image"
-        src="images/hero-main.jpg"
-        alt="Handcrafted Yixing Zisha teapot — master artisan engraving on natural purple clay"
-        width="1920"
-        height="1080"
-        fetchpriority="high"
-      />
-      <div class="hero-overlay"></div>
-    </div>
-    <div class="container">
-      <div class="hero-content">
+  <!-- Hero — split layout: brand copy + featured teapot -->
+  <section class="hero hero--split" id="hero" aria-label="Hero banner">
+    <div class="hero-split-bg" aria-hidden="true"></div>
+    <div class="container hero-split-inner">
+      <div class="hero-copy">
         <span class="hero-eyebrow">Yixing · China · Since 960 AD</span>
         <h1>Where <em>Clay</em><br>Becomes Art</h1>
         <span class="hero-zh">宜兴紫砂 · 百年传承</span>
-        <p>Each teapot is hand-thrown and engraved by a single master artisan — a living testament to over a thousand years of Zisha craftsmanship from Yixing, Jiangsu.</p>
-        <div class="hero-actions">
+        <p>Handcrafted and engraved by master artisans in Yixing — authentic Zisha clay, one-of-a-kind carving, shipped worldwide.</p>
+        <div class="hero-actions hero-actions--start">
           <a href="#collections" class="btn-primary btn-hero nav-scroll">Explore Collection</a>
-          <a href="contact.html" class="btn-outline-light btn-hero">Wholesale Inquiry</a>
+          <a href="contact.html" class="btn-outline btn-hero">Contact Us</a>
         </div>
       </div>
-    </div>
-    <div class="hero-scroll-hint" aria-hidden="true">
-      <span>Scroll</span>
-      <span class="scroll-arrow">↓</span>
+      <div class="hero-showcase">
+        <a href="product.html" class="hero-showcase-link" aria-label="View Engraved Ti Liang Teapot · Narcissus and Rock">
+          <div class="hero-showcase-frame">
+            <img
+              src="images/products/tiliang-narcissus-front.jpg"
+              alt="Engraved Ti Liang Teapot with narcissus and Taihu stone — master grade Yixing Zisha"
+              width="640"
+              height="640"
+              fetchpriority="high"
+            />
+          </div>
+          <span class="hero-showcase-caption">Engraved Ti Liang · Narcissus &amp; Rock</span>
+          <span class="hero-showcase-zh">水仙奇石提梁壶 · 仲壶定一合作</span>
+        </a>
+      </div>
     </div>
   </section>
 
