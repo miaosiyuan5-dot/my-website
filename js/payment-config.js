@@ -8,13 +8,12 @@ window.DY_PAYPAL = {
   disableFunding: 'venmo',
 
   /**
-   * Optional hosted button IDs from PayPal dashboard.
-   * Create buttons at https://www.paypal.com/buttons — copy each hostedButtonId here.
-   * Per-product ID takes priority; otherwise tier fallback (master = $950, daily = $238).
+   * PayPal hosted button IDs — all products $238 USD.
+   * Update button amount in PayPal dashboard to match.
    */
   hostedButtons: {
     default: '9BSLDUYYHD6UN',
     master: '9BSLDUYYHD6UN',
-    daily: ''
+    daily: '9BSLDUYYHD6UN'
   }
 };

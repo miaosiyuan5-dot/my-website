@@ -2255,6 +2255,10 @@ html[lang="zh-CN"] .hero--banner h1 {
 .spec-table td:first-child { color: var(--color-primary); font-weight: 500; width: 40%; }
 .spec-table td:last-child { color: var(--color-text-muted); }
 
+.product-spec-table {
+  margin: var(--space-md) 0 var(--space-lg);
+}
+
 @media (max-width: 900px) {
   .product-detail-inner { grid-template-columns: 1fr; }
   .product-gallery { position: static; }
