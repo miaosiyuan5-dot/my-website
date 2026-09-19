@@ -12,8 +12,8 @@ window.DY_PAYPAL = {
    * Update button amount in PayPal dashboard to match.
    */
   hostedButtons: {
-    default: '9BSLDUYYHD6UN',
-    master: '9BSLDUYYHD6UN',
-    daily: '9BSLDUYYHD6UN'
+    default: 'RKD2ZZSF5JXQJ',
+    master: 'RKD2ZZSF5JXQJ',
+    daily: 'RKD2ZZSF5JXQJ'
   }
 };
